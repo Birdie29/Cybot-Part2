@@ -1,3 +1,7 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="../../../Documents/Cybot-Part2/image and recording/asciiart.png" />
+    <File Path="../../../Documents/Cybot-Part2/recording/cybotgreeting (online-audio-converter.com).wav" />
+  </Folder>
   <Project Path="Cybot/Cybot.csproj" />
 </Solution>
