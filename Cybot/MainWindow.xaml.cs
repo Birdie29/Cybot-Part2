@@ -8,7 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.Media;
 namespace Cybot
 {
     /// <summary>
@@ -19,7 +19,17 @@ namespace Cybot
         public MainWindow()
         {
             InitializeComponent();
+            chatBotGreeting();
         }
+
+        private void chatBotGreeting()
+        {
+            string greeting = "/audio/cybotgreeting (online-audio-converter.com).wav";
+            SoundPlayer player = new SoundPlayer(greeting);
+            player.Play();
+        }
+
+
 
     }
 }

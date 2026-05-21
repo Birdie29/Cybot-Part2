@@ -11,6 +11,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-                
+
+        <Image Grid.Row="0" Source="/images/asciiart.png"></Image>
     </Grid>
 </Window>
