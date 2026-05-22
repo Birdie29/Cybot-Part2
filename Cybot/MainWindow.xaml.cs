@@ -21,6 +21,7 @@ namespace Cybot
             InitializeComponent();
            // chatBotGreeting();
             Username();
+     
         }
         /*
         private void chatBotGreeting()
@@ -31,7 +32,7 @@ namespace Cybot
         }
         */
 
-        private void press_Click(object sender, RoutedEventArgs e)
+        private void Press_Click(object sender, RoutedEventArgs e)
         {
             string name = username.Text;
             Username();
