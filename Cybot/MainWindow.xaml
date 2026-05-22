@@ -10,8 +10,26 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Image Grid.Row="0" Source="/images/asciiart.png"></Image>
+        <Image Grid.Row="0" Source="/images/asciiart.png">
+        </Image>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Label Grid.Column="0" Content="Please enter your name:" FontWeight="Bold" FontSize="19" FontFamily="Cascadia Mono" Foreground="Blue"></Label>
+            <TextBox Grid.Column="1" Name="username" HorizontalContentAlignment="Left" VerticalAlignment="Top" Foreground="Cyan" Width="250" Padding="10,8,10,8"></TextBox>
+            <Button Grid.Column="2" Name="Send" Click="press_Click" Width="80" BorderBrush="Blue" BorderThickness="3" VerticalAlignment="Top" HorizontalAlignment="Center" Content="Send"  FontSize="19" FontWeight="Bold" Foreground="Aqua" Background="Blue" Height="8,5" FontFamily="Cascadia Mono" VerticalContentAlignment="Center"></Button>
+            
+            
+        </Grid>
+        
     </Grid>
 </Window>
