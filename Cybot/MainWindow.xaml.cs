@@ -37,6 +37,7 @@ namespace Cybot
         {
             string name = username.Text;
             Username();
+            FavTopic();
         }
 
         private void Username()
@@ -44,13 +45,13 @@ namespace Cybot
             string name = username.Text;
             if (string.IsNullOrWhiteSpace(name))
             {
-                username.Foreground = Brushes.Red;
-                username.Text = "Please enter your name";
+                message.Text = "I need your name please";
+                message.Foreground = Brushes.Red;
             }
             else
             {
-                username.Foreground = Brushes.Blue;
-                username.Text = "Nice to meet you " + name + "is there any cybersecurity topic that sparks your interest?";
+                message.Text= "Nice to meet you " + name + "is there any cybersecurity topic that sparks your interest?";
+                message.Foreground = Brushes.Blue;
             }
         }
 
@@ -59,16 +60,17 @@ namespace Cybot
             string topic = favTopic.Text;
             if (string.IsNullOrWhiteSpace(topic))
             {
-                favTopic.Foreground = Brushes.Red;
-                favTopic.Text = "I'm sorry i didn't understand that please re-enter your topic";
+                message.Text = "I'm sorry i didn't understand that please re-enter your topic";
+                message.Foreground = Brushes.Red;
             }
             else 
             {
-                favTopic.Foreground = Brushes.Blue;
-                favTopic.Text = "Great! I'll be sure to remember that you're interested in " + topic + ". It's a crucial part of staying safe online.";
+                message.Text = "Great! I'll be sure to remember that you're interested in " + topic + ". It's a crucial part of staying safe online.";
+                message.Foreground = Brushes.Blue;
             }
 
         }
+
 
         
 
