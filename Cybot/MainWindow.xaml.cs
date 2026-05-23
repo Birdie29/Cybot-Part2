@@ -37,11 +37,11 @@ namespace Cybot
             string name = username.Text;
             Username();
         }
+
         private void Username()
         {
-
             string name = username.Text;
-            if (string.IsNullOrEmpty(name))
+            if (string.IsNullOrWhiteSpace(name))
             {
                 username.Foreground = Brushes.Red;
                 username.Text = "Please enter your name";
@@ -49,8 +49,14 @@ namespace Cybot
             else
             {
                 username.Foreground = Brushes.Blue;
-                username.Text = "Nice to meet you " + name + " is there any cybersecurity topic that sparks your interest?";
+                username.Text = "Nice to meet you " + name + "is there any cybersecurity topic that sparks your interest?";
             }
+        }
+
+        private void FavTopic() 
+        { 
+
+
         }
 
     }

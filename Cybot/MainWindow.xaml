@@ -8,28 +8,40 @@
         Title="Cybot" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Image Grid.Row="0" Source="/images/asciiart.png">
+        <Image Grid.Row="0" Source="/images/asciiart.png" Margin="0,0,0,87" Grid.RowSpan="2">
         </Image>
 
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="280"/>
+                <ColumnDefinition Width="280"/>
+                <ColumnDefinition Width="280"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" HorizontalContentAlignment="Center" Content="Please enter your name:" FontWeight="Bold" FontSize="19" FontFamily="Cascadia Mono" Foreground="Blue"></Label>
+            <TextBox Grid.Column="1" Name="username" HorizontalContentAlignment="Left" VerticalAlignment="Center" Foreground="Cyan" Width="250" Padding="10,8,10,8"></TextBox>
+            <Button Grid.Column="2" Name="Send" Click="press_Click" Width="80" BorderBrush="Blue" BorderThickness="3" VerticalAlignment="Top" HorizontalAlignment="Center" Content="Send"  FontSize="19" FontWeight="Bold" Foreground="Aqua" Background="Blue" Height="66" FontFamily="Cascadia Mono" VerticalContentAlignment="Center"></Button>
+
+
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            
-            <Label Grid.Column="0" Content="Please enter your name:" FontWeight="Bold" FontSize="19" FontFamily="Cascadia Mono" Foreground="Blue"></Label>
-            <TextBox Grid.Column="1" Name="username" HorizontalContentAlignment="Left" VerticalAlignment="Top" Foreground="Cyan" Width="250" Padding="10,8,10,8"></TextBox>
-            <Button Grid.Column="2" Name="Send" Click="press_Click" Width="80" BorderBrush="Blue" BorderThickness="3" VerticalAlignment="Top" HorizontalAlignment="Center" Content="Send"  FontSize="19" FontWeight="Bold" Foreground="Aqua" Background="Blue" Height="8,5" FontFamily="Cascadia Mono" VerticalContentAlignment="Center"></Button>
-            
+
+            <Label Grid.Column="0" HorizontalContentAlignment="Center" Content="Enter your favourite topic:" FontSize="19" FontWeight="Bold" FontFamily="Cascadia Mono" Foreground="Blue"></Label>
+            <TextBlock Grid.Column="1" Name="favTopic" Width="250" Padding="10,8,10,8" Foreground="Cyan" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
             
         </Grid>
-        
+
     </Grid>
 </Window>
