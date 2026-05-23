@@ -13,6 +13,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Image Grid.Row="0" Source="/images/asciiart.png" Margin="0,0,0,87" Grid.RowSpan="2">
@@ -38,10 +39,11 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Column="0" HorizontalContentAlignment="Center" Content="Enter your favourite topic:" FontSize="19" FontWeight="Bold" FontFamily="Cascadia Mono" Foreground="Blue"></Label>
-            <TextBlock Grid.Column="1" Name="favTopic" Width="250" Padding="10,8,10,8" Foreground="Cyan" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
+            <Label Grid.Column="0" HorizontalContentAlignment="Left" Content="Enter your favourite topic:" FontSize="19" FontWeight="Bold" FontFamily="Cascadia Mono" Foreground="Blue"></Label>
+            <TextBlock Grid.Column="1" Name="favTopic" Width="350" Padding="10,8,10,8" Foreground="Cyan" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
             
         </Grid>
 
+        
     </Grid>
 </Window>
