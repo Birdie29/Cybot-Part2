@@ -14,6 +14,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Image Grid.Row="0" Source="/images/asciiart.png" Margin="0,0,0,87" Grid.RowSpan="2">
@@ -50,14 +51,14 @@
         </Grid>
 
         <Grid Grid.Row="5">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
 
             <Label Grid.Row="5" Name="botTopics" Content="Here's a list of some topics we can dive right into:" FontSize="19" FontWeight="Bold" Foreground="Blue" FontFamily="Cascadia Mono"></Label>
-            <TextBox ></TextBox>
+            
         </Grid>
 
+        <StackPanel Grid.Row="6">
+            <TextBox Name="password" HorizontalContentAlignment="Left"></TextBox>
+        </StackPanel>
 
     </Grid>
 </Window>
