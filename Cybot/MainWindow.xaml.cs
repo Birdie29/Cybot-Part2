@@ -20,9 +20,9 @@ namespace Cybot
         {
             InitializeComponent();
            // chatBotGreeting();
-            Username();
+          
             //PressClick();
-            FavTopic();
+         
         }
         /*
         private void chatBotGreeting()
@@ -35,7 +35,7 @@ namespace Cybot
 
         private void PressClick(object sender, RoutedEventArgs e)
         {
-            string name = username.Text;
+          
             Username();
             FavTopic();
         }
@@ -60,13 +60,13 @@ namespace Cybot
             string topic = favTopic.Text;
             if (string.IsNullOrWhiteSpace(topic))
             {
-                message.Text = "I'm sorry i didn't understand that please re-enter your topic";
-                message.Foreground = Brushes.Red;
+                fav.Text = "I'm sorry i didn't understand that please re-enter your topic";
+                fav.Foreground = Brushes.Red;
             }
             else 
             {
-                message.Text = "Great! I'll be sure to remember that you're interested in " + topic + ". It's a crucial part of staying safe online.";
-                message.Foreground = Brushes.Blue;
+                fav.Text = "Great! I'll be sure to remember that you're interested in " + topic + ". It's a crucial part of staying safe online.";
+                fav.Foreground = Brushes.Blue;
             }
 
         }
