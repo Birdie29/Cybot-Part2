@@ -17,7 +17,8 @@
             <RowDefinition Height="90*"/>
             <RowDefinition Height="90*"/>
             <RowDefinition Height="90*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="90*"/>
             <RowDefinition Height="90*"/>
         </Grid.RowDefinitions>
 
@@ -77,7 +78,12 @@
             
         </Grid>
 
-        <TextBlock Grid.Row="9" Name="paragrapgh" HorizontalAlignment="Center"></TextBlock>
+        <Grid Grid.Row="9">
+            
+            <TextBlock Name="paragrapgh" FontSize="15" FontWeight="Bold" FontFamily="Cascadia Mono" Foreground="Blue"></TextBlock>
+            
+        </Grid>
+        
         
         
     </Grid>
