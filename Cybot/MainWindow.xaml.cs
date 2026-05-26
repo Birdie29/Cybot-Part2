@@ -60,7 +60,7 @@ namespace Cybot
             string topic = favTopic.Text;
             if (string.IsNullOrWhiteSpace(topic))
             {
-                fav.Text = "I'm sorry i didn't understand that please re-enter your topic";
+                fav.Text = "I'm sorry i didn't get that please re-enter your topic";
                 fav.Foreground = Brushes.Red;
             }
             else 
@@ -71,7 +71,30 @@ namespace Cybot
 
         }
 
+        private void BotTopics()
+        {
+            string chats = choice.Text;
+           if(!chats.Contains("password") && !chats.Contains("scam") && !chats.Contains("privacy"))
+            {
+                paragrapgh.Text = "I'm sorry your choice doesn't meet the bots topics";
+                paragrapgh.Foreground = Brushes.Red;
+            }
+           
+           if(chats.Contains("password"))
+            {
+                paragrapgh.Text = "Aim for a password length of atleast 12 characters long";
+            }
 
+           if(chats.Contains("scam"))
+            {
+                paragrapgh.Text = "Ensure the sites URL begins with https and that  a closed lock icon is visibile near the address bar";
+            }
+
+           if(chats.Contains("privacy"))
+            {
+                paragrapgh.Text = "Limit the personal information  you share online";
+            }
+        }
         
 
     }
