@@ -57,7 +57,9 @@
         </Grid>
 
         <StackPanel Grid.Row="6">
-            <TextBox Name="password" HorizontalContentAlignment="Left"></TextBox>
+            <Label Content="Password Safety" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="Blue"/>
+            <Label Content="Phishing" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="Blue"/>
+            <Label Content="Safe Browsing" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="Blue"/>
         </StackPanel>
 
     </Grid>
