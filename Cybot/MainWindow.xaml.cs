@@ -9,6 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Media;
+using System.Collections.Generic;
 namespace Cybot
 {
     /// <summary>
@@ -83,20 +84,67 @@ namespace Cybot
            
            if(chats.Contains("password"))
             {
-                paragrapgh.Text = "Aim for a password length of atleast 12 characters long";
+                paragrapgh.Text = "Aim for a password length of atleast 12 characters long.";
+                passwordTips();
             }
 
            if(chats.Contains("scam"))
             {
-                paragrapgh.Text = "Ensure the sites URL begins with https and that  a closed lock icon is visibile near the address bar";
+                paragrapgh.Text = "Ensure the sites URL begins with https and that  a closed lock icon is visible near the address bar.";
+                phishingTips();
             }
 
            if(chats.Contains("privacy"))
             {
-                paragrapgh.Text = "Limit the personal information  you share online";
+                paragrapgh.Text = "Limit the personal information  you share online.";
+                browsingTips();
             }
+
+           
         }
-        
+
+        Random rand = new Random();
+
+        public void passwordTips() 
+        {
+            
+            List<string> passwordTip = new List<string>();
+            passwordTip.Add("Regularly change your password to minimize the risk of data breaches and unauthorised access especially for critical accounts like email and banking.");
+            passwordTip.Add("Implement two-factor authentication which adds an extra layer of security such as a temporary code sent to your phone.");
+            passwordTip.Add("Include a mix of characters such as uppercase and lowercase letters, numbers and special characters.");
+            passwordTip.Add("Avoid using easily discoverable information like your name, birthdate or your partners name, family members or pets");
+
+            int index = rand.Next(passwordTip.Count);
+            string randomTip = passwordTip[index];
+            paragrapgh.Text(randomTip);
+        }
+
+        public void phishingTips()
+        {
+            List<string> phishingTip = new List<string>();
+            phishingTip.Add("Educate yourself by staying informed about common online threats and how to recognize them");
+            phishingTip.Add("Inspect strange emails by either performing a long press or hover your mouse over URL links to preview them.");
+            phishingTip.Add("Regularly update your operating system, browsers and apps. Updates include security patches.");
+            phishingTip.Add("Consider using password managers to generate and store passwords for you.");
+
+            int index = rand.Next(phishingTip.Count);
+            string randomTip = phishingTip[index];
+            paragrapgh.Text(randomTip);
+        }
+
+        public void browsingTips() 
+        { 
+            List<string> browsingTip = new List<string>();
+            browsingTip.Add("Use secure networks especially on public Wi-Fi like a VPN which adds an extra of protection by encrypting data in transit.");
+            browsingTip.Add("Review permissions and app access regularly.");
+            browsingTip.Add("Recognize emotional manipulation online.");
+            browsingTip.Add("Treat online safety as an ongoing habit because staying informed, revisiting basic practices and adjusting behavior overtime builds resilience.");
+
+            int index = rand.Next(browsingTip.Count);
+            string randomTip = browsingTip[index];
+            paragrapgh.Text(randomTip);
+
+        }
 
     }
 }
