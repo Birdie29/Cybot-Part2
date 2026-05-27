@@ -38,6 +38,7 @@ namespace Cybot
           
             Username();
             FavTopic();
+            BotTopics();
         }
 
         private void Username()
