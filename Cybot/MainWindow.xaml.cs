@@ -73,6 +73,11 @@ namespace Cybot
 
         }
 
+        private void Greeting() 
+        { 
+            
+            
+        }
         private void BotTopics()
         {
             string chats = choice.Text;

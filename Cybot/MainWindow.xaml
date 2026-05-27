@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cybot"
         mc:Ignorable="d"
-        Title="Cybot" Height="800" Width="800">
-    <Grid>
-        
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
-        
+        Title="Cybot" Height="600" Width="800">
+    <Grid Background="Pink">
+
         <Grid>
             <Grid.RowDefinitions>
+                <RowDefinition Height="90*"/>
+                <RowDefinition Height="90*"/>
                 <RowDefinition Height="90*"/>
                 <RowDefinition Height="90*"/>
                 <RowDefinition Height="90*"/>
@@ -32,16 +32,14 @@
 
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="280"/>
-                    <ColumnDefinition Width="280"/>
-                    <ColumnDefinition Width="280"/>
+                    <ColumnDefinition Width="290"/>
+                    <ColumnDefinition Width="290"/>
+                   
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Column="0" HorizontalContentAlignment="Center" Content="Please enter your name:" FontWeight="Bold" FontSize="19" FontFamily="Cascadia Mono" Foreground="Blue"/>
-                <TextBox Grid.Column="1" x:Name="username" HorizontalContentAlignment="Left" VerticalAlignment="Center" Foreground="Cyan" Width="250" Padding="10,8,10,8"/>
-                <Button Grid.Column="2" x:Name="Send" Click="PressClick" Width="69" BorderBrush="Blue" BorderThickness="3" VerticalAlignment="Top" HorizontalAlignment="Center" Content="Send"  FontSize="19" FontWeight="Bold" Foreground="Aqua" Background="Blue" Height="66" FontFamily="Cascadia Mono" VerticalContentAlignment="Center"/>
-
-
+                <Label Grid.Column="0" HorizontalContentAlignment="Center" Content="Please enter your name:" FontWeight="Bold" FontSize="19" FontFamily="Cascadia Mono" Foreground="DeepPink"/>
+                <TextBox Grid.Column="1" x:Name="username" HorizontalContentAlignment="Left" VerticalAlignment="Center" Foreground="DarkCyan" Width="250" Padding="10,8,10,8"/>
+                
             </Grid>
 
             <Grid Grid.Row="3">
@@ -55,11 +53,11 @@
 
             <Grid Grid.Row="4">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Column="0" HorizontalContentAlignment="Center" Content="Enter your favourite topic:" FontSize="19" FontWeight="Bold" FontFamily="Cascadia Mono" Foreground="Blue"/>
+                <Label Grid.Column="0" HorizontalContentAlignment="Center" Content="Enter your favourite topic:" FontSize="19" FontWeight="Bold" FontFamily="Cascadia Mono" Foreground="DeepPink"/>
                 <TextBox Grid.Column="1" x:Name="favTopic" Width="390" Padding="10,8,10,8" Foreground="Cyan" FontFamily="Cascadia Mono" FontWeight="Bold"/>
 
             </Grid>
@@ -72,26 +70,35 @@
 
             </Grid>
 
+            
             <Grid Grid.Row="6">
 
-                <Label Content="Here's a list of some topics we can dive right into:" FontSize="19" FontWeight="Bold" Foreground="Blue" FontFamily="Cascadia Mono"/>
+                <Label Name="choice" Content="What would you like to talk about?" FontSize="19" FontWeight="Bold" Foreground="DeepPink" FontFamily="Cascadia Mono"/>
 
             </Grid>
 
             <StackPanel Grid.Row="7">
-                <TextBlock Text="~Password Safety" Width="200" HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="Blue"/>
-                <TextBlock Text="~Phishing" Width="200"  HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="Blue"/>
-                <TextBlock Text="Safe Browsing" Width="200"  HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="Blue"/>
+                <TextBlock Text="Password Safety" Width="300" HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
+                <TextBlock Text="Phishing" Width="300"  HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
+                <TextBlock Text="Safe browsing" Width="200"  HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
             </StackPanel>
 
-            <Grid Grid.Row="9">
+            <Grid Grid.Row="8">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Name="conversations" Width="700" HorizontalAlignment="Center"></TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Column="0" x:Name="botTopics" Content="Enter your topic of choice please:" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="Blue"/>
-                <TextBox Grid.Column="1" x:Name="choice" Width="350"  Height="60" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="Cyan" FontSize="9" FontWeight="Bold"/>
+                <Label Grid.Column="0" x:Name="botTopics" Content="Enter your topic of choice please:" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
+                <TextBox Grid.Column="1" x:Name="pick" Width="390" Padding="10,8,10,8" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Cyan" FontSize="9" FontWeight="Bold"/>
 
             </Grid>
 
@@ -101,10 +108,15 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Name="paragrapgh" FontFamily="Cascadia Mono" FontSize="15" FontWeight="Bold" Foreground="Blue"></TextBlock>
-                
-                
             </Grid>
+
+            <Grid Grid.Row="13">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button Grid.Column="2" x:Name="Send" Click="PressClick" Width="190" BorderBrush="HotPink" BorderThickness="2"  VerticalAlignment="Top" HorizontalAlignment="Center" Content="Send"  FontSize="19" FontWeight="Bold" Foreground="Pink" Background="DeepPink" Height="66" FontFamily="Cascadia Mono" VerticalContentAlignment="Center"/>
+            </Grid>
+            
         </Grid>
-        </ScrollViewer>
     </Grid>
 </Window>
