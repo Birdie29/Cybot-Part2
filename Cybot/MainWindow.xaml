@@ -77,10 +77,10 @@
 
             </Grid>
 
-            <StackPanel Grid.Row="7" Name="topics">
-                <TextBlock Text="~Password Safety" Width="300" HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
-                <TextBlock Text="~Phishing" Width="300"  HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
-                <TextBlock Text="~Safe browsing" Width="300"  HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
+            <StackPanel Grid.Row="7">
+                <TextBlock Name="password" Text="~Password Safety" Width="300" HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
+                <TextBlock Name="scam" Text="~Phishing" Width="300"  HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
+                <TextBlock Name="privacy" Text="~Safe browsing" Width="300"  HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
             </StackPanel>
 
           
