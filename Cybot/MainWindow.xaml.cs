@@ -113,9 +113,17 @@ namespace Cybot
            else if(state.Contains("worried") || state.Contains("confused") || state.Contains("frustrated"))
             {
                 Dictionary<string, string> emotion = new Dictionary<string, string>();
-                emotion.Add("worried","I understand why that feels worrying but remember");
-                emotion.Add("confused", "I can help clarify that");
-                emotion.Add("frustrated", "I understand your frustration ");
+                {
+                    emotion.Add("worried", "I understand why that feels worrying but remember");
+                    emotion.Add("confused", "I can help clarify that");
+                    emotion.Add("frustrated", "I understand your frustration ");
+
+                    foreach(var motion in emotion)
+                    {
+                        error.Text = motion.Value;
+                    }
+                }
+                
             }
 
             if (chats.Contains("scam"))
