@@ -108,7 +108,7 @@ namespace Cybot
 
                     int index = rand.Next(passwordTip.Count);
                     string randomTip = passwordTip[index];
-                    paragrapgh.Text(randomTip);
+                    paragrapgh.Text = (randomTip);
                 }
             }
            else if(state.Contains("worried") || state.Contains("confused") || state.Contains("frustrated"))
@@ -135,14 +135,17 @@ namespace Cybot
             else if (chats.Contains("give me another tip") || chats.Contains("explain more") || chats.Contains("tell me more"))
             {
                 List<string> phishingTip = new List<string>();
-                phishingTip.Add("Educate yourself by staying informed about common online threats and how to recognize them");
-                phishingTip.Add("Inspect strange emails by either performing a long press or hover your mouse over URL links to preview them.");
-                phishingTip.Add("Regularly update your operating system, browsers and apps. Updates include security patches.");
-                phishingTip.Add("Consider using password managers to generate and store passwords for you.");
+                {
+                    phishingTip.Add("Educate yourself by staying informed about common online threats and how to recognize them");
+                    phishingTip.Add("Inspect strange emails by either performing a long press or hover your mouse over URL links to preview them.");
+                    phishingTip.Add("Regularly update your operating system, browsers and apps. Updates include security patches.");
+                    phishingTip.Add("Consider using password managers to generate and store passwords for you.");
 
-                int index = rand.Next(phishingTip.Count);
-                string randomTip = phishingTip[index];
-                paragrapgh.Text(randomTip);
+                    int index = rand.Next(phishingTip.Count);
+                    string randomTip = phishingTip[index];
+                    paragrapgh.Text = (randomTip);
+                }
+                
             }
             else if (state.Contains("worried") || state.Contains("confused") || state.Contains("frustrated")) 
             {
@@ -167,14 +170,17 @@ namespace Cybot
             else if (chats.Contains("give me another tip") || chats.Contains("explain more") || chats.Contains("tell me more"))
             {
                 List<string> browsingTip = new List<string>();
-                browsingTip.Add("Use secure networks especially on public Wi-Fi like a VPN which adds an extra of protection by encrypting data in transit.");
-                browsingTip.Add("Review permissions and app access regularly.");
-                browsingTip.Add("Recognize emotional manipulation online.");
-                browsingTip.Add("Treat online safety as an ongoing habit because staying informed, revisiting basic practices and adjusting behavior overtime builds resilience.");
+                {
+                    browsingTip.Add("Use secure networks especially on public Wi-Fi like a VPN which adds an extra of protection by encrypting data in transit.");
+                    browsingTip.Add("Review permissions and app access regularly.");
+                    browsingTip.Add("Recognize emotional manipulation online.");
+                    browsingTip.Add("Treat online safety as an ongoing habit because staying informed, revisiting basic practices and adjusting behavior overtime builds resilience.");
 
-                int index = rand.Next(browsingTip.Count);
-                string randomTip = browsingTip[index];
-                paragrapgh.Text(randomTip);
+                    int index = rand.Next(browsingTip.Count);
+                    string randomTip = browsingTip[index];
+                    paragrapgh.Text = (randomTip);
+                }
+                
             }
             else if (state.Contains("worried") || state.Contains("confused") || state.Contains("frustrated")) 
             {
