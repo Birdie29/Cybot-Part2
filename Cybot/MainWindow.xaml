@@ -125,7 +125,7 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 
-                <Label Content="Do you have anymore concerns?" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"></Label>
+                <Label Content="Do you have anymore concerns?" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink" HorizontalAlignment="Center"></Label>
                 
             </Grid>
 
@@ -133,7 +133,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox Name="detect" Foreground="HotPink" FontSize="8" FontFamily="Cascadia Mono" FontWeight="Bold"></TextBox>
+                <TextBox Name="detect" Foreground="HotPink" Width="500" FontSize="8" FontFamily="Cascadia Mono" FontWeight="Bold"></TextBox>
             </Grid>
 
             <Grid Grid.Row="15">
@@ -147,7 +147,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Button Grid.Column="2" x:Name="Send" Click="PressClick" Width="190" BorderBrush="HotPink" BorderThickness="4"  VerticalAlignment="Top" HorizontalAlignment="Center" Content="Send"  FontSize="19" FontWeight="Bold" Foreground="Pink" Background="DeepPink" Height="66" FontFamily="Cascadia Mono" VerticalContentAlignment="Center"/>
+                <Button x:Name="Send" Click="PressClick" Width="190" BorderBrush="HotPink" BorderThickness="4"  VerticalAlignment="Top" HorizontalAlignment="Center" Content="Send"  FontSize="19" FontWeight="Bold" Foreground="Pink" Background="DeepPink" Height="66" FontFamily="Cascadia Mono" VerticalContentAlignment="Center"/>
             </Grid>
             
         </Grid>
