@@ -110,7 +110,7 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 
-                <Label Name="feeling" Content="Do you have anymore concerns?" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"></Label>
+                <Label Content="Do you have anymore concerns?" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"></Label>
                 
             </Grid>
 
@@ -125,10 +125,10 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <ListBox Name="sentimental" Foreground="HotPink"></ListBox>
+                <TextBox x:Name="error" FontFamily="Cascadia Mono"></TextBox>
             </Grid>
             
-            <Grid Grid.Row="15">
+            <Grid Grid.Row="16">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>

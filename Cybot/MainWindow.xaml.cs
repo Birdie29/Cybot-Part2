@@ -76,10 +76,13 @@ namespace Cybot
 
 
         Random rand = new Random();
-        private void BotTopics()
+       
+        public void BotTopics()
         {
             string chats = pick.Text;
-           if(!chats.Contains("password") && !chats.Contains("scam") && !chats.Contains("privacy"))
+            string state = detect.Text;
+
+            if (!chats.Contains("password") && !chats.Contains("scam") && !chats.Contains("privacy"))
             {
                 paragrapgh.Text = "I'm sorry your choice doesn't meet the bots topics";
                 paragrapgh.Foreground = Brushes.Red;
@@ -104,14 +107,20 @@ namespace Cybot
                 paragrapgh.Text(randomTip);
 
             }
-
+           else if(state.Contains("worried") || state.Contains("confused") || state.Contains("frustrated"))
+            {
+                Dictionary<string, string> emotion = new Dictionary<string, string>();
+                emotion.Add("worried","I understand why that feels worrying but remember");
+                emotion.Add("confused", "I can help clarify that");
+                emotion.Add("frustrated", "I understand your frustration ");
+            }
 
             if (chats.Contains("scam"))
             {
                 paragrapgh.Text = "Since your enthusiastic about " + chats + " ensure the sites URL begins with https and that a closed lock icon is visible near the address bar.";
 
             }
-            else if (chats.Contains("give me another tip") || chats.Contains("explain more") || chats.Contains("tell me more")) 
+            else if (chats.Contains("give me another tip") || chats.Contains("explain more") || chats.Contains("tell me more"))
             {
                 List<string> phishingTip = new List<string>();
                 phishingTip.Add("Educate yourself by staying informed about common online threats and how to recognize them");
@@ -122,6 +131,20 @@ namespace Cybot
                 int index = rand.Next(phishingTip.Count);
                 string randomTip = phishingTip[index];
                 paragrapgh.Text(randomTip);
+            }
+            else if (state.Contains("worried") || state.Contains("confused") || state.Contains("frustrated")) 
+            {
+                Dictionary<string, string> emotion = new Dictionary<string, string>();
+                {
+                    emotion.Add("worried", "I hear your concern");
+                    emotion.Add("confused", "Heres a clearer way to look at it");
+                    emotion.Add("frustrated", "That sounds exhausting ");
+
+                    foreach (var motion in emotion) 
+                    {
+                        error.Text = motion.Value;
+                    }
+                }
             }
 
             if (chats.Contains("privacy"))
@@ -143,22 +166,6 @@ namespace Cybot
             }
         }
 
-        private void sentiment() 
-        { 
-            string state = detect.Text;
-            if(!string.IsNullOrWhiteSpace(state))
-            {
-                sentimental.Text = "Whoops i coud'nt get that mind rephrasing your concerns.";
-                sentimental.Foreground = Brushes.HotPink;
-            }
-
-            if(state.Contains("worried"))
-            {
-                List<string> worry = new List<string>();
-                worry.Add("");
-            }
-        }
-
-      
+       
     }
 }
