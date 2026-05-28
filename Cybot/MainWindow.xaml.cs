@@ -143,9 +143,20 @@ namespace Cybot
             }
         }
 
-        public void sentiment() 
+        private void sentiment() 
         { 
+            string state = detect.Text;
+            if(!string.IsNullOrWhiteSpace(state))
+            {
+                sentimental.Text = "Whoops i coud'nt get that mind rephrasing your concerns.";
+                sentimental.Foreground = Brushes.HotPink;
+            }
 
+            if(state.Contains("worried"))
+            {
+                List<string> worry = new List<string>();
+                worry.Add("");
+            }
         }
 
       

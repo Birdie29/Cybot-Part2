@@ -26,6 +26,7 @@
                 <RowDefinition Height="90*"/>
                 <RowDefinition Height="90*"/>
                 <RowDefinition Height="90*"/>
+                <RowDefinition Height="90*"/>
             </Grid.RowDefinitions>
 
             <Image Grid.Row="0"  Margin="0,0,0,87" Grid.RowSpan="2"/>
@@ -124,7 +125,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBlock Name="sentiment" Foreground="HotPink"></TextBlock>
+                <ListBox Name="sentimental" Foreground="HotPink"></ListBox>
             </Grid>
             
             <Grid Grid.Row="15">
