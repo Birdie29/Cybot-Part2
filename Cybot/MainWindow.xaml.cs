@@ -152,7 +152,7 @@ namespace Cybot
                 paragrapgh.Text = "Since you're all about " + chats + " you need to limit the personal information you share online.";
 
             }
-            else if (chats.Contains("give me another tip") || chats.Contains("explain more") || chats.Contains("tell me more")) 
+            else if (chats.Contains("give me another tip") || chats.Contains("explain more") || chats.Contains("tell me more"))
             {
                 List<string> browsingTip = new List<string>();
                 browsingTip.Add("Use secure networks especially on public Wi-Fi like a VPN which adds an extra of protection by encrypting data in transit.");
@@ -163,6 +163,20 @@ namespace Cybot
                 int index = rand.Next(browsingTip.Count);
                 string randomTip = browsingTip[index];
                 paragrapgh.Text(randomTip);
+            }
+            else if (state.Contains("worried") || state.Contains("confused") || state.Contains("frustrated")) 
+            {
+                Dictionary<string, string> emotion = new Dictionary<string, string>();
+                {
+                    emotion.Add("worried", "It's okay to feel uncertain about this");
+                    emotion.Add("confused", "Let's simplify it step by step");
+                    emotion.Add("frustrated", "It makes total sense that your frustrated");
+
+                    foreach (var motion in emotion) 
+                    {
+                        error.Text = motion.Value;
+                    }
+                }
             }
         }
 
