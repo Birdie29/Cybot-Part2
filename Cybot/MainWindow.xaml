@@ -38,7 +38,7 @@
 
                 </Grid.RowDefinitions>
 
-                <Label HorizontalContentAlignment="Center" Content="Please enter your name:" FontWeight="Bold" FontSize="19" FontFamily="Cascadia Mono" Foreground="DeepPink"/>
+                <Label HorizontalContentAlignment="Center" Content="Please enter your name:" FontWeight="Bold" FontSize="19"  FontFamily="Cascadia Mono" Foreground="DeepPink"/>
                 
             </Grid>
 
@@ -46,7 +46,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox  x:Name="username" HorizontalContentAlignment="Left" VerticalAlignment="Center" Width="400" Padding="10" Background="White" />
+                <TextBox  x:Name="username" HorizontalContentAlignment="Left" VerticalAlignment="Center" Width="500" Padding="10" Background="White" />
             </Grid>
             
             <Grid Grid.Row="4">
