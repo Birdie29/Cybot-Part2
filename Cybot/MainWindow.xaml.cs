@@ -87,11 +87,11 @@ namespace Cybot
            
            if(chats.Contains("password"))
             {
-                paragrapgh.Text = "As someone interested in " + chats + "Aim for a password length of atleast 12 characters long.";
+                paragrapgh.Text = "As someone who's interested in " + chats + " Aim for a password length of atleast 12 characters long.";
                 paragrapgh.Foreground = Brushes.Pink;
                 
             }
-           else if(chats.Contains("give me another tip") || chats.Contains(("explain more")) || chats.Contains("tell me more"))
+           else if(chats.Contains("another tip") || chats.Contains(("explain more")) || chats.Contains("tell me more"))
             {
                 List<string> passwordTip = new List<string>();
                 passwordTip.Add("Regularly change your password to minimize the risk of data breaches and unauthorised access especially for critical accounts like email and banking.");

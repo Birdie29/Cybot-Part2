@@ -25,6 +25,7 @@
                 <RowDefinition Height="90*"/>
                 <RowDefinition Height="90*"/>
                 <RowDefinition Height="90*"/>
+                <RowDefinition Height="90*"/>
             </Grid.RowDefinitions>
 
             <Image Grid.Row="0"  Margin="0,0,0,87" Grid.RowSpan="2"/>
@@ -100,10 +101,27 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Name="paragrapgh" FontFamily="Cascadia Mono" FontSize="15" FontWeight="Bold" Foreground="HotPink"></TextBlock>
+                <TextBlock FontFamily="Cascadia Mono" FontSize="15" FontWeight="Bold" Foreground="HotPink" Name="paragrapgh"></TextBlock>
             </Grid>
 
             <Grid Grid.Row="12">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <Label Name="feeling" Content="Do you have anymore concerns?" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"></Label>
+                
+            </Grid>
+
+            <Grid Grid.Row="13">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBox Name="sentiment" Foreground="HotPink" FontSize="8" FontFamily="Cascadia Mono" FontWeight="Bold"></TextBox>
+            </Grid>
+            
+            
+            <Grid Grid.Row="15">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
