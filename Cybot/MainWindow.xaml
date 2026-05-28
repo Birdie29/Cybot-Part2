@@ -117,9 +117,15 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox Name="sentiment" Foreground="HotPink" FontSize="8" FontFamily="Cascadia Mono" FontWeight="Bold"></TextBox>
+                <TextBox Name="detect" Foreground="HotPink" FontSize="8" FontFamily="Cascadia Mono" FontWeight="Bold"></TextBox>
             </Grid>
-            
+
+            <Grid Grid.Row="14">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Name="sentiment" Foreground="HotPink"></TextBlock>
+            </Grid>
             
             <Grid Grid.Row="15">
                 <Grid.RowDefinitions>
