@@ -101,7 +101,7 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <Label Content="Enter your topic of choice please:" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
+                <Label Content="Enter your topic of choice please:" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink" HorizontalAlignment="Center"/>
                
             </Grid>
 
@@ -109,7 +109,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox  x:Name="pick"  Width="450" Padding="20" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="HotPink" FontSize="9" FontWeight="Bold"/>
+                <TextBox  x:Name="pick"  Width="500" Padding="20" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="HotPink" FontSize="9" FontWeight="Bold"/>
             </Grid>
             
             <Grid Grid.Row="12">
