@@ -38,7 +38,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" HorizontalContentAlignment="Center" Content="Please enter your name:" FontWeight="Bold" FontSize="19" FontFamily="Cascadia Mono" Foreground="DeepPink"/>
-                <TextBox Grid.Column="1" x:Name="username" HorizontalContentAlignment="Left" VerticalAlignment="Center" Foreground="DarkCyan" Width="250" Padding="10,8,10,8"/>
+                <TextBox Grid.Column="1" x:Name="username" HorizontalContentAlignment="Left" VerticalAlignment="Center" Foreground="LightPink" BorderThickness="5" Width="250" Padding="10,8,10,8"/>
                 
             </Grid>
 
@@ -47,18 +47,18 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <TextBlock x:Name="message" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="9" FontFamily="Cascadia Mono"/>
+                <TextBlock x:Name="message" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="9" FontFamily="Cascadia Mono" Foreground="HotPink"/>
             </Grid>
 
 
             <Grid Grid.Row="4">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" HorizontalContentAlignment="Center" Content="Enter your favourite topic:" FontSize="19" FontWeight="Bold" FontFamily="Cascadia Mono" Foreground="DeepPink"/>
-                <TextBox Grid.Column="1" x:Name="favTopic" Width="390" Padding="10,8,10,8" Foreground="Cyan" FontFamily="Cascadia Mono" FontWeight="Bold"/>
+                <TextBox Grid.Column="1" x:Name="favTopic" Width="390" Padding="10,8,10,8" Foreground="LightPink" Background="LightPink" FontFamily="Cascadia Mono" FontWeight="Bold" />
 
             </Grid>
 
@@ -73,48 +73,41 @@
             
             <Grid Grid.Row="6">
 
-                <Label Name="choice" Content="What would you like to talk about?" FontSize="19" FontWeight="Bold" Foreground="DeepPink" FontFamily="Cascadia Mono"/>
+                <Label Name="choice" Content="Here's a list of some topics we can dive right into:" FontSize="19" FontWeight="Bold" Foreground="DeepPink" FontFamily="Cascadia Mono"/>
 
             </Grid>
 
-            <StackPanel Grid.Row="7">
-                <TextBlock Text="Password Safety" Width="300" HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
-                <TextBlock Text="Phishing" Width="300"  HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
-                <TextBlock Text="Safe browsing" Width="200"  HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
+            <StackPanel Grid.Row="7" Name="topics">
+                <TextBlock Text="~Password Safety" Width="300" HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
+                <TextBlock Text="~Phishing" Width="300"  HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
+                <TextBlock Text="~Safe browsing" Width="300"  HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
             </StackPanel>
 
-            <Grid Grid.Row="8">
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-
-                <TextBlock Name="conversations" Width="700" HorizontalAlignment="Center"></TextBlock>
-            </Grid>
-
-            <Grid Grid.Row="10">
+          
+            <Grid Grid.Row="9">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" x:Name="botTopics" Content="Enter your topic of choice please:" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
-                <TextBox Grid.Column="1" x:Name="pick" Width="390" Padding="10,8,10,8" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Cyan" FontSize="9" FontWeight="Bold"/>
+                <TextBox Grid.Column="1" x:Name="pick" Width="390" Padding="10,8,10,8" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="HotPink" FontSize="9" FontWeight="Bold"/>
 
             </Grid>
 
-            <Grid Grid.Row="11">
+            <Grid Grid.Row="10">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Name="paragrapgh" FontFamily="Cascadia Mono" FontSize="15" FontWeight="Bold" Foreground="Blue"></TextBlock>
+                <TextBlock Name="paragrapgh" FontFamily="Cascadia Mono" FontSize="15" FontWeight="Bold" Foreground="HotPink"></TextBlock>
             </Grid>
 
-            <Grid Grid.Row="13">
+            <Grid Grid.Row="12">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Button Grid.Column="2" x:Name="Send" Click="PressClick" Width="190" BorderBrush="HotPink" BorderThickness="2"  VerticalAlignment="Top" HorizontalAlignment="Center" Content="Send"  FontSize="19" FontWeight="Bold" Foreground="Pink" Background="DeepPink" Height="66" FontFamily="Cascadia Mono" VerticalContentAlignment="Center"/>
+                <Button Grid.Column="2" x:Name="Send" Click="PressClick" Width="190" BorderBrush="HotPink" BorderThickness="4"  VerticalAlignment="Top" HorizontalAlignment="Center" Content="Send"  FontSize="19" FontWeight="Bold" Foreground="Pink" Background="DeepPink" Height="66" FontFamily="Cascadia Mono" VerticalContentAlignment="Center"/>
             </Grid>
             
         </Grid>
