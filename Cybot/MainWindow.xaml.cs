@@ -10,6 +10,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Media;
 using System.Collections.Generic;
+
 namespace Cybot
 {
     /// <summary>
@@ -40,7 +41,7 @@ namespace Cybot
           
             Username();
             FavTopic();
-            BotTopics();
+           // BotTopics();
            
         }
 
@@ -76,7 +77,7 @@ namespace Cybot
 
         }
 
-
+        
         Random rand = new Random();
        
         public void BotTopics()
@@ -190,7 +191,7 @@ namespace Cybot
                 }
             }
         }
-
+        
        
     }
 }
