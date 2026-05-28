@@ -17,6 +17,7 @@ namespace Cybot
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -58,8 +59,9 @@ namespace Cybot
             }
         }
 
-        private void FavTopic() 
-        { 
+       
+        public void FavTopic() 
+        {
             string topic = favTopic.Text;
             if (string.IsNullOrWhiteSpace(topic))
             {
@@ -97,15 +99,16 @@ namespace Cybot
            else if(chats.Contains("another tip") || chats.Contains(("explain more")) || chats.Contains("tell me more"))
             {
                 List<string> passwordTip = new List<string>();
-                passwordTip.Add("Regularly change your password to minimize the risk of data breaches and unauthorised access especially for critical accounts like email and banking.");
-                passwordTip.Add("Implement two-factor authentication which adds an extra layer of security such as a temporary code sent to your phone.");
-                passwordTip.Add("Include a mix of characters such as uppercase and lowercase letters, numbers and special characters.");
-                passwordTip.Add("Avoid using easily discoverable information like your name, birthdate or your partners name, family members or pets");
+                {
+                    passwordTip.Add("Regularly change your password to minimize the risk of data breaches and unauthorised access especially for critical accounts like email and banking.");
+                    passwordTip.Add("Implement two-factor authentication which adds an extra layer of security such as a temporary code sent to your phone.");
+                    passwordTip.Add("Include a mix of characters such as uppercase and lowercase letters, numbers and special characters.");
+                    passwordTip.Add("Avoid using easily discoverable information like your name, birthdate or your partners name, family members or pets");
 
-                int index = rand.Next(passwordTip.Count);
-                string randomTip = passwordTip[index];
-                paragrapgh.Text(randomTip);
-
+                    int index = rand.Next(passwordTip.Count);
+                    string randomTip = passwordTip[index];
+                    paragrapgh.Text(randomTip);
+                }
             }
            else if(state.Contains("worried") || state.Contains("confused") || state.Contains("frustrated"))
             {
