@@ -84,7 +84,7 @@ namespace Cybot
         public void BotTopics()
         {
             string chats = pick.Text;
-            string state = detect.Text;
+            string state = info.Text;
 
             if (!chats.Contains("password") && !chats.Contains("scam") && !chats.Contains("privacy"))
             {
@@ -107,12 +107,13 @@ namespace Cybot
                     passwordTip.Add("Include a mix of characters such as uppercase and lowercase letters, numbers and special characters.");
                     passwordTip.Add("Avoid using easily discoverable information like your name, birthdate or your partners name, family members or pets");
 
-                    int index = rand.Next(passwordTip.Count);
-                    string randomTip = passwordTip[index];
                     foreach ( var tips in passwordTip)
                     {
-                        information.Text = (randomTip);
+
+                        int index = rand.Next(passwordTip.Count);
+                        information.Text = passwordTip[index];
                         information.Foreground = Brushes.HotPink;
+                       
 
                     }
 
@@ -149,12 +150,10 @@ namespace Cybot
                     phishingTip.Add("Regularly update your operating system, browsers and apps. Updates include security patches.");
                     phishingTip.Add("Consider using password managers to generate and store passwords for you.");
 
-                    int index = rand.Next(phishingTip.Count);
-                    string randomTip = phishingTip[index];
-
                     foreach (var tips in phishingTip) 
                     {
-                        information.Text = (randomTip);
+                        int index = rand.Next(phishingTip.Count);
+                        information.Text= phishingTip[index];
                         information.Foreground = Brushes.HotPink;
                     }
                 }
@@ -190,13 +189,10 @@ namespace Cybot
                     browsingTip.Add("Recognize emotional manipulation online.");
                     browsingTip.Add("Treat online safety as an ongoing habit because staying informed, revisiting basic practices and adjusting behavior overtime builds resilience.");
 
-
-                    int index = rand.Next(browsingTip.Count);
-                    string randomTip = browsingTip[index];
-
                     foreach (var tips in browsingTip) 
                     {
-                        information.Text = (randomTip);
+                        int index = rand.Next(browsingTip.Count);
+                        information.Text = browsingTip[index];
                         information.Foreground = Brushes.HotPink;
                     }
                 }
