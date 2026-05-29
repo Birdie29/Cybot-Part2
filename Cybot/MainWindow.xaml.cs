@@ -109,8 +109,8 @@ namespace Cybot
 
                     int index = rand.Next(passwordTip.Count);
                     string randomTip = passwordTip[index];
-                    paragrapgh.Text = (randomTip);
-                    paragrapgh.Foreground = Brushes.HotPink;
+                    information.Text = (randomTip);
+                    information.Foreground = Brushes.HotPink;
                 }
             }
            else if(state.Contains("worried") || state.Contains("confused") || state.Contains("frustrated"))
@@ -124,7 +124,7 @@ namespace Cybot
                     foreach(var motion in emotion)
                     {
                         error.Text = motion.Value;
-                        paragrapgh.Foreground = Brushes.HotPink;
+                        error.Foreground = Brushes.HotPink;
                     }
                 }
                 
@@ -146,8 +146,8 @@ namespace Cybot
 
                     int index = rand.Next(phishingTip.Count);
                     string randomTip = phishingTip[index];
-                    paragrapgh.Text = (randomTip);
-                    paragrapgh.Foreground = Brushes.HotPink;
+                    information.Text = (randomTip);
+                    information.Foreground = Brushes.HotPink;
                 }
                 
             }
@@ -183,8 +183,8 @@ namespace Cybot
 
                     int index = rand.Next(browsingTip.Count);
                     string randomTip = browsingTip[index];
-                    paragrapgh.Text = (randomTip);
-                    paragrapgh.Foreground = Brushes.HotPink;
+                    information.Text = (randomTip);
+                    information.Foreground = Brushes.HotPink;
                 }
                 
             }
