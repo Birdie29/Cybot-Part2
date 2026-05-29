@@ -85,6 +85,7 @@ namespace Cybot
         {
             string chats = pick.Text;
             string state = info.Text;
+            string reply = detect.Text;
 
             if (!chats.Contains("password") && !chats.Contains("scam") && !chats.Contains("privacy"))
             {
@@ -98,7 +99,7 @@ namespace Cybot
                 paragrapgh.Foreground = Brushes.HotPink;
                 
             }
-           else if(chats.Contains("another tip") || chats.Contains(("explain more")) || chats.Contains("tell me more"))
+           else if(state.Contains("another tip") || state.Contains(("explain more")) || state.Contains("tell me more"))
             {
                 List<string> passwordTip = new List<string>();
                 {
@@ -119,7 +120,7 @@ namespace Cybot
 
                 }
             }
-           else if(state.Contains("worried") || state.Contains("confused") || state.Contains("frustrated"))
+           else if(reply.Contains("worried") || reply.Contains("confused") || reply.Contains("frustrated"))
             {
                 Dictionary<string, string> emotion = new Dictionary<string, string>();
                 {
@@ -141,7 +142,7 @@ namespace Cybot
                 paragrapgh.Text = "Since your enthusiastic about " + chats + " ensure the sites URL begins with https and that a closed lock icon is visible near the address bar.";
                 paragrapgh.Foreground = Brushes.HotPink;
             }
-            else if (chats.Contains("give me another tip") || chats.Contains("explain more") || chats.Contains("tell me more"))
+            else if (state.Contains("give me another tip") || state.Contains("explain more") || state.Contains("tell me more"))
             {
                 List<string> phishingTip = new List<string>();
                 {
@@ -159,7 +160,7 @@ namespace Cybot
                 }
                 
             }
-            else if (state.Contains("worried") || state.Contains("confused") || state.Contains("frustrated")) 
+            else if (reply.Contains("worried") || reply.Contains("confused") || reply.Contains("frustrated")) 
             {
                 Dictionary<string, string> emotion = new Dictionary<string, string>();
                 {
@@ -180,7 +181,7 @@ namespace Cybot
                 paragrapgh.Text = "Since you're all about " + chats + " you need to limit the personal information you share online.";
                 paragrapgh.Foreground = Brushes.HotPink;
             }
-            else if (chats.Contains("give me another tip") || chats.Contains("explain more") || chats.Contains("tell me more"))
+            else if (state.Contains("give me another tip") || state.Contains("explain more") || state.Contains("tell me more"))
             {
                 List<string> browsingTip = new List<string>();
                 {
@@ -198,7 +199,7 @@ namespace Cybot
                 }
                 
             }
-            else if (state.Contains("worried") || state.Contains("confused") || state.Contains("frustrated")) 
+            else if (reply.Contains("worried") || reply.Contains("confused") || reply.Contains("frustrated")) 
             {
                 Dictionary<string, string> emotion = new Dictionary<string, string>();
                 {
