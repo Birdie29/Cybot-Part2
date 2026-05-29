@@ -30,7 +30,10 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+                 <RowDefinition Height="Auto"/>
+                 <RowDefinition Height="Auto"/>
+                 <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
             <Image Grid.Row="0"  Margin="0,0,0,87" Grid.RowSpan="2"/>
 
@@ -123,7 +126,30 @@
                 <TextBlock x:Name="paragrapgh" FontFamily="Cascadia Mono" FontSize="16" FontWeight="Bold" Foreground="HotPink"/>
             </Grid>
 
-            <Grid Grid.Row="13">
+                <Grid Grid.Row="13">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Do you need any additional tips?" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Bold" FontSize="19" HorizontalAlignment="Center"></Label>
+                </Grid>
+
+                <Grid Grid.Row="14">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBox x:Name="info" Foreground="HotPink" FontFamily="Cascadia Mono" FontSize="16" Width="500" Padding="10"></TextBox>
+                </Grid>
+
+                <Grid Grid.Row="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock x:Name="information" FontFamily="Cascadia Mono" FontSize="16" FontWeight="Medium"></TextBlock>
+                </Grid>
+            
+            <Grid Grid.Row="16">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
@@ -132,21 +158,21 @@
                 
             </Grid>
 
-            <Grid Grid.Row="14">
+            <Grid Grid.Row="17">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <TextBox x:Name="detect" Foreground="HotPink" Width="500" Padding="10" FontSize="16" FontFamily="Cascadia Mono" FontWeight="Medium"></TextBox>
             </Grid>
 
-            <Grid Grid.Row="15">
+            <Grid Grid.Row="18">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <TextBlock x:Name="error" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="16"></TextBlock>
             </Grid>
             
-            <Grid Grid.Row="16">
+            <Grid Grid.Row="19">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
