@@ -203,9 +203,9 @@ namespace Cybot
             {
                 Dictionary<string, string> emotion = new Dictionary<string, string>();
                 {
-                    emotion.Add("worried", "It's okay to feel uncertain about this");
-                    emotion.Add("confused", "Let's simplify it step by step");
-                    emotion.Add("frustrated", "It makes total sense that your frustrated");
+                    emotion.Add("worried", "It's okay to feel uncertain about this certain sites request permissions from your browsers to access your cameras, microphones and geolocational data.");
+                    emotion.Add("confused", "Let's simplify it step by step your browser can collect data about your browsing habits and share it with third parties to deliver targeted adverts to you.");
+                    emotion.Add("frustrated", "It makes total sense that your frustrated your device can use your IP address and Wi-Fi to collect and share information about your location with websites.");
 
                     foreach (var motion in emotion) 
                     {
