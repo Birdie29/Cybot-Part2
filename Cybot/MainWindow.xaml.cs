@@ -41,7 +41,7 @@ namespace Cybot
           
             Username();
             FavTopic();
-           // BotTopics();
+            BotTopics();
            
         }
 

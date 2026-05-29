@@ -112,7 +112,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox  x:Name="pick"  Width="500" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="HotPink" FontSize="10" FontWeight="Medium"/>
+                <TextBox x:Name="pick" Width="500" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="HotPink" FontSize="16" FontWeight="Medium"/>
             </Grid>
             
             <Grid Grid.Row="12">
@@ -120,7 +120,7 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <TextBlock x:Name="paragrapgh" FontFamily="Cascadia Mono" FontSize="14" FontWeight="Bold" Foreground="HotPink"/>
+                <TextBlock x:Name="paragrapgh" FontFamily="Cascadia Mono" FontSize="16" FontWeight="Bold" Foreground="HotPink"/>
             </Grid>
 
             <Grid Grid.Row="13">
@@ -136,7 +136,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox Name="detect" Foreground="HotPink" Width="500" Padding="10" FontSize="8" FontFamily="Cascadia Mono" FontWeight="Medium"></TextBox>
+                <TextBox x:Name="detect" Foreground="HotPink" Width="500" Padding="10" FontSize="16" FontFamily="Cascadia Mono" FontWeight="Medium"></TextBox>
             </Grid>
 
             <Grid Grid.Row="15">
