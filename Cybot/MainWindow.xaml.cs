@@ -85,21 +85,21 @@ namespace Cybot
         {
             string chats = pick.Text;
             string state = info.Text;
-            string reply = detect.Text;
+            string concern = detect.Text;
 
             if (!chats.Contains("password") && !chats.Contains("scam") && !chats.Contains("privacy"))
             {
                 paragrapgh.Text = "I'm sorry your choice doesn't meet the bots topics";
                 paragrapgh.Foreground = Brushes.Red;
             }
-           
-           if(chats.Contains("password"))
+
+            if (chats.Contains("password"))
             {
                 paragrapgh.Text = "As someone who's interested in " + chats + " Aim for a password length of atleast 12 characters long.";
                 paragrapgh.Foreground = Brushes.HotPink;
-                
+
             }
-           else if(state.Contains("another tip") || state.Contains(("explain more")) || state.Contains("tell me more"))
+            else if (state.Contains("another tip") || state.Contains(("explain more")) || state.Contains("tell me more"))
             {
                 List<string> passwordTip = new List<string>();
                 {
@@ -108,19 +108,23 @@ namespace Cybot
                     passwordTip.Add("Include a mix of characters such as uppercase and lowercase letters, numbers and special characters.");
                     passwordTip.Add("Avoid using easily discoverable information like your name, birthdate or your partners name, family members or pets");
 
-                    foreach ( var tips in passwordTip)
+                    foreach (var tips in passwordTip)
                     {
 
                         int index = rand.Next(passwordTip.Count);
                         information.Text = passwordTip[index];
                         information.Foreground = Brushes.HotPink;
-                       
 
                     }
 
                 }
             }
-           else if(reply.Contains("worried") || reply.Contains("confused") || reply.Contains("frustrated"))
+            else if (!state.Contains("another tip") || !state.Contains("explain more") || !state.Contains("tell me more"))
+            {
+                information.Text = "Oh no looks like you missed something, try to re-phrase it again please.";
+                information.Foreground = Brushes.Red;
+            }
+            else if (concern.Contains("worried") || concern.Contains("confused") || concern.Contains("frustrated"))
             {
                 Dictionary<string, string> emotion = new Dictionary<string, string>();
                 {
@@ -128,15 +132,20 @@ namespace Cybot
                     emotion.Add("confused", "I can help clarify that just stick to randomly mixed numbers, letters and symbols.");
                     emotion.Add("frustrated", "I understand your frustration simply make each password unique.");
 
-                    foreach(var motion in emotion)
+                    foreach (var motion in emotion)
                     {
-                        error.Text = motion.Value;
-                        error.Foreground = Brushes.HotPink;
+                        additionalTips.Text = motion.Value;
+                        additionalTips.Foreground = Brushes.HotPink;
                     }
                 }
-                
-            }
 
+            }
+            else if(!concern.Contains("worried") || !concern.Contains("confused") || !concern.Contains("frustrated"))
+            {
+                additionalTips.Text = "I'm sorry i didn't quite get that.";
+                additionalTips.Foreground = Brushes.Red;
+            }
+             
             if (chats.Contains("scam"))
             {
                 paragrapgh.Text = "Since your enthusiastic about " + chats + " ensure the sites URL begins with https and that a closed lock icon is visible near the address bar.";
@@ -160,7 +169,12 @@ namespace Cybot
                 }
                 
             }
-            else if (reply.Contains("worried") || reply.Contains("confused") || reply.Contains("frustrated")) 
+            else if(!state.Contains("give me another tip") || !state.Contains("explain more") || !state.Contains("tell me more")) 
+            {
+                information.Text = "Oh no looks like you missed something, mind rephrasing it please.";
+                information.Foreground = Brushes.Red;
+            }
+            else if (concern.Contains("worried") || concern.Contains("confused") || concern.Contains("frustrated")) 
             {
                 Dictionary<string, string> emotion = new Dictionary<string, string>();
                 {
@@ -170,12 +184,16 @@ namespace Cybot
 
                     foreach (var motion in emotion) 
                     {
-                        error.Text = motion.Value;
-                        error.Foreground = Brushes.HotPink;
+                        additionalTips.Text = motion.Value;
+                        additionalTips.Foreground = Brushes.HotPink;
                     }
                 }
             }
-
+            else if(!concern.Contains("worried") || !concern.Contains("confused") || !concern.Contains("frustrated")) 
+            {
+                additionalTips.Text = "I'm sorry i didnt quite get that.";
+                additionalTips.Foreground = Brushes.Red;
+            }
             if (chats.Contains("privacy"))
             {
                 paragrapgh.Text = "Since you're all about " + chats + " you need to limit the personal information you share online.";
@@ -199,7 +217,12 @@ namespace Cybot
                 }
                 
             }
-            else if (reply.Contains("worried") || reply.Contains("confused") || reply.Contains("frustrated")) 
+            else if(!state.Contains("give me another tip") || !state.Contains("explain more") || !state.Contains("tell me more"))
+            {
+                information.Text = "Oh no looks like you missed something mind rephrasing it please.";
+                information.Foreground = Brushes.Red;
+            }
+            else if (concern.Contains("worried") || concern.Contains("confused") || concern.Contains("frustrated")) 
             {
                 Dictionary<string, string> emotion = new Dictionary<string, string>();
                 {
@@ -209,10 +232,15 @@ namespace Cybot
 
                     foreach (var motion in emotion) 
                     {
-                        error.Text = motion.Value;
-                        error.Foreground = Brushes.HotPink;
+                        additionalTips.Text = motion.Value;
+                        additionalTips.Foreground = Brushes.HotPink;
                     }
                 }
+            }
+            else if(!concern.Contains("worried") || !concern.Contains("confused") || !concern.Contains("frustrated")) 
+            {
+                additionalTips.Text = "I'm sorry i didnt quite get that";
+                additionalTips.Foreground = Brushes.Red;
             }
         }
         

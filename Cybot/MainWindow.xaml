@@ -169,7 +169,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBlock x:Name="error" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="16" HorizontalAlignment="Center"></TextBlock>
+                <TextBlock x:Name="additionalTips" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="16" HorizontalAlignment="Center"></TextBlock>
             </Grid>
             
             <Grid Grid.Row="19">
