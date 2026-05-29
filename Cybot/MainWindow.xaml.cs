@@ -55,8 +55,8 @@ namespace Cybot
             }
             else
             {
-                message.Text= "Nice to meet you " + name + "is there any cybersecurity topic that sparks your interest?";
-                message.Foreground = Brushes.Pink;
+                message.Text = "Nice to meet you " + name + "is there any cybersecurity topic that sparks your interest?";
+                message.Foreground = Brushes.HotPink;
             }
         }
 
@@ -68,6 +68,7 @@ namespace Cybot
             {
                 fav.Text = "I'm sorry i didn't get that please re-enter your topic";
                 fav.Foreground = Brushes.Red;
+                
             }
             else 
             {
@@ -109,6 +110,7 @@ namespace Cybot
                     int index = rand.Next(passwordTip.Count);
                     string randomTip = passwordTip[index];
                     paragrapgh.Text = (randomTip);
+                    paragrapgh.Foreground = Brushes.HotPink;
                 }
             }
            else if(state.Contains("worried") || state.Contains("confused") || state.Contains("frustrated"))
@@ -122,6 +124,7 @@ namespace Cybot
                     foreach(var motion in emotion)
                     {
                         error.Text = motion.Value;
+                        paragrapgh.Foreground = Brushes.HotPink;
                     }
                 }
                 
@@ -144,6 +147,7 @@ namespace Cybot
                     int index = rand.Next(phishingTip.Count);
                     string randomTip = phishingTip[index];
                     paragrapgh.Text = (randomTip);
+                    paragrapgh.Foreground = Brushes.HotPink;
                 }
                 
             }
@@ -180,6 +184,7 @@ namespace Cybot
                     int index = rand.Next(browsingTip.Count);
                     string randomTip = browsingTip[index];
                     paragrapgh.Text = (randomTip);
+                    paragrapgh.Foreground = Brushes.HotPink;
                 }
                 
             }

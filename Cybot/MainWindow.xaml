@@ -49,7 +49,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox x:Name="username" HorizontalContentAlignment="Left" VerticalAlignment="Center" Width="500" Padding="10" Background="White" Foreground="HotPink"/>
+                <TextBox x:Name="username" HorizontalContentAlignment="Left" VerticalAlignment="Center" Width="500" Padding="10" Background="White" Foreground="HotPink" FontFamily="Cascadia Mono" FontWeight="Medium"/>
             </Grid>
             
             <Grid Grid.Row="4">
@@ -57,7 +57,7 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <TextBlock x:Name="message" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="14" FontFamily="Cascadia Mono" Foreground="HotPink"/>
+                <TextBlock x:Name="message" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="ExtraBold" FontSize="16" FontFamily="Cascadia Mono" Foreground="HotPink"/>
             </Grid>
 
 
@@ -74,7 +74,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox x:Name="favTopic" Width="500" Padding="10" Foreground="LightPink"  FontFamily="Cascadia Mono" FontWeight="Bold" />
+                <TextBox x:Name="favTopic" Width="500" Padding="10" Foreground="HotPink"  FontFamily="Cascadia Mono" FontWeight="Medium" />
 
             </Grid>
             
@@ -82,7 +82,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBlock  x:Name="fav" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock  x:Name="fav" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Cascadia Mono" FontWeight="ExtraBold"/>
 
             </Grid>
 
@@ -112,7 +112,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox  x:Name="pick"  Width="500" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="HotPink" FontSize="9" FontWeight="Bold"/>
+                <TextBox  x:Name="pick"  Width="500" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="HotPink" FontSize="10" FontWeight="Medium"/>
             </Grid>
             
             <Grid Grid.Row="12">
@@ -120,7 +120,7 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Name="paragrapgh" FontFamily="Cascadia Mono" FontSize="15" FontWeight="Bold" Foreground="HotPink"/>
+                <TextBlock x:Name="paragrapgh" FontFamily="Cascadia Mono" FontSize="14" FontWeight="Bold" Foreground="HotPink"/>
             </Grid>
 
             <Grid Grid.Row="13">
@@ -136,14 +136,14 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox Name="detect" Foreground="HotPink" Width="500" Padding="10" FontSize="8" FontFamily="Cascadia Mono" FontWeight="Bold"></TextBox>
+                <TextBox Name="detect" Foreground="HotPink" Width="500" Padding="10" FontSize="8" FontFamily="Cascadia Mono" FontWeight="Medium"></TextBox>
             </Grid>
 
             <Grid Grid.Row="15">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBlock x:Name="error" FontFamily="Cascadia Mono"></TextBlock>
+                <TextBlock x:Name="error" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="16"></TextBlock>
             </Grid>
             
             <Grid Grid.Row="16">
