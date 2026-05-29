@@ -85,7 +85,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBlock  x:Name="fav" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Cascadia Mono" FontWeight="ExtraBold"/>
+                <TextBlock  x:Name="fav" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Cascadia Mono"  FontSize="16" FontWeight="ExtraBold"/>
 
             </Grid>
 
