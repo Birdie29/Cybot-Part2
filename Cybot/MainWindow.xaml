@@ -5,28 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cybot"
         mc:Ignorable="d"
-        Title="Cybot" Height="900" Width="900">
+        Title="Cybot" Height="800" Width="900">
     <Grid Background="Pink">
 
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            
+        
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="90*"/>
-                <RowDefinition Height="90*"/>
-                <RowDefinition Height="90*"/>
-                <RowDefinition Height="90*"/>
-                <RowDefinition Height="90*"/>
-                <RowDefinition Height="90*"/>
-                <RowDefinition Height="90*"/>
-                <RowDefinition Height="90*"/>
-                <RowDefinition Height="90*"/>
-                <RowDefinition Height="90*"/>
-                <RowDefinition Height="90*"/>
-                <RowDefinition Height="90*"/>
-                <RowDefinition Height="90*"/>
-                <RowDefinition Height="90*"/>
-                <RowDefinition Height="90*"/>
-                <RowDefinition Height="90*"/>
-                <RowDefinition Height="90*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <Image Grid.Row="0"  Margin="0,0,0,87" Grid.RowSpan="2"/>
@@ -46,7 +49,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox  x:Name="username" HorizontalContentAlignment="Left" VerticalAlignment="Center" Width="500" Padding="10" Background="White" />
+                <TextBox x:Name="username" HorizontalContentAlignment="Left" VerticalAlignment="Center" Width="500" Padding="10" Background="White" Foreground="HotPink"/>
             </Grid>
             
             <Grid Grid.Row="4">
@@ -71,7 +74,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox x:Name="favTopic" Width="500" Padding="30" Foreground="LightPink"  FontFamily="Cascadia Mono" FontWeight="Bold" />
+                <TextBox x:Name="favTopic" Width="500" Padding="10" Foreground="LightPink"  FontFamily="Cascadia Mono" FontWeight="Bold" />
 
             </Grid>
             
@@ -89,10 +92,10 @@
 
             </Grid>
 
-            <StackPanel Grid.Row="9">
-                <TextBlock Name="password" Text="~Password Safety" Width="400"  HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
-                <TextBlock Name="scam" Text="~Phishing" Width="400"  HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
-                <TextBlock Name="privacy" Text="~Safe browsing" Width="400" HorizontalAlignment="Left" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
+            <StackPanel Grid.Row="9" Margin="10">
+                <TextBlock Name="password" Text="~Password Safety" Width="300"  HorizontalAlignment="Center" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
+                <TextBlock Name="scam" Text="~Phishing" Width="300"  HorizontalAlignment="Center" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
+                <TextBlock Name="privacy" Text="~Safe browsing" Width="300" HorizontalAlignment="Center" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
             </StackPanel>
 
           
@@ -109,7 +112,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox  x:Name="pick"  Width="500" Padding="20" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="HotPink" FontSize="9" FontWeight="Bold"/>
+                <TextBox  x:Name="pick"  Width="500" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="HotPink" FontSize="9" FontWeight="Bold"/>
             </Grid>
             
             <Grid Grid.Row="12">
@@ -133,7 +136,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox Name="detect" Foreground="HotPink" Width="500" FontSize="8" FontFamily="Cascadia Mono" FontWeight="Bold"></TextBox>
+                <TextBox Name="detect" Foreground="HotPink" Width="500" Padding="10" FontSize="8" FontFamily="Cascadia Mono" FontWeight="Bold"></TextBox>
             </Grid>
 
             <Grid Grid.Row="15">
@@ -151,5 +154,6 @@
             </Grid>
             
         </Grid>
+        </ScrollViewer>
     </Grid>
 </Window>

@@ -94,7 +94,7 @@ namespace Cybot
            if(chats.Contains("password"))
             {
                 paragrapgh.Text = "As someone who's interested in " + chats + " Aim for a password length of atleast 12 characters long.";
-                paragrapgh.Foreground = Brushes.Pink;
+                paragrapgh.Foreground = Brushes.HotPink;
                 
             }
            else if(chats.Contains("another tip") || chats.Contains(("explain more")) || chats.Contains("tell me more"))
@@ -130,7 +130,7 @@ namespace Cybot
             if (chats.Contains("scam"))
             {
                 paragrapgh.Text = "Since your enthusiastic about " + chats + " ensure the sites URL begins with https and that a closed lock icon is visible near the address bar.";
-
+                paragrapgh.Foreground = Brushes.HotPink;
             }
             else if (chats.Contains("give me another tip") || chats.Contains("explain more") || chats.Contains("tell me more"))
             {
@@ -158,6 +158,7 @@ namespace Cybot
                     foreach (var motion in emotion) 
                     {
                         error.Text = motion.Value;
+                        error.Foreground = Brushes.HotPink;
                     }
                 }
             }
@@ -165,7 +166,7 @@ namespace Cybot
             if (chats.Contains("privacy"))
             {
                 paragrapgh.Text = "Since you're all about " + chats + " you need to limit the personal information you share online.";
-
+                paragrapgh.Foreground = Brushes.HotPink;
             }
             else if (chats.Contains("give me another tip") || chats.Contains("explain more") || chats.Contains("tell me more"))
             {
@@ -193,6 +194,7 @@ namespace Cybot
                     foreach (var motion in emotion) 
                     {
                         error.Text = motion.Value;
+                        error.Foreground = Brushes.HotPink;
                     }
                 }
             }
