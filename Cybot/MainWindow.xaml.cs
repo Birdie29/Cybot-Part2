@@ -122,9 +122,9 @@ namespace Cybot
             {
                 Dictionary<string, string> emotion = new Dictionary<string, string>();
                 {
-                    emotion.Add("worried", "I understand why that feels worrying but remember");
-                    emotion.Add("confused", "I can help clarify that");
-                    emotion.Add("frustrated", "I understand your frustration ");
+                    emotion.Add("worried", "I understand why that feels worrying but remember all you have to do is make them long.");
+                    emotion.Add("confused", "I can help clarify that just stick to randomly mixed numbers, letters and symbols.");
+                    emotion.Add("frustrated", "I understand your frustration simply make each password unique.");
 
                     foreach(var motion in emotion)
                     {
