@@ -163,9 +163,9 @@ namespace Cybot
             {
                 Dictionary<string, string> emotion = new Dictionary<string, string>();
                 {
-                    emotion.Add("worried", "I hear your concern");
-                    emotion.Add("confused", "Heres a clearer way to look at it");
-                    emotion.Add("frustrated", "That sounds exhausting ");
+                    emotion.Add("worried", "I hear your concern if you fall victim to an attempt report it at the ReportFraud.ftc.gov.");
+                    emotion.Add("confused", "Here's a clearer way to look at it multi-factor authentication makes it harder for scammers to log into your accounts.");
+                    emotion.Add("frustrated", "That sounds exhausting just beware of suspicious links that want you to make a payment its usually corrupted with malware.");
 
                     foreach (var motion in emotion) 
                     {
