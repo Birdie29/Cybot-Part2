@@ -137,16 +137,7 @@ namespace Cybot
                         {
                             additionalTips.Text = motion.Value;
                             additionalTips.Foreground = Brushes.HotPink;
-                        }
-                        else if (concern.Contains(motion.Key))
-                        {
-                            additionalTips.Text = motion.Value;
-                            additionalTips.Foreground = Brushes.HotPink;
-                        }
-                        else if (concern.Contains(motion.Key))
-                        {
-                            additionalTips.Text = motion.Value;
-                            additionalTips.Foreground = Brushes.HotPink;
+                            break;
                         }
                         else 
                         {
@@ -204,16 +195,7 @@ namespace Cybot
                         {
                             additionalTips.Text = motion.Value;
                             additionalTips.Foreground = Brushes.HotPink;
-                        }
-                        else if (concern.Contains(motion.Key))
-                        {
-                            additionalTips.Text = motion.Value;
-                            additionalTips.Foreground = Brushes.HotPink;
-                        }
-                        else if (concern.Contains(motion.Key))
-                        {
-                            additionalTips.Text = motion.Value;
-                            additionalTips.Foreground = Brushes.HotPink;
+                            break;
                         }
                         else
                         {
@@ -272,16 +254,7 @@ namespace Cybot
                         {
                             additionalTips.Text = motion.Value;
                             additionalTips.Foreground = Brushes.HotPink;
-                        }
-                        else if (concern.Contains(motion.Key))
-                        {
-                            additionalTips.Text = motion.Value;
-                            additionalTips.Foreground = Brushes.HotPink;
-                        }
-                        else if (concern.Contains(motion.Key))
-                        {
-                            additionalTips.Text = motion.Value;
-                            additionalTips.Foreground = Brushes.HotPink;
+                            break;
                         }
                         else
                         {
