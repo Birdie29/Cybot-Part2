@@ -8,4 +8,17 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="cybotart.png" />
+    <None Remove="cybotgreeting %28online-audio-converter.com%29.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="cybotgreeting (online-audio-converter.com).wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="cybotart.png" />
+  </ItemGroup>
+
 </Project>
