@@ -30,9 +30,9 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
-                 <RowDefinition Height="Auto"/>
-                 <RowDefinition Height="Auto"/>
-                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
             <Image Grid.Row="0"  Margin="0,0,0,87" Grid.RowSpan="2"/>
@@ -44,7 +44,8 @@
 
                 </Grid.RowDefinitions>
 
-                <Label HorizontalContentAlignment="Center" Content="Please enter your name:" FontWeight="Bold" FontSize="19"  FontFamily="Cascadia Mono" Foreground="DeepPink"/>
+                <Label HorizontalContentAlignment="Center" Content="Please enter your name:" FontWeight="Bold" FontSize="19"  
+                       FontFamily="Cascadia Mono" Foreground="DeepPink"/>
                 
             </Grid>
 
@@ -52,7 +53,8 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox x:Name="username" HorizontalContentAlignment="Left" VerticalAlignment="Center" Width="500" Padding="10" Background="White"  Foreground="HotPink" FontFamily="Cascadia Mono" FontWeight="Medium"/>
+                <TextBox x:Name="username" HorizontalContentAlignment="Left" VerticalAlignment="Center" Width="500" 
+                         Padding="10" Background="White"  Foreground="HotPink" FontFamily="Cascadia Mono" FontWeight="Medium"/>
             </Grid>
             
             <Grid Grid.Row="4">
@@ -60,7 +62,8 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <TextBlock x:Name="message" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="ExtraBold" FontSize="16" FontFamily="Cascadia Mono" Foreground="HotPink"/>
+                <TextBlock x:Name="message" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="ExtraBold" 
+                           FontSize="16" FontFamily="Cascadia Mono" Foreground="HotPink"/>
             </Grid>
 
 
@@ -176,7 +179,9 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Button x:Name="Send" Click="PressClick" Width="190" BorderBrush="HotPink" BorderThickness="4"  VerticalAlignment="Top" HorizontalAlignment="Center" Content="Send"  FontSize="19" FontWeight="Bold" Foreground="Pink" Background="DeepPink" Height="66" FontFamily="Cascadia Mono" VerticalContentAlignment="Center"/>
+                <Button x:Name="Send" Click="PressClick" Width="190" BorderBrush="HotPink" BorderThickness="4"  
+                        VerticalAlignment="Top" HorizontalAlignment="Center" Content="Send"  FontSize="19" 
+                        FontWeight="Bold" Foreground="Pink" Background="DeepPink" Height="66" FontFamily="Cascadia Mono" VerticalContentAlignment="Center"/>
             </Grid>
             
         </Grid>
