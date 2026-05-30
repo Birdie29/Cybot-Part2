@@ -131,21 +131,34 @@ namespace Cybot
                     emotion.Add("confused", "I can help clarify that just stick to randomly mixed numbers, letters and symbols.");
                     emotion.Add("frustrated", "I understand your frustration simply make each password unique.");
 
-                    foreach (var motion in emotion)
+                   foreach( var motion in emotion)
                     {
-                        additionalTips.Text = motion.Value;
-                        additionalTips.Foreground = Brushes.HotPink;
+                        if (concern.Contains(motion.Key))
+                        {
+                            additionalTips.Text = motion.Value;
+                            additionalTips.Foreground = Brushes.HotPink;
+                        }
+                        else if (concern.Contains(motion.Key))
+                        {
+                            additionalTips.Text = motion.Value;
+                            additionalTips.Foreground = Brushes.HotPink;
+                        }
+                        else if (concern.Contains(motion.Key))
+                        {
+                            additionalTips.Text = motion.Value;
+                            additionalTips.Foreground = Brushes.HotPink;
+                        }
+                        else 
+                        {
+                            additionalTips.Text = " I'm sorry i didn't quite get that.";
+                            additionalTips.Foreground = Brushes.Red;
+                        }
                     }
                 }
 
             }
-            else if(!concern.Contains("worried") && !concern.Contains("confused") && !concern.Contains("frustrated"))
-            {
-                additionalTips.Text = "I'm sorry i didn't quite get that.";
-                additionalTips.Foreground = Brushes.Red;
-            }
+           
 
-             
             if (chats.Contains("scam"))
             {
                 paragrapgh.Text = "Since your enthusiastic about " + chats + " " +
@@ -186,17 +199,31 @@ namespace Cybot
 
                     foreach (var motion in emotion) 
                     {
-                        additionalTips.Text = motion.Value;
-                        additionalTips.Foreground = Brushes.HotPink;
+
+                        if (concern.Contains(motion.Key))
+                        {
+                            additionalTips.Text = motion.Value;
+                            additionalTips.Foreground = Brushes.HotPink;
+                        }
+                        else if (concern.Contains(motion.Key))
+                        {
+                            additionalTips.Text = motion.Value;
+                            additionalTips.Foreground = Brushes.HotPink;
+                        }
+                        else if (concern.Contains(motion.Key))
+                        {
+                            additionalTips.Text = motion.Value;
+                            additionalTips.Foreground = Brushes.HotPink;
+                        }
+                        else
+                        {
+                            additionalTips.Text = " I'm sorry i didn't quite get that.";
+                            additionalTips.Foreground = Brushes.Red;
+                        }
                     }
                 }
             }
-            else if(!concern.Contains("worried") && !concern.Contains("confused") && !concern.Contains("frustrated")) 
-            {
-                additionalTips.Text = "I'm sorry i didn't quite get that.";
-                additionalTips.Foreground = Brushes.Red;
-            }
-
+           
 
             if (chats.Contains("privacy"))
             {
@@ -240,16 +267,31 @@ namespace Cybot
 
                     foreach (var motion in emotion) 
                     {
-                        additionalTips.Text = motion.Value;
-                        additionalTips.Foreground = Brushes.HotPink;
+
+                        if (concern.Contains(motion.Key))
+                        {
+                            additionalTips.Text = motion.Value;
+                            additionalTips.Foreground = Brushes.HotPink;
+                        }
+                        else if (concern.Contains(motion.Key))
+                        {
+                            additionalTips.Text = motion.Value;
+                            additionalTips.Foreground = Brushes.HotPink;
+                        }
+                        else if (concern.Contains(motion.Key))
+                        {
+                            additionalTips.Text = motion.Value;
+                            additionalTips.Foreground = Brushes.HotPink;
+                        }
+                        else
+                        {
+                            additionalTips.Text = " I'm sorry i didn't quite get that.";
+                            additionalTips.Foreground = Brushes.Red;
+                        }
                     }
                 }
             }
-            else if(!concern.Contains("worried") && !concern.Contains("confused") && !concern.Contains("frustrated")) 
-            {
-                additionalTips.Text = "I'm sorry i didn't quite get that";
-                additionalTips.Foreground = Brushes.Red;
-            }
+           
         }
         
        
