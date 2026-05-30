@@ -22,19 +22,17 @@ namespace Cybot
         public MainWindow()
         {
             InitializeComponent();
-           // chatBotGreeting();
+            chatBotGreeting();
           
-            //PressClick();
-         
         }
-        /*
+      
         private void chatBotGreeting()
         {
-            string greeting = "/audio/cybotgreeting (online-audio-converter.com).wav";
+            string greeting = "cybotgreeting (online-audio-converter.com).wav";
             SoundPlayer player = new SoundPlayer(greeting);
             player.Play();
         }
-        */
+        
 
         private void PressClick(object sender, RoutedEventArgs e)
         {
