@@ -35,7 +35,7 @@
                 <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-            <Image Grid.Row="0"  Margin="0,0,0,87" Grid.RowSpan="2"/>
+            <Image Grid.Row="0"  Source="/cybotart.png" Margin="0,0,0,87" Grid.RowSpan="2"/>
 
 
             <Grid Grid.Row="2">
