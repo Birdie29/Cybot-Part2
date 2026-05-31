@@ -21,5 +21,7 @@ USAGE:
 
 As soon as the program loads the user sees the screen with several questions that need user input the user will have textboxes whereby input is required for every invalid input an error message will display back to the user in red if valid then a pink font will lso display back to the user to indicate that the value has been detected and stored by the program. To be able to see those messages for every input the user would have to press the send button to be able to engage with the program.
 
+Furthermore generic collections such as lists and dictionaries have been utilised specifically for those follow up requests by the user to know more about a specific topic or to clear up any feelings of confusion, frustration or worry.
+
 Github has been used to create a readme file to be able to make commits and push them alternatively it aslo contains timestapms regarding when the program started and the names of every single commits that have been made.
  
