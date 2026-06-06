@@ -267,7 +267,8 @@ namespace Cybot
                 rb2 = "B)Advising teenagers on how to properly catch a fish.",
                 rb3 = "C)It's an expression used in culinary terms.",
                 rb4 = "D)It's a form of spyware.",
-                correct = "A"});
+                correct = "A",}
+                );
 
                 questions.Add(new Questions
                 { txtQuestion = "What are some red flags that an email you received is probably a scam?",
@@ -359,6 +360,12 @@ namespace Cybot
                     rb2 = "False.",
                     correct = "False"
                 });
+
+                
+                foreach (Questions quest in questions)
+                {
+                    if()
+                }
             }
         }
         

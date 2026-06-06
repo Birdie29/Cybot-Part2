@@ -13,7 +13,7 @@ namespace Cybot
         public string rb4 { get; set; }
         public string correct {  get; set; }
         public string txtFeedback {  get; set; }
-        
+        public string tstScore { get; set; } 
 
     }
 }
