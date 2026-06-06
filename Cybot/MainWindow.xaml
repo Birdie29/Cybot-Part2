@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cybot"
         mc:Ignorable="d"
-        Title="Cybot" Height="1800" Width="1800">
+        Title="Cybot" Height="4619" Width="4005">
     <Grid Background="Pink">
 
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,0,0,10">
 
 
             <Grid>
@@ -196,8 +196,8 @@
                     <Label Content="Enter your reminder date please:" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19" FontWeight="Bold" HorizontalAlignment="Center"></Label>
                     <DatePicker Name="reminder" Foreground="DeepPink" Width="500" Padding="10" SelectedDateFormat="Short"></DatePicker>
 
-                    <TextBlock Name="feedback" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="19" HorizontalAlignment="Center"></TextBlock>
-                    
+                    <TextBlock Name="feedback" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="19" HorizontalAlignment="Center" Width="1500"></TextBlock>
+
                     <Grid Margin="10,10,10,10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="10*"/>
@@ -209,7 +209,32 @@
                         <Button Grid.Column="2" Name="complete" Content="Mark Complete" Width="250" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="20" Background="DeepPink" Padding="15"></Button>
                     </Grid>
                 </StackPanel>
- 
+
+                <StackPanel Grid.Row="21">
+                    <Label Content="Would you like to play a game?" FontWeight="Bold" HorizontalAlignment="Center" Foreground="DeepPink" FontFamily="Cascadia Mono" FontSize="19"></Label>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80*"/>
+                            <ColumnDefinition Width="80*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Name="btnyes" Content="YES" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="200" Background="DeepPink" Padding="10"></Button>
+                        <Button Grid.Column="1" Name="btnno" Content="NO" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="200" Background="DeepPink" Padding="10"></Button>
+                    </Grid>
+
+                    <StackPanel Grid.Row="21">
+                        <Label Name="txtQuestion" Content="What do you understand by the term phishing?" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19" FontWeight="Bold"></Label>
+                        <RadioButton Name="rb1" Content="A)Online fraud that tricks people into providing sensitive information like passwords or credit card information." Foreground="DeepPink" FontSize="19" FontWeight="Bold"></RadioButton>
+                        <RadioButton Name="rb2" Content="B)Advising teenagers on how to properly catch a fish." Foreground="DeepPink"></RadioButton>
+                        <RadioButton Name="rb3" Content="C)It's an expression used in cullinary terms." Foreground="DeepPink"></RadioButton>
+                        <RadioButton Name="rb4" Content="D)It's a form of spyware."></RadioButton>
+                        <TextBlock Name="txtFeedback" FontFamily="Cascadia Mono" FontSize="16" FontWeight="ExtraBold"></TextBlock>
+                        <Button Name="btnext" Content="NEXT" Width="250" HorizontalAlignment="Left"></Button>
+                        
+                    </StackPanel>
+                </StackPanel>
+
+
+
                 <Grid Grid.Row="23">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
