@@ -228,7 +228,7 @@
                         <RadioButton Name="rb3" Content="C)It's an expression used in cullinary terms." Foreground="DeepPink"></RadioButton>
                         <RadioButton Name="rb4" Content="D)It's a form of spyware."></RadioButton>
                         <TextBlock Name="txtFeedback" FontFamily="Cascadia Mono" FontSize="16" FontWeight="ExtraBold"></TextBlock>
-                        <Button Name="btnext" Content="NEXT" Width="250" HorizontalAlignment="Left"></Button>
+                        <TextBlock Name="txtScore" FontFamily="Cascadia Mono" FontSize="20" FontWeight="ExtraBold"></TextBlock>
                         
                     </StackPanel>
                 </StackPanel>

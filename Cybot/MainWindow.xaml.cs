@@ -18,14 +18,14 @@ namespace Cybot
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+
         public MainWindow()
         {
             InitializeComponent();
-           
+
         }
-      
-      
+
+
         private void PressClick(object sender, RoutedEventArgs e)
         {
             Username();
@@ -48,17 +48,17 @@ namespace Cybot
             }
         }
 
-       
-        public void FavTopic() 
+
+        public void FavTopic()
         {
             string topic = favTopic.Text;
             if (string.IsNullOrWhiteSpace(topic))
             {
                 fav.Text = "I'm sorry i didn't get that please re-enter your topic";
                 fav.Foreground = Brushes.Red;
-                
+
             }
-            else 
+            else
             {
                 fav.Text = "Great! I'll be sure to remember that you're interested in " + topic + ". It's a crucial part of staying safe online.";
                 fav.Foreground = Brushes.HotPink;
@@ -66,9 +66,9 @@ namespace Cybot
 
         }
 
-        
+
         Random rand = new Random();
-       
+
         public void BotTopics()
         {
             string chats = pick.Text;
@@ -121,7 +121,7 @@ namespace Cybot
                     emotion.Add("confused", "I can help clarify that just stick to randomly mixed numbers, letters and symbols.");
                     emotion.Add("frustrated", "I understand your frustration simply make each password unique.");
 
-                   foreach( var motion in emotion)
+                    foreach (var motion in emotion)
                     {
                         if (concern.Contains(motion.Key))
                         {
@@ -129,7 +129,7 @@ namespace Cybot
                             additionalTips.Foreground = Brushes.HotPink;
                             break;
                         }
-                        else 
+                        else
                         {
                             additionalTips.Text = " I'm sorry i didn't quite get that.";
                             additionalTips.Foreground = Brushes.Red;
@@ -138,7 +138,7 @@ namespace Cybot
                 }
 
             }
-           
+
 
             if (chats.Contains("scam"))
             {
@@ -155,21 +155,21 @@ namespace Cybot
                     phishingTip.Add("Regularly update your operating system, browsers and apps. Updates include security patches.");
                     phishingTip.Add("Consider using password managers to generate and store passwords for you.");
 
-                    foreach (var tips in phishingTip) 
+                    foreach (var tips in phishingTip)
                     {
                         int index = rand.Next(phishingTip.Count);
-                        information.Text= phishingTip[index];
+                        information.Text = phishingTip[index];
                         information.Foreground = Brushes.HotPink;
                     }
                 }
-                
+
             }
-            else if(!state.Contains("give me another tip") && !state.Contains("explain more") && !state.Contains("tell me more")) 
+            else if (!state.Contains("give me another tip") && !state.Contains("explain more") && !state.Contains("tell me more"))
             {
                 information.Text = "Oh no looks like you missed something, mind rephrasing it please.";
                 information.Foreground = Brushes.Red;
             }
-            else if (concern.Contains("worried") || concern.Contains("confused") || concern.Contains("frustrated")) 
+            else if (concern.Contains("worried") || concern.Contains("confused") || concern.Contains("frustrated"))
             {
                 Dictionary<string, string> emotion = new Dictionary<string, string>();
                 {
@@ -178,7 +178,7 @@ namespace Cybot
                     emotion.Add("frustrated", "That sounds exhausting just beware of suspicious links that want you to " +
                         "make a payment its usually corrupted with malware.");
 
-                    foreach (var motion in emotion) 
+                    foreach (var motion in emotion)
                     {
 
                         if (concern.Contains(motion.Key))
@@ -195,7 +195,7 @@ namespace Cybot
                     }
                 }
             }
-           
+
 
             if (chats.Contains("privacy"))
             {
@@ -212,21 +212,21 @@ namespace Cybot
                     browsingTip.Add("Treat online safety as an ongoing habit because staying informed, revisiting basic practices and " +
                         "adjusting behavior overtime builds resilience.");
 
-                    foreach (var tips in browsingTip) 
+                    foreach (var tips in browsingTip)
                     {
                         int index = rand.Next(browsingTip.Count);
                         information.Text = browsingTip[index];
                         information.Foreground = Brushes.HotPink;
                     }
                 }
-                
+
             }
-            else if(!state.Contains("give me another tip") && !state.Contains("explain more") && !state.Contains("tell me more"))
+            else if (!state.Contains("give me another tip") && !state.Contains("explain more") && !state.Contains("tell me more"))
             {
                 information.Text = "Oh no looks like you missed something mind rephrasing it please.";
                 information.Foreground = Brushes.Red;
             }
-            else if (concern.Contains("worried") || concern.Contains("confused") || concern.Contains("frustrated")) 
+            else if (concern.Contains("worried") || concern.Contains("confused") || concern.Contains("frustrated"))
             {
                 Dictionary<string, string> emotion = new Dictionary<string, string>();
                 {
@@ -237,7 +237,7 @@ namespace Cybot
                     emotion.Add("frustrated", "It makes total sense that your " +
                         "frustrated your device can use your IP address and Wi-Fi to collect and share information about your location with websites.");
 
-                    foreach (var motion in emotion) 
+                    foreach (var motion in emotion)
                     {
 
                         if (concern.Contains(motion.Key))
@@ -254,8 +254,115 @@ namespace Cybot
                     }
                 }
             }
-           
+
         }
+
+        public void topicQuestions() 
+        { 
+            List<Questions> questions = new List<Questions>();
+            {
+                questions.Add(new Questions
+                { txtQuestion = "What is meant by the term phishing?" ,
+                rb1 = "A)Online fraud that tricks people into providing sensitive information like passwords or card information.",
+                rb2 = "B)Advising teenagers on how to properly catch a fish.",
+                rb3 = "C)It's an expression used in culinary terms.",
+                rb4 = "D)It's a form of spyware.",
+                correct = "A"});
+
+                questions.Add(new Questions
+                { txtQuestion = "What are some red flags that an email you received is probably a scam?",
+                rb1 = "A)The email is generic.",
+                rb2 = "B)The email says your account is on hold because of a billing problem.",
+                rb3 = "C)The email invites you to click on a link to update your payment details.",
+                rb4 = "D)All of the above.",
+                correct = "D"});
+
+                questions.Add(new Questions
+                {txtQuestion = "If you received a phishing email what authorities would you report it to?" ,
+                rb1 = "A)SAPS",
+                rb2 = "B)SABC",
+                rb3 = "C)CIA",
+                rb4 = "D)FTC",
+                correct = "D"});
+
+                questions.Add(new Questions
+                { txtQuestion = "Why should you always strive for longer passwords?",
+                rb1 = "A)Longer passwords make it harder for attackers to guess or crack it through brute force methods.",
+                rb2 = "B)It's meant to look like that.",
+                rb3 = "C)It reduces the risk of exploiting your personal information.",
+                rb4 = "D)To be able to share it with unknown people online.",
+                correct = "A"});
+
+                questions.Add(new Questions
+                { txtQuestion = "What potential risks am i going to face if i don't change my passwords regularly?",
+                rb1 = "A)You might get a free voucher.",
+                rb2 = "B)Risks related to data breaches and unauthorised access for critical accounts like email or banking.",
+                rb3 = "C)Some random individual might have access to your work phone number.",
+                rb4 = "D)Someone may have access to your Netflix account.",
+                correct = "B"});
+
+                questions.Add(new Questions
+                {
+                    txtQuestion = "What role do special characters play when creating passwords?",
+                    rb1 = "A)They make the password more aesthetically appealing.",
+                    rb2 = "B)They ensure that your password is as strong as possible.",
+                    rb3 = "C)Hackers wont be able to gain access to your information.",
+                    rb4 = "D)To safeguard my favorite clothing brand account information.",
+                    correct = "B"
+                });
+
+
+                questions.Add(new Questions
+                {
+                    txtQuestion = "Choosing to not update my device means that my software will run efficiently.",
+                    rb1 = "True.",
+                    rb2 = "False.",
+                    correct = "False"
+                });
+
+                questions.Add(new Questions
+                {
+                    txtQuestion = "Using HTTPS encrypts data exchanged between your web browser and the website your visiting making it difficult for hackers to intercept your information.",
+                    rb1 = "True.",
+                    rb2 = "False.",
+                    correct = "True"
+                });
+
+                questions.Add(new Questions 
+                {
+                    txtQuestion = "Being aware of the latest online threats and how to protect yourself is crucial in maintaining your online security..",
+                    rb1 = "True.",
+                    rb2 = "False.",
+                    correct = "True"
+                });
+
+                questions.Add(new Questions
+                {
+                    txtQuestion = "Social engineering is a harmless action whereby people unknowingly share sensitive information about themselves.",
+                    rb1 = "True.",
+                    rb2 = "False.",
+                    correct = "False"
+                });
+
+                questions.Add(new Questions
+                {
+                    txtQuestion = "It's a must that you allow an unknown individual to physically follow you to a restricted area while claiming they have mislaid their pass.",
+                    rb1 = "True.",
+                    rb2 = "False.",
+                    correct = "False"
+                });
+
+                questions.Add(new Questions
+                {
+                    txtQuestion = "Social engineering attacks are not always easy to detect and therefore organisations should never conduct proper training for their staff.",
+                    rb1 = "True.",
+                    rb2 = "False.",
+                    correct = "False"
+                });
+            }
+        }
+        
+ 
         
        
     }
