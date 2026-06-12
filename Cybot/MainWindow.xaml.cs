@@ -8,7 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Sound;
+using System.Media;
 using System.Collections.Generic;
 
 namespace Cybot
@@ -257,7 +257,7 @@ namespace Cybot
 
         }
 
-
+        public void 
         List<Questions> questions = new List<Questions>();
         string userOption = "";
         string correct = "";
