@@ -257,21 +257,28 @@ namespace Cybot
 
         }
 
+        List<Questions> questions = new List<Questions>();
+        string userOption = "";
+        string correct = "";
+        int totalScore = 0;
+        int currentQuestion = 0;
+        int currentIndex = 0;
+
         public void topicQuestions() 
         { 
-            List<Questions> questions = new List<Questions>();
+            
             {
                 questions.Add(new Questions
-                { txtQuestion = "What is meant by the term phishing?" ,
+                { txtQuestion = "1)What is meant by the term phishing?" ,
                 rb1 = "A)Online fraud that tricks people into providing sensitive information like passwords or card information.",
                 rb2 = "B)Advising teenagers on how to properly catch a fish.",
                 rb3 = "C)It's an expression used in culinary terms.",
                 rb4 = "D)It's a form of spyware.",
-                correct = "A",}
-                );
-
+                correct = "A",
+                });
+                
                 questions.Add(new Questions
-                { txtQuestion = "What are some red flags that an email you received is probably a scam?",
+                { txtQuestion = "2)What are some red flags that an email you received is probably a scam?",
                 rb1 = "A)The email is generic.",
                 rb2 = "B)The email says your account is on hold because of a billing problem.",
                 rb3 = "C)The email invites you to click on a link to update your payment details.",
@@ -279,7 +286,7 @@ namespace Cybot
                 correct = "D"});
 
                 questions.Add(new Questions
-                {txtQuestion = "If you received a phishing email what authorities would you report it to?" ,
+                {txtQuestion = "3)If you received a phishing email what authorities would you report it to?" ,
                 rb1 = "A)SAPS",
                 rb2 = "B)SABC",
                 rb3 = "C)CIA",
@@ -287,7 +294,7 @@ namespace Cybot
                 correct = "D"});
 
                 questions.Add(new Questions
-                { txtQuestion = "Why should you always strive for longer passwords?",
+                { txtQuestion = "4)Why should you always strive for longer passwords?",
                 rb1 = "A)Longer passwords make it harder for attackers to guess or crack it through brute force methods.",
                 rb2 = "B)It's meant to look like that.",
                 rb3 = "C)It reduces the risk of exploiting your personal information.",
@@ -295,7 +302,7 @@ namespace Cybot
                 correct = "A"});
 
                 questions.Add(new Questions
-                { txtQuestion = "What potential risks am i going to face if i don't change my passwords regularly?",
+                { txtQuestion = "5)What potential risks am i going to face if i don't change my passwords regularly?",
                 rb1 = "A)You might get a free voucher.",
                 rb2 = "B)Risks related to data breaches and unauthorised access for critical accounts like email or banking.",
                 rb3 = "C)Some random individual might have access to your work phone number.",
@@ -304,7 +311,7 @@ namespace Cybot
 
                 questions.Add(new Questions
                 {
-                    txtQuestion = "What role do special characters play when creating passwords?",
+                    txtQuestion = "6)What role do special characters play when creating passwords?",
                     rb1 = "A)They make the password more aesthetically appealing.",
                     rb2 = "B)They ensure that your password is as strong as possible.",
                     rb3 = "C)Hackers wont be able to gain access to your information.",
@@ -315,7 +322,7 @@ namespace Cybot
 
                 questions.Add(new Questions
                 {
-                    txtQuestion = "Choosing to not update my device means that my software will run efficiently.",
+                    txtQuestion = "7)Choosing to not update my device means that my software will run efficiently.",
                     rb1 = "True.",
                     rb2 = "False.",
                     correct = "False"
@@ -323,7 +330,7 @@ namespace Cybot
 
                 questions.Add(new Questions
                 {
-                    txtQuestion = "Using HTTPS encrypts data exchanged between your web browser and the website your visiting making it difficult for hackers to intercept your information.",
+                    txtQuestion = "8)Using HTTPS encrypts data exchanged between your web browser and the website your visiting making it difficult for hackers to intercept your information.",
                     rb1 = "True.",
                     rb2 = "False.",
                     correct = "True"
@@ -331,7 +338,7 @@ namespace Cybot
 
                 questions.Add(new Questions 
                 {
-                    txtQuestion = "Being aware of the latest online threats and how to protect yourself is crucial in maintaining your online security..",
+                    txtQuestion = "9)Being aware of the latest online threats and how to protect yourself is crucial in maintaining your online security..",
                     rb1 = "True.",
                     rb2 = "False.",
                     correct = "True"
@@ -339,7 +346,7 @@ namespace Cybot
 
                 questions.Add(new Questions
                 {
-                    txtQuestion = "Social engineering is a harmless action whereby people unknowingly share sensitive information about themselves.",
+                    txtQuestion = "10)Social engineering is a harmless action whereby people unknowingly share sensitive information about themselves.",
                     rb1 = "True.",
                     rb2 = "False.",
                     correct = "False"
@@ -347,7 +354,7 @@ namespace Cybot
 
                 questions.Add(new Questions
                 {
-                    txtQuestion = "It's a must that you allow an unknown individual to physically follow you to a restricted area while claiming they have mislaid their pass.",
+                    txtQuestion = "11)As an authorised individual within an organisation it's a must that you allow an unknown individual to physically follow you to a restricted area while claiming they have mislaid their pass.",
                     rb1 = "True.",
                     rb2 = "False.",
                     correct = "False"
@@ -355,22 +362,185 @@ namespace Cybot
 
                 questions.Add(new Questions
                 {
-                    txtQuestion = "Social engineering attacks are not always easy to detect and therefore organisations should never conduct proper training for their staff.",
+                    txtQuestion = "12)Social engineering attacks are not always easy to detect and therefore organisations should never conduct proper training for their staff.",
                     rb1 = "True.",
                     rb2 = "False.",
                     correct = "False"
                 });
-
                 
-                foreach (Questions quest in questions)
-                {
-                    if()
-                }
             }
         }
-        
- 
-        
-       
+
+        public void QuizQuestions()
+        {
+            Questions currentQuestion = Questions[currentIndex];
+
+            txtQuestion.Text = currentQuestion.txtQuestion;
+
+            rb1.Content = currentQuestion.rb1;
+            rb2.Content = currentQuestion.rb2;
+            rb3.Content = currentQuestion.rb3;
+            rb4.Content = currentQuestion.rb4;
+
+            rb1.IsChecked = false;
+            rb2.IsChecked = false;
+            rb3.IsChecked = false;
+            rb4.IsChecked = false;
+
+        }
+
+        public void validateAnswers()
+        {
+            Questions currentQuestion = questions[currentIndex];
+
+            if (rb1.IsChecked == true && questions[currentIndex].correct == "A")
+            {
+                txtFeedback.Foreground = Brushes.Green;
+                txtFeedback.Text = "Correct!";
+                totalScore = totalScore + 1;
+            }
+            else 
+            {
+                txtFeedback.Foreground = Brushes.Red;
+                txtFeedback.Text = "Incorrect:Phishing is an online fraud that tricks people into providing sensitive information like passwords and credit card information.";
+            }
+
+            if (rb4.IsChecked == true && questions[currentIndex].correct == "D") 
+            {
+                txtFeedback.Foreground= Brushes.Green;
+                txtFeedback.Text = "Correct!";
+                totalScore = totalScore + 1;
+            }
+            else 
+            {
+                txtFeedback.Foreground = Brushes.Red;
+                txtFeedback.Text = "Incorrect:All these red flags are valid";
+            }
+
+            if(rb4.IsChecked == true && questions[currentIndex].correct == "D") 
+            {
+                txtFeedback.Foreground = Brushes.Green;
+                txtFeedback.Text = "Correct!";
+                totalScore = totalScore + 1;
+            }
+            else 
+            {
+                txtFeedback.Foreground = Brushes.Red;
+                txtFeedback.Text = "Incorrect:You should report it to the";
+            }
+
+            if(rb1.IsChecked == true && questions[currentIndex].correct == "A")
+            {
+                txtFeedback.Foreground = Brushes.Green;
+                txtFeedback.Text = "Correct!";
+                totalScore = totalScore + 1;
+            }
+            else
+            {
+                txtFeedback.Foreground = Brushes.Red;
+                txtFeedback.Text = "Incorrect:Longer passwords make it harder for attackers to guess or crack it through brute force methods.";
+            }
+
+            if(rb2.IsChecked == true && questions[currentIndex].correct == "B")
+            {
+                txtFeedback.Foreground = Brushes.Green;
+                txtFeedback.Text = "Correct!";
+                totalScore = totalScore + 1;
+            }
+            else
+            {
+                txtFeedback.Foreground= Brushes.Red;
+                txtFeedback.Text = "Incorrect:Risks related to data breaches and unauthorised access for critical accounts like email or banking.";
+            }
+
+
+            if (rb2.IsChecked == true && questions[currentIndex].correct == "B")
+            {
+                txtFeedback.Foreground = Brushes.Green;
+                txtFeedback.Text = "Correct!";
+                totalScore = totalScore + 1;
+            }
+            else
+            {
+                txtFeedback.Foreground = Brushes.Red;
+                txtFeedback.Text = "Incorrect:They ensure that your password is as strong as possible.";
+            }
+
+            if (rb2.IsChecked == true && questions[currentIndex].correct == "False")
+            {
+                txtFeedback.Foreground = Brushes.Green;
+                txtFeedback.Text = "Correct!";
+                totalScore = totalScore + 1;
+            }
+            else
+            {
+                txtFeedback.Foreground = Brushes.Red;
+                txtFeedback.Text = "Incorrect:You need to update your software regularly.";
+            }
+
+            if (rb1.IsChecked == true && questions[currentIndex].correct == "True")
+            {
+                txtFeedback.Foreground = Brushes.Green;
+                txtFeedback.Text = "Correct!";
+                totalScore = totalScore + 1;
+            }
+            else
+            {
+                txtFeedback.Foreground = Brushes.Red;
+                txtFeedback.Text = "Incorrect:HTTPS does encrypt your data so hackers don't intercept your information.";
+            }
+
+            if (rb1.IsChecked == true && questions[currentIndex].correct == "True")
+            {
+                txtFeedback.Foreground = Brushes.Green;
+                txtFeedback.Text = "Correct!";
+                totalScore = totalScore + 1;
+            }
+            else
+            {
+                txtFeedback.Foreground = Brushes.Red;
+                txtFeedback.Text = "Incorrect:Being aware of online threats helps you to protect yourself so you can maintain online security.";
+            }
+
+
+            if (rb2.IsChecked == true && questions[currentIndex].correct == "False")
+            {
+                txtFeedback.Foreground = Brushes.Green;
+                txtFeedback.Text = "Correct!";
+                totalScore = totalScore + 1;
+            }
+            else
+            {
+                txtFeedback.Foreground = Brushes.Red;
+                txtFeedback.Text = "Incorrect:Social Engineering uses psychological manipulation to trick people into divulging confidential information.";
+            }
+
+            if (rb2.IsChecked == true && questions[currentIndex].correct == "False")
+            {
+                txtFeedback.Foreground = Brushes.Green;
+                txtFeedback.Text = "Correct!";
+                totalScore = totalScore + 1;
+            }
+            else
+            {
+                txtFeedback.Foreground = Brushes.Red;
+                txtFeedback.Text = "Incorrect:Tailgating is a form of social engineering whereby unauthorised individuals  gain access to a restricted area of an organisation.";
+            }
+
+
+            if (rb2.IsChecked == true && questions[currentIndex].correct == "False")
+            {
+                txtFeedback.Foreground = Brushes.Green;
+                txtFeedback.Text = "Correct!";
+                totalScore = totalScore + 1;
+            }
+            else
+            {
+                txtFeedback.Foreground = Brushes.Red;
+                txtFeedback.Text = "Incorrect:Organisations need to perform mandatory training to reduce the likelihood of losing vital information.";
+            }
+
+            
+        }
     }
 }
