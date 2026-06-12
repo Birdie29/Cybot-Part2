@@ -538,9 +538,25 @@ namespace Cybot
             {
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:Organisations need to perform mandatory training to reduce the likelihood of losing vital information.";
+
             }
 
-            
+            if (totalScore >= 10 && totalScore <= 12)
+            {
+                txtScore.Text = "You scored a " + totalScore + "/12";
+                txtScore.Text = "Great Job! your a cybersecurity pro.";
+            }
+            else if (totalScore >= 6 && totalScore <= 9)
+            {
+                txtScore.Text = "You scored a " + totalScore + "/12";
+                txtScore.Text = "Nice work you're already thinking like a pro!";
+            }
+            else
+            {
+                txtScore.Text = "You scored a " + totalScore + "/12";
+                txtScore.Text = "Keep learning to stay safe online!";
+            }
+
         }
     }
 }
