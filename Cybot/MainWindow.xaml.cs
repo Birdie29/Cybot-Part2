@@ -8,7 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Media;
+using System.Sound;
 using System.Collections.Generic;
 
 namespace Cybot
@@ -257,6 +257,7 @@ namespace Cybot
 
         }
 
+
         List<Questions> questions = new List<Questions>();
         string userOption = "";
         string correct = "";
@@ -373,9 +374,9 @@ namespace Cybot
 
         public void QuizQuestions()
         {
-            Questions currentQuestion = Questions[currentIndex];
+            Questions currentQuestion = questions[currentIndex];
 
-            txtQuestion.Text = currentQuestion.txtQuestion;
+            txtQuestion.TextInput = currentQuestion.txtQuestion;
 
             rb1.Content = currentQuestion.rb1;
             rb2.Content = currentQuestion.rb2;
@@ -386,7 +387,6 @@ namespace Cybot
             rb2.IsChecked = false;
             rb3.IsChecked = false;
             rb4.IsChecked = false;
-
         }
 
         public void validateAnswers()
@@ -538,7 +538,6 @@ namespace Cybot
             {
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:Organisations need to perform mandatory training to reduce the likelihood of losing vital information.";
-
             }
 
             if (totalScore >= 10 && totalScore <= 12)
