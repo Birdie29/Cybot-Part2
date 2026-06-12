@@ -217,8 +217,8 @@
                             <ColumnDefinition Width="80*"/>
                             <ColumnDefinition Width="80*"/>
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" Name="btnyes" Click="PressClick" Content="YES" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="200" Background="DeepPink" Padding="10"></Button>
-                        <Button Grid.Column="1" Name="btnno" Click="PressClick" Content="NO" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="200" Background="DeepPink" Padding="10"></Button>
+                        <Button Grid.Column="0" Name="btnyes" Click="YesClick" Content="YES" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="200" Background="DeepPink" Padding="10"></Button>
+                        <Button Grid.Column="1" Name="btnno" Click="NoClick" Content="NO" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="200" Background="DeepPink" Padding="10"></Button>
                     </Grid>
 
                     <StackPanel Grid.Row="21" x:Name="QuizPanel" Visibility="Collapsed">

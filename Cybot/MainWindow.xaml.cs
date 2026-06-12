@@ -257,13 +257,23 @@ namespace Cybot
 
         }
 
-        public void 
+        public void YesClicks(object sender, RoutedEventArgs e) 
+        {
+            StartPanel.Visibility = Visibility.Hidden;
+            QuizPanel.Visibility = Visibility.Visible;
+            totalScore = 0;
+            currentIndex = 0;
+            QuizQuestions();
+        }
+
+
+
         List<Questions> questions = new List<Questions>();
         string userOption = "";
         string correct = "";
-        int totalScore = 0;
+        int totalScore;
         int currentQuestion = 0;
-        int currentIndex = 0;
+        int currentIndex;
 
         public void topicQuestions() 
         { 
@@ -376,8 +386,8 @@ namespace Cybot
         {
             Questions currentQuestion = questions[currentIndex];
 
-            txtQuestion.TextInput = currentQuestion.txtQuestion;
-
+            txtQuestion.Content = currentQuestion.txtQuestion;
+            
             rb1.Content = currentQuestion.rb1;
             rb2.Content = currentQuestion.rb2;
             rb3.Content = currentQuestion.rb3;
