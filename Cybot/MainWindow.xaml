@@ -210,7 +210,7 @@
                     </Grid>
                 </StackPanel>
 
-                <StackPanel Grid.Row="21" Name="StartPanel">
+                <StackPanel Grid.Row="21" Name="StartPanel" Visibility="Visible">
                     <Label Content="Would you like to play a game?" FontWeight="Bold" HorizontalAlignment="Center" Foreground="DeepPink" FontFamily="Cascadia Mono" FontSize="19"></Label>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -221,7 +221,7 @@
                         <Button Grid.Column="1" Name="btnno" Content="NO" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="200" Background="DeepPink" Padding="10"></Button>
                     </Grid>
 
-                    <StackPanel Grid.Row="21" x:Name="QuizPanel">
+                    <StackPanel Grid.Row="21" x:Name="QuizPanel" Visibility="Collapsed">
                         <Label Name="txtQuestion" Content="What do you understand by the term phishing?" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19" FontWeight="Bold"></Label>
                         <RadioButton Name="rb1" Content="A)Online fraud that tricks people into providing sensitive information like passwords or credit card information." Foreground="DeepPink" FontSize="19" FontWeight="Bold"></RadioButton>
                         <RadioButton Name="rb2" Content="B)Advising teenagers on how to properly catch a fish." Foreground="DeepPink"></RadioButton>
