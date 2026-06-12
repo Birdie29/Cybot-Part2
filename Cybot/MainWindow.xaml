@@ -217,10 +217,12 @@
                             <ColumnDefinition Width="80*"/>
                             <ColumnDefinition Width="80*"/>
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" Name="btnyes" Click="YesClick" Content="YES" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="200" Background="DeepPink" Padding="10"></Button>
+                        <Button Grid.Column="0" Name="btnyes" Click="Yes_Click" Content="YES" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="200" Background="DeepPink" Padding="10"></Button>
                         <Button Grid.Column="1" Name="btnno" Click="NoClick" Content="NO" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="200" Background="DeepPink" Padding="10"></Button>
+     
                     </Grid>
-
+                    <TextBlock x:Name="nomessage" Foreground="HotPink" FontSize="16" FontWeight="Medium" Grid.ColumnSpan="2" ></TextBlock>
+                    
                     <StackPanel Grid.Row="21" x:Name="QuizPanel" Visibility="Collapsed">
                         <Label Name="txtQuestion" Content="What do you understand by the term phishing?" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19" FontWeight="Bold"></Label>
                         <RadioButton Name="rb1" Content="A)Online fraud that tricks people into providing sensitive information like passwords or credit card information." Foreground="DeepPink" FontSize="19" FontWeight="Bold"></RadioButton>

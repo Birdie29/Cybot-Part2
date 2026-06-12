@@ -257,7 +257,7 @@ namespace Cybot
 
         }
 
-        public void YesClicks(object sender, RoutedEventArgs e) 
+        public void Yes_Clicks(object sender, RoutedEventArgs e) 
         {
             StartPanel.Visibility = Visibility.Hidden;
             QuizPanel.Visibility = Visibility.Visible;
@@ -266,7 +266,11 @@ namespace Cybot
             QuizQuestions();
         }
 
-
+        public void No_Clicks()
+        {
+            QuizPanel.Visibility = Visibility.Hidden;
+            nomessage.Text = "Cool, whenever your ready cybersecurity nerd!";
+        }
 
         List<Questions> questions = new List<Questions>();
         string userOption = "";
