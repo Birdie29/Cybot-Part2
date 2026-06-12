@@ -223,13 +223,14 @@
                     </Grid>
                     <TextBlock x:Name="nomessage" Foreground="HotPink" FontSize="16" FontWeight="Medium" Grid.ColumnSpan="2" ></TextBlock>
                     
-                    <StackPanel Grid.Row="21" x:Name="QuizPanel" Visibility="Collapsed">
+                    <StackPanel Grid.Row="21" x:Name="QuizPanel">
                         <Label Name="txtQuestion" Content="What do you understand by the term phishing?" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19" FontWeight="Bold"></Label>
                         <RadioButton Name="rb1" Content="A)Online fraud that tricks people into providing sensitive information like passwords or credit card information." Foreground="DeepPink" FontSize="19" FontWeight="Bold"></RadioButton>
                         <RadioButton Name="rb2" Content="B)Advising teenagers on how to properly catch a fish." Foreground="DeepPink"></RadioButton>
                         <RadioButton Name="rb3" Content="C)It's an expression used in cullinary terms." Foreground="DeepPink"></RadioButton>
                         <RadioButton Name="rb4" Content="D)It's a form of spyware."></RadioButton>
                         <TextBlock Name="txtFeedback" FontFamily="Cascadia Mono" FontSize="16" FontWeight="ExtraBold"></TextBlock>
+                        <Button Name="submit" Width="350" HorizontalAlignment="Left"></Button>
                         <TextBlock Name="txtScore" FontFamily="Cascadia Mono" FontSize="20" FontWeight="ExtraBold"></TextBlock>
                         
                     </StackPanel>
