@@ -272,6 +272,11 @@ namespace Cybot
             nomessage.Text = "Cool, whenever your ready cybersecurity nerd!";
         }
 
+        public void Press_Next(object sender, RoutedEventArgs e)
+        {
+            validateAnswers();
+        }
+
         List<Questions> questions = new List<Questions>();
         string userOption = "";
         string correct = "";
@@ -418,6 +423,7 @@ namespace Cybot
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:Phishing is an online fraud that tricks people into providing sensitive information like passwords and credit card information.";
             }
+            currentIndex = currentIndex + 1;
 
             if (rb4.IsChecked == true && questions[currentIndex].correct == "D") 
             {
@@ -430,6 +436,7 @@ namespace Cybot
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:All these red flags are valid";
             }
+            currentIndex = currentIndex + 1;
 
             if(rb4.IsChecked == true && questions[currentIndex].correct == "D") 
             {
@@ -442,6 +449,7 @@ namespace Cybot
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:You should report it to the";
             }
+            currentIndex = currentIndex + 1;
 
             if(rb1.IsChecked == true && questions[currentIndex].correct == "A")
             {
@@ -454,6 +462,7 @@ namespace Cybot
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:Longer passwords make it harder for attackers to guess or crack it through brute force methods.";
             }
+            currentIndex = currentIndex + 1;
 
             if(rb2.IsChecked == true && questions[currentIndex].correct == "B")
             {
@@ -466,7 +475,7 @@ namespace Cybot
                 txtFeedback.Foreground= Brushes.Red;
                 txtFeedback.Text = "Incorrect:Risks related to data breaches and unauthorised access for critical accounts like email or banking.";
             }
-
+            currentIndex = currentIndex + 1;
 
             if (rb2.IsChecked == true && questions[currentIndex].correct == "B")
             {
@@ -479,6 +488,7 @@ namespace Cybot
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:They ensure that your password is as strong as possible.";
             }
+            currentIndex = currentIndex + 1;
 
             if (rb2.IsChecked == true && questions[currentIndex].correct == "False")
             {
@@ -491,7 +501,7 @@ namespace Cybot
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:You need to update your software regularly.";
             }
-
+            currentIndex = currentIndex + 1;
             if (rb1.IsChecked == true && questions[currentIndex].correct == "True")
             {
                 txtFeedback.Foreground = Brushes.Green;
@@ -503,7 +513,7 @@ namespace Cybot
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:HTTPS does encrypt your data so hackers don't intercept your information.";
             }
-
+            currentIndex = currentIndex + 1;
             if (rb1.IsChecked == true && questions[currentIndex].correct == "True")
             {
                 txtFeedback.Foreground = Brushes.Green;
@@ -515,7 +525,7 @@ namespace Cybot
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:Being aware of online threats helps you to protect yourself so you can maintain online security.";
             }
-
+            currentIndex = currentIndex + 1;
 
             if (rb2.IsChecked == true && questions[currentIndex].correct == "False")
             {
@@ -528,7 +538,7 @@ namespace Cybot
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:Social Engineering uses psychological manipulation to trick people into divulging confidential information.";
             }
-
+            currentIndex = currentIndex + 1;
             if (rb2.IsChecked == true && questions[currentIndex].correct == "False")
             {
                 txtFeedback.Foreground = Brushes.Green;
@@ -540,7 +550,7 @@ namespace Cybot
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:Tailgating is a form of social engineering whereby unauthorised individuals  gain access to a restricted area of an organisation.";
             }
-
+            currentIndex = currentIndex + 1;
 
             if (rb2.IsChecked == true && questions[currentIndex].correct == "False")
             {
@@ -553,6 +563,7 @@ namespace Cybot
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:Organisations need to perform mandatory training to reduce the likelihood of losing vital information.";
             }
+            currentIndex = currentIndex + 1;
 
             if (totalScore >= 10 && totalScore <= 12)
             {
