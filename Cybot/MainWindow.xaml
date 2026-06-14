@@ -240,7 +240,8 @@
                 <StackPanel Grid.Row="22">
                     <Label Content="By the way is there anything in particular youd like to ammend about the tasks?" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Bold" FontSize="19" HorizontalAlignment="Center"></Label>
                     <TextBox Name="taskMod" Width="490" Padding="10" FontSize="16" FontWeight="Medium" Foreground="HotPink"></TextBox>
-                    <TextBlock Name="summary" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold"></TextBlock>
+                    <TextBlock Name="taskFeedback" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
+                    <TextBlock Name="summary" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
                 </StackPanel>
 
                 <Grid Grid.Row="23">

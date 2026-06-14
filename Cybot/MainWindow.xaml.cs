@@ -583,5 +583,25 @@ namespace Cybot
 
         }
 
+        public void taskModification()
+        {
+            string action = taskMod.Text;
+            action.ToLower();
+            if(!action.Contains("add") && !action.Contains("create") && !action.Contains("make") && !action.Contains("new")) 
+            {
+                taskMod.Foreground = Brushes.Red;
+                taskMod.Text = "Im sorry i did't catch that. Could you rephrase it.";
+            }
+            else if(action.Contains("add") || action.Contains("create") || action.Contains("make") || action.Contains("new"))
+            {
+                List<string> addTask = new List<string>();
+                {
+                    addTask.Add(action);
+                    taskFeedback.Foreground = Brushes.Green;
+                    taskFeedback.Text = "Task added:" + action;
+                }
+            }
+        }
+
     }
 }
