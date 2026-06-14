@@ -601,6 +601,65 @@ namespace Cybot
                     taskFeedback.Text = "Task added:" + action;
                 }
             }
+
+            if (!action.Contains("phishing") && !action.Contains("password") && !action.Contains("privacy"))
+            {
+                taskMod.Foreground = Brushes.Red;
+                taskMod.Text = "Im sorry i did't catch that. Could you rephrase it.";
+            }
+            else if (action.Contains("phishing") || action.Contains("password") || action.Contains("privacy"))
+            {
+                List<string> cybersecurityTopics = new List<string>();
+                {
+                    cybersecurityTopics.Add(action);
+                    taskFeedback.Foreground = Brushes.Green;
+                    taskFeedback.Text = "Cybersecurity tip added:" + action;
+                }
+            }
+
+            if (!action.Contains("remind") && !action.Contains("set") && !action.Contains("remember") && !action.Contains("forget"))
+            {
+                taskMod.Foreground = Brushes.Red;
+                taskMod.Text = "Im sorry i did't catch that. Could you rephrase it.";
+            }
+            else if (action.Contains("remind") || action.Contains("set") || action.Contains("reminder") || action.Contains("forget")) 
+            {
+                List<string> setReminder = new List<string>();
+                {
+                    setReminder.Add(action);
+                    taskFeedback.Foreground = Brushes.Green;
+                    taskFeedback.Text = "Reminder set:" + action;
+                }
+            }
+
+            if (!action.Contains("test") && !action.Contains("ask") && !action.Contains("question"))
+            {
+                taskMod.Foreground = Brushes.Red;
+                taskMod.Text = "Im sorry i did't catch that. Could you rephrase it.";
+            }
+            else if (action.Contains("test") || action.Contains("ask") || action.Contains("question")) 
+            {
+                List<string> quizTest = new List<string>();
+                {
+                    quizTest.Add(action);
+                    taskFeedback.Foreground = Brushes.Green;
+                    taskFeedback.Text = "Quiz Test:" + action;
+                }
+            }
+
+            if(!action.Contains("show") && !action.Contains("summary") && !action.Contains("what") && !action.Contains("list")) 
+            {
+                taskMod.Foreground = Brushes.Red;
+                taskMod.Text = "Im sorry i did't catch that. Could you rephrase it.";
+            }
+            else if(action.Contains("show") || action.Contains("summary") || action.Contains("what") || action.Contains("list")) 
+            {
+                List<string> summary = new List<string>();
+                {
+                   
+                }
+            }
+           
         }
 
     }
