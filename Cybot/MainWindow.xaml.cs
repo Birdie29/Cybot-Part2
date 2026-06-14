@@ -31,6 +31,7 @@ namespace Cybot
             Username();
             FavTopic();
             BotTopics();
+            taskModification();
         }
 
         private void Username()
@@ -257,7 +258,8 @@ namespace Cybot
 
         }
 
-        public void Yes_Clicks(object sender, RoutedEventArgs e) 
+        /*
+        public void YesClicks(object sender, RoutedEventArgs e) 
         {
             StartPanel.Visibility = Visibility.Hidden;
             QuizPanel.Visibility = Visibility.Visible;
@@ -266,23 +268,23 @@ namespace Cybot
             QuizQuestions();
         }
 
-        public void No_Clicks(object sender, RoutedEventArgs e)
+        public void NoClicks(object sender, RoutedEventArgs e)
         {
             QuizPanel.Visibility = Visibility.Hidden;
             nomessage.Text = "Cool, whenever your ready cybersecurity nerd!";
         }
 
-        public void Press_Next(object sender, RoutedEventArgs e)
+        public void PressNext(object sender, RoutedEventArgs e)
         {
             validateAnswers();
         }
-
+        
         List<Questions> questions = new List<Questions>();
        // string userOption = "";
        // string correct = "";
-        int totalScore;
-        int currentQuestion = 0;
-        int currentIndex;
+        int totalScore = 0;
+       // int currentQuestion = 0;
+        int currentIndex = 0;
 
         public void topicQuestions() 
         { 
@@ -582,7 +584,7 @@ namespace Cybot
             }
 
         }
-
+        */
         List<string> addTask = new List<string>();
         List<string> cybersecurityTopics = new List<string>();
         List<string> setReminder = new List<string>();
@@ -594,8 +596,8 @@ namespace Cybot
             action.ToLower();
             if(!action.Contains("add") && !action.Contains("create") && !action.Contains("make") && !action.Contains("new")) 
             {
-                taskMod.Foreground = Brushes.Red;
-                taskMod.Text = "Im sorry i did't catch that. Could you rephrase it.";
+                taskFeedback.Foreground = Brushes.Red;
+                taskFeedback.Text = "Im sorry i did't catch that. Could you rephrase it.";
             }
             else if(action.Contains("add") || action.Contains("create") || action.Contains("make") || action.Contains("new"))
             {
@@ -609,8 +611,8 @@ namespace Cybot
 
             if (!action.Contains("phishing") && !action.Contains("password") && !action.Contains("privacy"))
             {
-                taskMod.Foreground = Brushes.Red;
-                taskMod.Text = "Im sorry i did't catch that. Could you rephrase it.";
+                taskFeedback.Foreground = Brushes.Red;
+                taskFeedback.Text = "Im sorry i did't catch that. Could you rephrase it.";
             }
             else if (action.Contains("phishing") || action.Contains("password") || action.Contains("privacy"))
             {
@@ -624,8 +626,8 @@ namespace Cybot
 
             if (!action.Contains("remind") && !action.Contains("set") && !action.Contains("remember") && !action.Contains("forget"))
             {
-                taskMod.Foreground = Brushes.Red;
-                taskMod.Text = "Im sorry i did't catch that. Could you rephrase it.";
+                taskFeedback.Foreground = Brushes.Red;
+                taskFeedback.Text = "Im sorry i did't catch that. Could you rephrase it.";
             }
             else if (action.Contains("remind") || action.Contains("set") || action.Contains("reminder") || action.Contains("forget")) 
             {
@@ -639,8 +641,8 @@ namespace Cybot
 
             if (!action.Contains("test") && !action.Contains("ask") && !action.Contains("question"))
             {
-                taskMod.Foreground = Brushes.Red;
-                taskMod.Text = "Im sorry i did't catch that. Could you rephrase it.";
+                taskFeedback.Foreground = Brushes.Red;
+                taskFeedback.Text = "Im sorry i did't catch that. Could you rephrase it.";
             }
             else if (action.Contains("test") || action.Contains("ask") || action.Contains("question")) 
             {
@@ -654,8 +656,8 @@ namespace Cybot
 
             if(!action.Contains("show") && !action.Contains("summary") && !action.Contains("what") && !action.Contains("list")) 
             {
-                taskMod.Foreground = Brushes.Red;
-                taskMod.Text = "Im sorry i did't catch that. Could you rephrase it.";
+                taskFeedback.Foreground = Brushes.Red;
+                taskFeedback.Text = "Im sorry i did't catch that. Could you rephrase it.";
             }
             else if(action.Contains("show") || action.Contains("summary") || action.Contains("what") || action.Contains("list")) 
             {
