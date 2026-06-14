@@ -266,7 +266,7 @@ namespace Cybot
             QuizQuestions();
         }
 
-        public void No_Clicks()
+        public void No_Clicks(object sender, RoutedEventArgs e)
         {
             QuizPanel.Visibility = Visibility.Hidden;
             nomessage.Text = "Cool, whenever your ready cybersecurity nerd!";
@@ -278,8 +278,8 @@ namespace Cybot
         }
 
         List<Questions> questions = new List<Questions>();
-        string userOption = "";
-        string correct = "";
+       // string userOption = "";
+       // string correct = "";
         int totalScore;
         int currentQuestion = 0;
         int currentIndex;
@@ -582,5 +582,6 @@ namespace Cybot
             }
 
         }
+
     }
 }

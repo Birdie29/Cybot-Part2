@@ -98,7 +98,7 @@
 
                 <Grid Grid.Row="8">
 
-                    <Label  Content="Here's a list of some topics we can dive right into:" FontSize="19" FontWeight="Bold" Foreground="DeepPink" FontFamily="Cascadia Mono" HorizontalAlignment="Center"/>
+                    <Label Content="Here's a list of some topics we can dive right into:" FontSize="19" FontWeight="Bold" Foreground="DeepPink" FontFamily="Cascadia Mono" HorizontalAlignment="Center"/>
 
                 </Grid>
 
@@ -217,8 +217,8 @@
                             <ColumnDefinition Width="80*"/>
                             <ColumnDefinition Width="80*"/>
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" Name="btnyes" Click="Yes_Click" Content="YES" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="200" Background="DeepPink" Padding="10"></Button>
-                        <Button Grid.Column="1" Name="btnno" Click="NoClick" Content="NO" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="200" Background="DeepPink" Padding="10"></Button>
+                        <Button Grid.Column="0" Name="btnyes" Click="PressClick" Content="YES" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="200" Background="DeepPink" Padding="10"></Button>
+                        <Button Grid.Column="1" Name="btnno" Click="PressClick" Content="NO" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="200" Background="DeepPink" Padding="10"></Button>
      
                     </Grid>
                     <TextBlock x:Name="nomessage" Foreground="HotPink" FontSize="16" FontWeight="Medium" Grid.ColumnSpan="2" ></TextBlock>
@@ -237,6 +237,11 @@
                 </StackPanel>
 
 
+                <StackPanel Grid.Row="22">
+                    <Label Content="By the way is there anything in particular youd like to ammend about the tasks?" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Bold" FontSize="19" HorizontalAlignment="Center"></Label>
+                    <TextBox Name="taskMod" Width="490" Padding="10" FontSize="16" FontWeight="Medium" Foreground="HotPink"></TextBox>
+                    <TextBlock Name="summary" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold"></TextBlock>
+                </StackPanel>
 
                 <Grid Grid.Row="23">
                     <Grid.RowDefinitions>
