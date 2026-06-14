@@ -583,6 +583,11 @@ namespace Cybot
 
         }
 
+        List<string> addTask = new List<string>();
+        List<string> cybersecurityTopics = new List<string>();
+        List<string> setReminder = new List<string>();
+        List<string> quizTest = new List<string>(); 
+
         public void taskModification()
         {
             string action = taskMod.Text;
@@ -594,7 +599,7 @@ namespace Cybot
             }
             else if(action.Contains("add") || action.Contains("create") || action.Contains("make") || action.Contains("new"))
             {
-                List<string> addTask = new List<string>();
+                
                 {
                     addTask.Add(action);
                     taskFeedback.Foreground = Brushes.Green;
@@ -609,7 +614,7 @@ namespace Cybot
             }
             else if (action.Contains("phishing") || action.Contains("password") || action.Contains("privacy"))
             {
-                List<string> cybersecurityTopics = new List<string>();
+               
                 {
                     cybersecurityTopics.Add(action);
                     taskFeedback.Foreground = Brushes.Green;
@@ -624,7 +629,7 @@ namespace Cybot
             }
             else if (action.Contains("remind") || action.Contains("set") || action.Contains("reminder") || action.Contains("forget")) 
             {
-                List<string> setReminder = new List<string>();
+                
                 {
                     setReminder.Add(action);
                     taskFeedback.Foreground = Brushes.Green;
@@ -639,7 +644,7 @@ namespace Cybot
             }
             else if (action.Contains("test") || action.Contains("ask") || action.Contains("question")) 
             {
-                List<string> quizTest = new List<string>();
+                
                 {
                     quizTest.Add(action);
                     taskFeedback.Foreground = Brushes.Green;
@@ -654,9 +659,24 @@ namespace Cybot
             }
             else if(action.Contains("show") || action.Contains("summary") || action.Contains("what") || action.Contains("list")) 
             {
-                List<string> summary = new List<string>();
+                foreach (var task in addTask) 
                 {
-                   
+                    summary.Text = task;
+                }
+
+                foreach (var topic in cybersecurityTopics) 
+                {
+                    summary.Text = topic;
+                }
+
+                foreach (var reminder in setReminder) 
+                { 
+                    summary.Text = reminder;
+                }
+
+                foreach (var test in quizTest)
+                { 
+                    summary.Text = test;
                 }
             }
            
