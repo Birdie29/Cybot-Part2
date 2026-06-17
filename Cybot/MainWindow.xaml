@@ -239,10 +239,10 @@
 
                 <StackPanel Grid.Row="22">
                     <Label Content="By the way is there anything in particular youd like to ammend about the tasks?" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Bold" FontSize="19" HorizontalAlignment="Center"></Label>
-                    <TextBox Name="taskMod" Width="490" Padding="10" FontSize="16" FontWeight="Medium" Foreground="HotPink"></TextBox>
-                    <TextBlock Name="taskFeedback" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
-                    <TextBlock Name="summary" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
-                    <Button x:Name="Button_Manage" Click="PressClick" Content="Ammend Task" Width="250" Height="66" FontSize="19" Foreground="Pink" Background="DeepPink"></Button>
+                    <TextBox x:Name="taskMod" Width="490" Padding="10" FontSize="16" FontWeight="Medium" Foreground="HotPink"></TextBox>
+                    <TextBlock x:Name="taskFeedback" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
+                    <TextBlock x:Name="summary" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
+                    <Button Grid.Row="22"  x:Name="Button_Manage" Click="PressClick" Content="Ammend Task" Width="250" Height="66" FontSize="19" Foreground="Pink" Background="DeepPink"></Button>
                 </StackPanel>
 
                 <Grid Grid.Row="23">
