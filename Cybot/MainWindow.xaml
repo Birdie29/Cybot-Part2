@@ -242,6 +242,7 @@
                     <TextBox Name="taskMod" Width="490" Padding="10" FontSize="16" FontWeight="Medium" Foreground="HotPink"></TextBox>
                     <TextBlock Name="taskFeedback" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
                     <TextBlock Name="summary" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
+                    <Button x:Name="Button_Manage" Click="PressClick" Content="Ammend Task" Width="250" Height="66" FontSize="19" Foreground="Pink" Background="DeepPink"></Button>
                 </StackPanel>
 
                 <Grid Grid.Row="23">
