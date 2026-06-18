@@ -31,6 +31,7 @@ namespace Cybot
             Username();
             FavTopic();
             BotTopics();
+            
         }
 
         private void Username()
@@ -589,15 +590,19 @@ namespace Cybot
         List<string> cybersecurityTopics = new List<string>();
         List<string> setReminder = new List<string>();
         List<string> quizTest = new List<string>();
-
-        private void Button_manage(object sender, RoutedEventArgs e)
+        List<string> activityLog = new List<string>();
+        
+        private void ButtonManage_Click(object sender, RoutedEventArgs e)
         {
             taskModification();
         }
 
+       
+        
         public void taskModification()
         {
             string action = taskMod.Text;
+            string log = logAction.Text;
             action.ToLower();
             if(!action.Contains("add") && !action.Contains("create") && !action.Contains("make") && !action.Contains("new")) 
             {
@@ -610,7 +615,8 @@ namespace Cybot
                 {
                     addTask.Add(action);
                     taskFeedback.Foreground = Brushes.Green;
-                    taskFeedback.Text = "Task added:" + action;
+                    taskFeedback.Text = "Task:" + action;
+                    activityLog.Add("Task added:" + action);
                 }
             }
 
@@ -625,7 +631,8 @@ namespace Cybot
                 {
                     cybersecurityTopics.Add(action);
                     taskFeedback.Foreground = Brushes.Green;
-                    taskFeedback.Text = "Cybersecurity tip added:" + action;
+                    taskFeedback.Text = "Cybersecurity tip:" + action;
+                    activityLog.Add("Cybersecurity tip:" + action);
                 }
             }
 
@@ -640,7 +647,8 @@ namespace Cybot
                 {
                     setReminder.Add(action);
                     taskFeedback.Foreground = Brushes.Green;
-                    taskFeedback.Text = "Reminder set:" + action;
+                    taskFeedback.Text = "Reminder:" + action;
+                    activityLog.Add("Reminder set:" + action);
                 }
             }
 
@@ -655,7 +663,8 @@ namespace Cybot
                 {
                     quizTest.Add(action);
                     taskFeedback.Foreground = Brushes.Green;
-                    taskFeedback.Text = "Quiz Test:" + action;
+                    taskFeedback.Text = "Quiz:" + action;
+                    activityLog.Add("Quiz Test:" + action);
                 }
             }
 
@@ -686,6 +695,31 @@ namespace Cybot
                     summary.Text = test;
                 }
             }
+
+            if (!log.Contains("show activity log") && !log.Contains("activities") && !log.Contains("log")) 
+            {
+                logsumarry.Foreground = Brushes.Red;
+                logsumarry.Text = "I am having trouble with reading your input try again please";
+            }
+            else if(log.Contains("show activity log") || log.Contains("activities") || log.Contains("log")) 
+            {
+                int counter = 1;
+                int maxActivities = 5;
+                int initialActivity = activityLog.Count() - maxActivities;
+
+                if (initialActivity < 0) 
+                { 
+                    initialActivity = 0;
+                }
+                
+                for(int i=0; i>initialActivity; i= activityLog.Count() - 1) 
+                {
+                    logsumarry.Foreground = Brushes.HotPink;
+                    logsumarry.Text = counter + "." + activityLog[i];
+                    counter = counter + 1;
+                }
+            }
+            
            
         }
 

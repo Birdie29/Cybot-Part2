@@ -37,6 +37,13 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
                 <Image Grid.Row="0"  Source="/cybotart.png" Margin="0,0,0,87" Grid.RowSpan="2"/>
@@ -232,20 +239,51 @@
                         <TextBlock Name="txtFeedback" FontFamily="Cascadia Mono" FontSize="16" FontWeight="ExtraBold"></TextBlock>
                         <Button Name="next" Click="PressClick" Width="350" HorizontalAlignment="Left"></Button>
                         <TextBlock Name="txtScore" FontFamily="Cascadia Mono" FontSize="20" FontWeight="ExtraBold"></TextBlock>
-                        
                     </StackPanel>
                 </StackPanel>
-
 
                 <StackPanel Grid.Row="22">
                     <Label Content="By the way is there anything in particular youd like to ammend about the tasks?" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Bold" FontSize="19" HorizontalAlignment="Center"></Label>
                     <TextBox x:Name="taskMod" Width="490" Padding="10" FontSize="16" FontWeight="Medium" Foreground="HotPink"></TextBox>
                     <TextBlock x:Name="taskFeedback" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
-                    <TextBlock x:Name="summary" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
-                    <Button Grid.Row="22"  x:Name="Button_Manage" Click="PressClick" Content="Ammend Task" Width="250" Height="66" FontSize="19" Foreground="Pink" Background="DeepPink"></Button>
                 </StackPanel>
 
                 <Grid Grid.Row="23">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  x:Name="summary" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
+                </Grid>
+
+                <Grid Grid.Row="24">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="ManageButton_Click" Click="PressClick" Content="Ammend Task" Width="130" Margin="10" FontSize="19" Foreground="Pink" Background="DeepPink"></Button>
+                </Grid>
+
+                <Grid Grid.Row="25">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Would you like me to display your activities:" Foreground="DeepPink" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                </Grid>
+
+                <Grid Grid.Row="28">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="logAction"  Width="650" Padding="10" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="16" Foreground="LightPink"></TextBox>
+                </Grid>
+
+                <Grid Grid.Row="29">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="logsumarry" Foreground="HotPink" FontFamily="Cascadia Mono" FontSize="16" FontWeight="Medium"></TextBlock>
+                </Grid>
+                
+                <Grid Grid.Row="30">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -254,8 +292,7 @@
                         FontWeight="Bold" Foreground="Pink" Background="DeepPink" Height="66" FontFamily="Cascadia Mono" VerticalContentAlignment="Center"/>
                 </Grid>
 
-
-
+                
             </Grid>
         </ScrollViewer>
     </Grid>
