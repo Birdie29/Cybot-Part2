@@ -34,6 +34,11 @@ namespace Cybot
             
         }
 
+        private void ButtonManage_Click(object sender, RoutedEventArgs e)
+        {
+            taskModification();
+        }
+
         private void Username()
         {
             string name = username.Text;
@@ -592,13 +597,8 @@ namespace Cybot
         List<string> quizTest = new List<string>();
         List<string> activityLog = new List<string>();
         
-        private void ButtonManage_Click(object sender, RoutedEventArgs e)
-        {
-            taskModification();
-        }
-
        
-        
+
         public void taskModification()
         {
             string action = taskMod.Text;

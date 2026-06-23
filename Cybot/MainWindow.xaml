@@ -186,7 +186,7 @@
                     <TextBlock x:Name="additionalTips" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="16" HorizontalAlignment="Center"></TextBlock>
                 </Grid>
 
-                <Grid Grid.Row="19" Visibility="Collapsed">
+                <Grid Grid.Row="19" Visibility="Visible">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -195,7 +195,7 @@
                 </Grid>
 
 
-                <StackPanel Grid.Row="20" Visibility="Collapsed">
+                <StackPanel Grid.Row="20">
                     <Label Content="Enter your task title:" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19" FontWeight="Bold" HorizontalAlignment="Center"></Label>
                     <TextBox Name="title" Width="500" FontFamily="Cascadia Mono" FontSize="16" Padding="10" FontWeight="Medium" Foreground="HotPink"></TextBox>
                     <Label Content="Enter your task description:" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19" FontWeight="Bold" HorizontalAlignment="Center"></Label>
@@ -211,9 +211,9 @@
                             <ColumnDefinition Width="10*"/>
                             <ColumnDefinition Width="10*"/>
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" Name="add" Content="Add Task" Width="250" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="20" Background="DeepPink" Padding="15"></Button>
-                        <Button Grid.Column="1" Name="delete" Content="Delete Task" Width="250" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="20" Background="DeepPink" Padding="15"></Button>
-                        <Button Grid.Column="2" Name="complete" Content="Mark Complete" Width="250" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="20" Background="DeepPink" Padding="15"></Button>
+                        <Button Grid.Column="0" Name="add" Click="PressClick" Content="Add Task" Width="250" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15"></Button>
+                        <Button Grid.Column="1" Name="delete" Click="PressClick" Content="Delete Task" Width="250" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15"></Button>
+                        <Button Grid.Column="2" Name="complete" Click="PressClick" Content="Mark Complete" Width="250" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15"></Button>
                     </Grid>
                 </StackPanel>
 
@@ -242,8 +242,8 @@
                     </StackPanel>
                 </StackPanel>
 
-                <StackPanel Grid.Row="22">
-                    <Label Content="By the way is there anything in particular youd like to ammend about the tasks?" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Bold" FontSize="19" HorizontalAlignment="Center"></Label>
+                <StackPanel Grid.Row="22" Visibility="Collapsed">
+                    <Label Content="Just a quick headsup regarding your tasks you can add, set reminders, take quizzes or even view a summry or your activity logs" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Bold" FontSize="19" HorizontalAlignment="Center"></Label>
                     <TextBox x:Name="taskMod" Width="490" Padding="10" FontSize="16" FontWeight="Medium" Foreground="HotPink"></TextBox>
                     <TextBlock x:Name="taskFeedback" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
                 </StackPanel>
@@ -252,31 +252,31 @@
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBlock  x:Name="summary" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
+                    <TextBlock x:Name="summary" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
                 </Grid>
 
-                <Grid Grid.Row="24">
+                <Grid Grid.Row="24" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Button x:Name="ManageButton_Click" Click="PressClick" Content="Ammend Task" Width="130" Margin="10" FontSize="19" Foreground="Pink" Background="DeepPink"></Button>
+                    <Button x:Name="ManageButtonClick" Click="ButtonManage_Click" Content="Ammend Task" Width="130" Margin="10" FontSize="19" Foreground="Pink" Background="DeepPink"></Button>
                 </Grid>
 
-                <Grid Grid.Row="25">
+                <Grid Grid.Row="25" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <Label Content="Would you like me to display your activities:" Foreground="DeepPink" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
                 </Grid>
 
-                <Grid Grid.Row="28">
+                <Grid Grid.Row="28" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <TextBox x:Name="logAction"  Width="650" Padding="10" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="16" Foreground="LightPink"></TextBox>
                 </Grid>
 
-                <Grid Grid.Row="29">
+                <Grid Grid.Row="29" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
