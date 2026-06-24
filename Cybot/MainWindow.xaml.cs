@@ -34,6 +34,126 @@ namespace Cybot
             
         }
 
+       
+        private void addTaskButton_Click(object sender, RoutedEventArgs e) 
+        {
+            string addTask = title.Text;
+            string describeTask = description.Text;
+            string datePicker = reminder.Text;
+            if (string.IsNullOrWhiteSpace(addTask))
+            {
+                titlemsg.Text = "Looks like you didn't enter your title re type it please";
+                titlemsg.Foreground = Brushes.Red;
+            }
+            else
+            {
+                titlemsg.Text = "Awesome task title received";
+                titlemsg.Foreground = Brushes.HotPink;
+            }
+
+            if(string.IsNullOrWhiteSpace(describeTask))
+            {
+                description.Text = "I need you to enter your title please";
+                description.Foreground = Brushes.Red;
+            }
+            else 
+            {
+                description.Text = "Description received";
+                description.Foreground = Brushes.Red;
+            }
+
+            if (string.IsNullOrWhiteSpace(datePicker)) 
+            {
+                datemsg.Text = "I need your date please";
+                datemsg.Foreground = Brushes.Red;
+            }
+            else
+            {
+                datemsg.Text = "Date has been set";
+                datemsg.Foreground = Brushes.HotPink;
+            }
+        }
+
+        private void deleteTaskButton_Click(object sender, RoutedEventArgs e) 
+        {
+            string deleteTask = title.Text;
+            string describeTask = description.Text;
+            string datePicker = reminder.Text;
+
+            if (string.IsNullOrWhiteSpace(deleteTask)) 
+            {
+                title.Text = "Looks like you didn't enter your title re type it please";
+                titlemsg.Foreground = Brushes.Red;
+            }
+            else 
+            {
+                titlemsg.Text = "Awesome task title received";
+                titlemsg.Foreground = Brushes.HotPink;
+            }
+
+            if (string.IsNullOrWhiteSpace(describeTask))
+            {
+                description.Text = "I need you to enter your title please";
+                description.Foreground = Brushes.Red;
+            }
+            else 
+            {
+                description.Text = "Description received";
+                description.Foreground = Brushes.Red;
+            }
+
+            if (string.IsNullOrWhiteSpace(datePicker))
+            {
+                datemsg.Text = "I need your date please";
+                datemsg.Foreground = Brushes.Red;
+            }
+            else
+            {
+                datemsg.Text = "Date has been set";
+                datemsg.Foreground = Brushes.HotPink;
+            }
+        }
+
+        private void completeTaskButton_Click(object sender, RoutedEventArgs e)
+        {
+            string completeTask = title.Text;
+            string describeTask = description.Text;
+            string datePicker = reminder.Text;
+
+            if (string.IsNullOrWhiteSpace(completeTask))
+            {
+                title.Text = "Looks like you didn't enter your title re type it please";
+                titlemsg.Foreground = Brushes.Red;
+            }
+            else
+            {
+                titlemsg.Text = "Awesome task title received";
+                titlemsg.Foreground = Brushes.HotPink;
+            }
+
+            if (string.IsNullOrWhiteSpace(describeTask))
+            {
+                description.Text = "I need you to enter your title please";
+                description.Foreground = Brushes.Red;
+            }
+            else
+            {
+                description.Text = "Description received";
+                description.Foreground = Brushes.Red;
+            }
+
+            if (string.IsNullOrWhiteSpace(datePicker))
+            {
+                datemsg.Text = "I need your date please";
+                datemsg.Foreground = Brushes.Red;
+            }
+            else
+            {
+                datemsg.Text = "Date has been set";
+                datemsg.Foreground = Brushes.HotPink;
+            }
+        }
+
         private void ButtonManage_Click(object sender, RoutedEventArgs e)
         {
             taskModification();
@@ -262,6 +382,7 @@ namespace Cybot
             }
 
         }
+
 
         /*
         public void YesClicks(object sender, RoutedEventArgs e) 
