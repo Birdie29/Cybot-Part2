@@ -227,8 +227,8 @@
                             <ColumnDefinition Width="80*"/>
                             <ColumnDefinition Width="80*"/>
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" Name="btnyes" Click="PressClick" Content="YES" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="200" Background="DeepPink" Padding="10"></Button>
-                        <Button Grid.Column="1" Name="btnno" Click="PressClick" Content="NO" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="200" Background="DeepPink" Padding="10"></Button>
+                        <Button Grid.Column="0" Name="btnyes" Click="btnyes_Click" Content="YES" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="190" Background="DeepPink" Padding="10"></Button>
+                        <Button Grid.Column="1" Name="btnno" Click="btnno_Click" Content="NO" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="190" Background="DeepPink" Padding="10"></Button>
      
                     </Grid>
                     <TextBlock x:Name="nomessage" Foreground="HotPink" FontSize="16" FontWeight="Medium" Grid.ColumnSpan="2" ></TextBlock>
@@ -240,7 +240,7 @@
                         <RadioButton Name="rb3" Content="C)It's an expression used in cullinary terms." Foreground="DeepPink"></RadioButton>
                         <RadioButton Name="rb4" Content="D)It's a form of spyware."></RadioButton>
                         <TextBlock Name="txtFeedback" FontFamily="Cascadia Mono" FontSize="16" FontWeight="ExtraBold"></TextBlock>
-                        <Button Name="next" Click="PressClick" Width="350" HorizontalAlignment="Left"></Button>
+                        <Button Name="next" Click="next_Click" Width="350" HorizontalAlignment="Left"></Button>
                         <TextBlock Name="txtScore" FontFamily="Cascadia Mono" FontSize="20" FontWeight="ExtraBold"></TextBlock>
                     </StackPanel>
                 </StackPanel>

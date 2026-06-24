@@ -388,18 +388,18 @@ namespace Cybot
 
 
         
-        public void btnyes_Click(object sender, RoutedEventArgs e) 
+        private void btnyes_Click(object sender, RoutedEventArgs e) 
         {
-            StartPanel.Visibility = Visibility.Hidden;
+            StartPanel.Visibility = Visibility.Collapsed;
             QuizPanel.Visibility = Visibility.Visible;
             totalScore = 0;
             currentIndex = 0;
             QuizQuestions();
         }
 
-        public void btnno_Click(object sender, RoutedEventArgs e)
+        private void btnno_Click(object sender, RoutedEventArgs e)
         {
-            QuizPanel.Visibility = Visibility.Hidden;
+            QuizPanel.Visibility = Visibility.Collapsed;
             nomessage.Text = "Cool, whenever your ready cybersecurity nerd!";
         }
 
