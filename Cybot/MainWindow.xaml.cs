@@ -35,11 +35,13 @@ namespace Cybot
         }
 
        
+        /*
         private void addTaskButton_Click(object sender, RoutedEventArgs e) 
         {
             string addTask = title.Text;
             string describeTask = description.Text;
-            string datePicker = reminder.Text;
+            DateTime? reminderDate = reminder.SelectedDate;
+
             if (string.IsNullOrWhiteSpace(addTask))
             {
                 titlemsg.Text = "Looks like you didn't enter your title re type it please";
@@ -47,7 +49,7 @@ namespace Cybot
             }
             else
             {
-                titlemsg.Text = "Awesome task title received";
+                titlemsg.Text = "Awesome title has been captured";
                 titlemsg.Foreground = Brushes.HotPink;
             }
 
@@ -62,15 +64,14 @@ namespace Cybot
                 description.Foreground = Brushes.Red;
             }
 
-            if (string.IsNullOrWhiteSpace(datePicker)) 
+            if (reminderDate.HasValue)
             {
-                datemsg.Text = "I need your date please";
-                datemsg.Foreground = Brushes.Red;
+                DateTime selectedDate = reminderDate.Value;
             }
-            else
+            else 
             {
-                datemsg.Text = "Date has been set";
-                datemsg.Foreground = Brushes.HotPink;
+                DBNull.Value;
+                Value;
             }
         }
 
@@ -153,11 +154,13 @@ namespace Cybot
                 datemsg.Foreground = Brushes.HotPink;
             }
         }
+        
 
         private void ButtonManage_Click(object sender, RoutedEventArgs e)
         {
             taskModification();
         }
+        */
 
         private void Username()
         {
@@ -384,8 +387,8 @@ namespace Cybot
         }
 
 
-        /*
-        public void YesClicks(object sender, RoutedEventArgs e) 
+        
+        public void btnyes_Click(object sender, RoutedEventArgs e) 
         {
             StartPanel.Visibility = Visibility.Hidden;
             QuizPanel.Visibility = Visibility.Visible;
@@ -394,7 +397,7 @@ namespace Cybot
             QuizQuestions();
         }
 
-        public void NoClicks(object sender, RoutedEventArgs e)
+        public void btnno_Click(object sender, RoutedEventArgs e)
         {
             QuizPanel.Visibility = Visibility.Hidden;
             nomessage.Text = "Cool, whenever your ready cybersecurity nerd!";
@@ -710,8 +713,9 @@ namespace Cybot
             }
 
         }
-        */
+        
 
+        /*
         List<string> addTask = new List<string>();
         List<string> cybersecurityTopics = new List<string>();
         List<string> setReminder = new List<string>();
@@ -843,6 +847,7 @@ namespace Cybot
             
            
         }
+        */
 
     }
 }
