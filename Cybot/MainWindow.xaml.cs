@@ -393,7 +393,7 @@ namespace Cybot
             StartPanel.Visibility = Visibility.Collapsed;
             QuizPanel.Visibility = Visibility.Visible;
             totalScore = 0;
-            currentIndex = 0;
+            
             QuizQuestions();
         }
 
@@ -403,7 +403,7 @@ namespace Cybot
             nomessage.Text = "Cool, whenever your ready cybersecurity nerd!";
         }
 
-        public void PressNext(object sender, RoutedEventArgs e)
+        public void next_Click(object sender, RoutedEventArgs e)
         {
             validateAnswers();
         }
@@ -524,6 +524,7 @@ namespace Cybot
 
         public void QuizQuestions()
         {
+            currentIndex = 0;
             Questions currentQuestion = questions[currentIndex];
 
             txtQuestion.Content = currentQuestion.txtQuestion;
