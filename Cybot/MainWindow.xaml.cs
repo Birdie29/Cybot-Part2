@@ -411,7 +411,7 @@ namespace Cybot
 
         public void next_Click(object sender, RoutedEventArgs e)
         {
-            totalScore = 0;
+            
             validateAnswers();
         }
         
@@ -726,6 +726,7 @@ namespace Cybot
 
         public void Score()
         {
+            totalScore = 0;
 
             if (totalScore >= 10 && totalScore <= 12)
             {
