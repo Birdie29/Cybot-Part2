@@ -241,8 +241,8 @@
                         <RadioButton Name="rb4" Content="D)It's a form of spyware." Foreground="DeepPink"></RadioButton>
                         <TextBlock Name="txtFeedback" FontFamily="Cascadia Mono" FontSize="16" FontWeight="ExtraBold"></TextBlock>
                         <TextBlock x:Name="questionIndex" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="11" HorizontalAlignment="Right" VerticalAlignment="Top"></TextBlock>
-                        <Button Name="next" Click="next_Click" Width="180" HorizontalAlignment="Left"></Button>
-                        <TextBlock Name="txtScore" FontFamily="Cascadia Mono" FontSize="20" FontWeight="ExtraBold"></TextBlock>
+                        <Button Name="next" Click="next_Click" Content="Next" Width="190" HorizontalAlignment="Left"></Button>
+                        <TextBlock Name="txtScore" FontFamily="Cascadia Mono" FontSize="16" FontWeight="ExtraBold" Foreground="DeepPink"></TextBlock>
                     </StackPanel>
                 </StackPanel>
 

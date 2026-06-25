@@ -720,7 +720,12 @@ namespace Cybot
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:Organisations need to perform mandatory training to reduce the likelihood of losing vital information.";
             }
-            currentIndex = currentIndex + 1;
+            
+
+        }
+
+        public void Score()
+        {
 
             if (totalScore >= 10 && totalScore <= 12)
             {
@@ -737,7 +742,6 @@ namespace Cybot
                 txtScore.Text = "You scored a " + totalScore + "/12";
                 txtScore.Text = "Keep learning to stay safe online!";
             }
-
         }
         
 
