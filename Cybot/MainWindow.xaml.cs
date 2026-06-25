@@ -18,7 +18,7 @@ namespace Cybot
     /// </summary>
     public partial class MainWindow : Window
     {
-
+       
         public MainWindow()
         {
             InitializeComponent();
@@ -386,14 +386,15 @@ namespace Cybot
 
         }
 
-
         
+
         private void btnyes_Click(object sender, RoutedEventArgs e) 
         {
             StartPanel.Visibility = Visibility.Collapsed;
             QuizPanel.Visibility = Visibility.Visible;
-            totalScore = 0;
             
+            currentIndex++;
+            topicQuestions();
             QuizQuestions();
         }
 
@@ -405,6 +406,7 @@ namespace Cybot
 
         public void next_Click(object sender, RoutedEventArgs e)
         {
+            totalScore = 0;
             validateAnswers();
         }
         
@@ -412,7 +414,7 @@ namespace Cybot
        // string userOption = "";
        // string correct = "";
         int totalScore = 0;
-       // int currentQuestion = 0;
+        // int currentQuestion = 0;
         int currentIndex = 0;
 
         public void topicQuestions() 
@@ -522,22 +524,40 @@ namespace Cybot
             }
         }
 
+        
         public void QuizQuestions()
         {
-            currentIndex = 0;
-            Questions currentQuestion = questions[currentIndex];
+            if(currentIndex < 0 || currentIndex >= questions.Count)
+            {
+                txtQuestion.Content = "Quiz ended";
+                return;
+            }
+            Questions q = questions[currentIndex];
 
-            txtQuestion.Content = currentQuestion.txtQuestion;
+            txtQuestion.Content = q.txtQuestion;
             
-            rb1.Content = currentQuestion.rb1;
-            rb2.Content = currentQuestion.rb2;
-            rb3.Content = currentQuestion.rb3;
-            rb4.Content = currentQuestion.rb4;
+            rb1.Content = q.rb1;
+            rb2.Content = q.rb2;
+            rb3.Content = q.rb3;
+            rb4.Content = q.rb4;
 
             rb1.IsChecked = false;
             rb2.IsChecked = false;
             rb3.IsChecked = false;
             rb4.IsChecked = false;
+        }
+
+        public void NextQuestion()
+        {
+            currentIndex++;
+            if(currentIndex < questions.Count)
+            {
+                QuizQuestions();
+            }
+            else
+            {
+                txtQuestion.Content = "Quiz completed";
+            }
         }
 
         public void validateAnswers()

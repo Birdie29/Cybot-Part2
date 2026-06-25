@@ -238,8 +238,9 @@
                         <RadioButton Name="rb1" Content="A)Online fraud that tricks people into providing sensitive information like passwords or credit card information." Foreground="DeepPink" FontSize="19" FontWeight="Bold"></RadioButton>
                         <RadioButton Name="rb2" Content="B)Advising teenagers on how to properly catch a fish." Foreground="DeepPink"></RadioButton>
                         <RadioButton Name="rb3" Content="C)It's an expression used in cullinary terms." Foreground="DeepPink"></RadioButton>
-                        <RadioButton Name="rb4" Content="D)It's a form of spyware."></RadioButton>
+                        <RadioButton Name="rb4" Content="D)It's a form of spyware." Foreground="DeepPink"></RadioButton>
                         <TextBlock Name="txtFeedback" FontFamily="Cascadia Mono" FontSize="16" FontWeight="ExtraBold"></TextBlock>
+                        <TextBlock x:Name="questionIndex" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="11" HorizontalAlignment="Right" VerticalAlignment="Top"></TextBlock>
                         <Button Name="next" Click="next_Click" Width="350" HorizontalAlignment="Left"></Button>
                         <TextBlock Name="txtScore" FontFamily="Cascadia Mono" FontSize="20" FontWeight="ExtraBold"></TextBlock>
                     </StackPanel>
