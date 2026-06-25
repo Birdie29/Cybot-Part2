@@ -413,6 +413,7 @@ namespace Cybot
         {
             
             validateAnswers();
+
         }
         
         List<Questions> questions = new List<Questions>();
@@ -554,15 +555,15 @@ namespace Cybot
 
         public void NextQuestion()
         {
+            validateAnswers();
+
             currentIndex++;
+
             if(currentIndex < questions.Count)
             {
                 QuizQuestions();
             }
-            else
-            {
-                questionIndex.Text = "Quiz completed";
-            }
+           
         }
 
         public void validateAnswers()
