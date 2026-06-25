@@ -403,6 +403,28 @@ namespace Cybot
             
         }
 
+        public void QuizQuestions()
+        {
+            if (currentIndex < 0 || currentIndex >= questions.Count)
+            {
+                txtQuestion.Content = "Quiz ended";
+                return;
+            }
+            Questions q = questions[currentIndex];
+
+            txtQuestion.Content = q.txtQuestion;
+
+            rb1.Content = q.rb1;
+            rb2.Content = q.rb2;
+            rb3.Content = q.rb3;
+            rb4.Content = q.rb4;
+
+            rb1.IsChecked = false;
+            rb2.IsChecked = false;
+            rb3.IsChecked = false;
+            rb4.IsChecked = false;
+        }
+
         private void btnno_Click(object sender, RoutedEventArgs e)
         {
             QuizPanel.Visibility = Visibility.Collapsed;
@@ -413,6 +435,16 @@ namespace Cybot
         {
             
             validateAnswers();
+            currentIndex++;
+
+            if (currentIndex < questions.Count)
+            {
+                QuizQuestions();
+            }
+            else
+            {
+                Score();
+            }
 
         }
         
@@ -531,40 +563,6 @@ namespace Cybot
         }
 
         
-        public void QuizQuestions()
-        {
-            if(currentIndex < 0 || currentIndex >= questions.Count)
-            {
-                txtQuestion.Content = "Quiz ended";
-                return;
-            }
-            Questions q = questions[currentIndex];
-
-            txtQuestion.Content = q.txtQuestion;
-            
-            rb1.Content = q.rb1;
-            rb2.Content = q.rb2;
-            rb3.Content = q.rb3;
-            rb4.Content = q.rb4;
-
-            rb1.IsChecked = false;
-            rb2.IsChecked = false;
-            rb3.IsChecked = false;
-            rb4.IsChecked = false;
-        }
-
-        public void NextQuestion()
-        {
-            validateAnswers();
-
-            currentIndex++;
-
-            if(currentIndex < questions.Count)
-            {
-                QuizQuestions();
-            }
-           
-        }
 
         public void validateAnswers()
         {
