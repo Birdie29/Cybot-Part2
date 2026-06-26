@@ -757,7 +757,7 @@ namespace Cybot
             }
         }
 
-        private void managebtn_Click(object sender, RoutedEventArgs e)
+        private void modifyTasks_Click(object sender, RoutedEventArgs e)
         {
             taskModification();
         }

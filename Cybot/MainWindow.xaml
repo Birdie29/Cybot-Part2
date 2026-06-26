@@ -261,14 +261,11 @@
                 </Grid>
 
                 <Grid Grid.Row="24">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" x:Name="addtsk" Click="addtask_Click" Content="Ammend Task" Width="130" Margin="10" FontSize="19" Foreground="Pink" Background="DeepPink"></Button>
-                    <Button Grid.Column="1" Name="cyberTopics" Click="cybersTopics_Click" Content="CybberTopics" Width="130" Foreground="Pink" Background="DeepPink"></Button>
-                    <Button Grid.Column="2" Name="remindtsk" Click="remindtsk_Click" Content="reminder" Width="130" Foreground="Pink" Background="DeepPink"></Button>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="modifyTasks" Click="modifyTasks_Click" Content="modifyTasks" Width="130" Margin="10" FontSize="19" Foreground="Pink" Background="DeepPink"></Button>
+                     
                 </Grid>
 
                 <Grid Grid.Row="25">
