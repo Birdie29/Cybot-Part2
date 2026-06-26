@@ -594,7 +594,7 @@ namespace Cybot
             else 
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:" + explanation;
+                txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
     
             
@@ -607,7 +607,7 @@ namespace Cybot
             else 
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:";
+                txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
             
 
@@ -620,7 +620,7 @@ namespace Cybot
             else 
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:";
+                txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
             
 
@@ -633,7 +633,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:";
+                txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
             
 
@@ -646,7 +646,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground= Brushes.Red;
-                txtFeedback.Text = "Incorrect:";
+                txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
             
 
@@ -659,7 +659,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:";
+                txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
             
 
@@ -672,7 +672,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:";
+                txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
             
             if (rb1.IsChecked == true && currentQuestion.correct == "True")
@@ -684,7 +684,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:";
+                txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
             
             if (rb1.IsChecked == true && currentQuestion.correct == "True")
@@ -696,7 +696,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:";
+                txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
             
 
@@ -709,7 +709,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:";
+                txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
            
             if (rb2.IsChecked == true && currentQuestion.correct == "False")
@@ -721,7 +721,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:";
+                txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
             
 
@@ -734,7 +734,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:";
+                txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
             
 
@@ -743,20 +743,20 @@ namespace Cybot
         public void Score()
         {
             
-            if (totalScore >= 0 && totalScore <= 5)
+            if (totalScore >= 10 && totalScore <= 12)
             {
                 txtScore.Text = "You scored a " + totalScore + "/12";
-                scoreFeedback.Text = "Keep learning to stay safe online.";
+                scoreFeedback.Text = "Great job, your a cybersecurity pro!.";
             }
             else if (totalScore >= 6 && totalScore <= 9)
             {
                 txtScore.Text = "You scored a " + totalScore + "/12";
                 scoreFeedback.Text = "Nice work you're already thinking like a pro!";
             }
-            else if(totalScore >=10 && totalScore <=12)
+            else
             {
                 txtScore.Text = "You scored a " + totalScore + "/12";
-                scoreFeedback.Text = "Great job, your a cybersecurity pro!";
+                scoreFeedback.Text = "Keep learning to stay safe online";
             }
         }
         
