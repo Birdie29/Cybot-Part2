@@ -279,7 +279,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBox x:Name="logAction"  Width="650" Padding="10" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="16" Foreground="LightPink"></TextBox>
+                    <TextBox x:Name="logAction"  Width="650" Padding="10" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="16" Foreground="HotPink"></TextBox>
                 </Grid>
 
                 <Grid Grid.Row="29">

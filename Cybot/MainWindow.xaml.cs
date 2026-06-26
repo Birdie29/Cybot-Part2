@@ -832,28 +832,33 @@ namespace Cybot
 
             }
 
-            if (!log.Contains("show activity log") && !log.Contains("activities") && !log.Contains("log")) 
+            if (log.Contains("show activity log") || log.Contains("activities") || log.Contains("log")) 
             {
-                logsumarry.Foreground = Brushes.Red;
-                logsumarry.Text = "I am having trouble with reading your input try again please";
-            }
-            else if(log.Contains("show activity log") || log.Contains("activities") || log.Contains("log")) 
-            {
+
                 int counter = 1;
                 int maxActivities = 5;
                 int initialActivity = activityLog.Count() - maxActivities;
 
-                if (initialActivity < 0) 
-                { 
+                if (initialActivity < 0)
+                {
                     initialActivity = 0;
                 }
-                
-                for(int i=0; i>initialActivity; i= activityLog.Count() - 1) 
+
+                logsumarry.Text = "";
+
+                for (int i = initialActivity; i< activityLog.Count; i++)
                 {
                     logsumarry.Foreground = Brushes.HotPink;
                     logsumarry.Text += counter + "." + activityLog[i] + "\n";
                     counter = counter + 1;
                 }
+ 
+            }
+            else 
+            {
+                logsumarry.Foreground = Brushes.Red;
+                logsumarry.Text = "I am having trouble with reading your input try again please";
+
             }
             
            
