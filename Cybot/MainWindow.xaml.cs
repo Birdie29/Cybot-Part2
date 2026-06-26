@@ -26,6 +26,7 @@ namespace Cybot
         }
 
 
+        
         private void PressClick(object sender, RoutedEventArgs e)
         {
             Username();
@@ -160,7 +161,7 @@ namespace Cybot
         {
             taskModification();
         }
-        */
+       */
 
         private void Username()
         {
@@ -385,7 +386,7 @@ namespace Cybot
             }
 
         }
-
+        
         
 
         private void btnyes_Click(object sender, RoutedEventArgs e) 
@@ -396,11 +397,11 @@ namespace Cybot
             
             topicQuestions();
 
-            currentIndex++;
-            
-           // QuizQuestions();
-            
-            
+            currentIndex = 0;
+
+            QuizQuestions();
+
+
         }
 
         public void QuizQuestions()
@@ -568,7 +569,7 @@ namespace Cybot
         {
             Questions currentQuestion = questions[currentIndex];
 
-            if (rb1.IsChecked == true && questions[currentIndex].correct == "A")
+            if (rb1.IsChecked == true && currentQuestion.correct == "A")
             {
                 txtFeedback.Foreground = Brushes.Green;
                 txtFeedback.Text = "Correct!";
@@ -579,9 +580,9 @@ namespace Cybot
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:Phishing is an online fraud that tricks people into providing sensitive information like passwords and credit card information.";
             }
+    
             
-
-            if (rb4.IsChecked == true && questions[currentIndex].correct == "D") 
+            if (rb4.IsChecked == true && currentQuestion.correct == "D") 
             {
                 txtFeedback.Foreground= Brushes.Green;
                 txtFeedback.Text = "Correct!";
@@ -594,7 +595,7 @@ namespace Cybot
             }
             
 
-            if(rb4.IsChecked == true && questions[currentIndex].correct == "D") 
+            if(rb4.IsChecked == true && currentQuestion.correct == "D") 
             {
                 txtFeedback.Foreground = Brushes.Green;
                 txtFeedback.Text = "Correct!";
@@ -607,7 +608,7 @@ namespace Cybot
             }
             
 
-            if(rb1.IsChecked == true && questions[currentIndex].correct == "A")
+            if(rb1.IsChecked == true && currentQuestion.correct == "A")
             {
                 txtFeedback.Foreground = Brushes.Green;
                 txtFeedback.Text = "Correct!";
@@ -620,7 +621,7 @@ namespace Cybot
             }
             
 
-            if(rb2.IsChecked == true && questions[currentIndex].correct == "B")
+            if(rb2.IsChecked == true && currentQuestion.correct == "B")
             {
                 txtFeedback.Foreground = Brushes.Green;
                 txtFeedback.Text = "Correct!";
@@ -633,7 +634,7 @@ namespace Cybot
             }
             
 
-            if (rb2.IsChecked == true && questions[currentIndex].correct == "B")
+            if (rb2.IsChecked == true && currentQuestion.correct == "B")
             {
                 txtFeedback.Foreground = Brushes.Green;
                 txtFeedback.Text = "Correct!";
@@ -646,7 +647,7 @@ namespace Cybot
             }
             
 
-            if (rb2.IsChecked == true && questions[currentIndex].correct == "False")
+            if (rb2.IsChecked == true && currentQuestion.correct == "False")
             {
                 txtFeedback.Foreground = Brushes.Green;
                 txtFeedback.Text = "Correct!";
@@ -658,7 +659,7 @@ namespace Cybot
                 txtFeedback.Text = "Incorrect:You need to update your software regularly.";
             }
             
-            if (rb1.IsChecked == true && questions[currentIndex].correct == "True")
+            if (rb1.IsChecked == true && currentQuestion.correct == "True")
             {
                 txtFeedback.Foreground = Brushes.Green;
                 txtFeedback.Text = "Correct!";
@@ -670,7 +671,7 @@ namespace Cybot
                 txtFeedback.Text = "Incorrect:HTTPS does encrypt your data so hackers don't intercept your information.";
             }
             
-            if (rb1.IsChecked == true && questions[currentIndex].correct == "True")
+            if (rb1.IsChecked == true && currentQuestion.correct == "True")
             {
                 txtFeedback.Foreground = Brushes.Green;
                 txtFeedback.Text = "Correct!";
@@ -683,7 +684,7 @@ namespace Cybot
             }
             
 
-            if (rb2.IsChecked == true && questions[currentIndex].correct == "False")
+            if (rb2.IsChecked == true && currentQuestion.correct == "False")
             {
                 txtFeedback.Foreground = Brushes.Green;
                 txtFeedback.Text = "Correct!";
@@ -695,7 +696,7 @@ namespace Cybot
                 txtFeedback.Text = "Incorrect:Social Engineering uses psychological manipulation to trick people into divulging confidential information.";
             }
            
-            if (rb2.IsChecked == true && questions[currentIndex].correct == "False")
+            if (rb2.IsChecked == true && currentQuestion.correct == "False")
             {
                 txtFeedback.Foreground = Brushes.Green;
                 txtFeedback.Text = "Correct!";
@@ -708,7 +709,7 @@ namespace Cybot
             }
             
 
-            if (rb2.IsChecked == true && questions[currentIndex].correct == "False")
+            if (rb2.IsChecked == true && currentQuestion.correct == "False")
             {
                 txtFeedback.Foreground = Brushes.Green;
                 txtFeedback.Text = "Correct!";
@@ -725,22 +726,21 @@ namespace Cybot
 
         public void Score()
         {
-            totalScore = 0;
-
-            if (totalScore >= 10 && totalScore <= 12)
+            
+            if (totalScore >= 0 && totalScore <= 5)
             {
                 txtScore.Text = "You scored a " + totalScore + "/12";
-                txtScore.Text = "Great Job! your a cybersecurity pro.";
+                scoreFeedback.Text = "Keep learning to stay safe online.";
             }
             else if (totalScore >= 6 && totalScore <= 9)
             {
                 txtScore.Text = "You scored a " + totalScore + "/12";
-                txtScore.Text = "Nice work you're already thinking like a pro!";
+                scoreFeedback.Text = "Nice work you're already thinking like a pro!";
             }
-            else
+            else if(totalScore >=10 && totalScore <=12)
             {
                 txtScore.Text = "You scored a " + totalScore + "/12";
-                txtScore.Text = "Keep learning to stay safe online!";
+                scoreFeedback.Text = "Great job, your a cybersecurity pro!";
             }
         }
         

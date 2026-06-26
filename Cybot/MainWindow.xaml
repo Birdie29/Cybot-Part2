@@ -49,7 +49,7 @@
                 <Image Grid.Row="0"  Source="/cybotart.png" Margin="0,0,0,87" Grid.RowSpan="2"/>
 
 
-                <Grid Grid.Row="2">
+                <Grid Grid.Row="2" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
 
@@ -60,7 +60,7 @@
 
                 </Grid>
 
-                <Grid Grid.Row="3">
+                <Grid Grid.Row="3" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -68,7 +68,7 @@
                          Padding="10" Background="White"  Foreground="HotPink" FontFamily="Cascadia Mono" FontWeight="Medium"/>
                 </Grid>
 
-                <Grid Grid.Row="4">
+                <Grid Grid.Row="4" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -78,7 +78,7 @@
                 </Grid>
 
 
-                <Grid Grid.Row="5">
+                <Grid Grid.Row="5" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -87,7 +87,7 @@
 
                 </Grid>
 
-                <Grid Grid.Row="6">
+                <Grid Grid.Row="6" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -95,7 +95,7 @@
 
                 </Grid>
 
-                <Grid Grid.Row="7">
+                <Grid Grid.Row="7" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -103,20 +103,20 @@
 
                 </Grid>
 
-                <Grid Grid.Row="8">
+                <Grid Grid.Row="8" Visibility="Collapsed">
 
                     <Label Content="Here's a list of some topics we can dive right into:" FontSize="19" FontWeight="Bold" Foreground="DeepPink" FontFamily="Cascadia Mono" HorizontalAlignment="Center"/>
 
                 </Grid>
 
-                <StackPanel Grid.Row="9" Margin="10">
+                <StackPanel Grid.Row="9" Margin="10" Visibility="Collapsed">
                     <TextBlock Name="password" Text="~Password Safety" Width="300"  HorizontalAlignment="Center" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
                     <TextBlock Name="scam" Text="~Phishing" Width="300"  HorizontalAlignment="Center" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
                     <TextBlock Name="privacy" Text="~Safe browsing" Width="300" HorizontalAlignment="Center" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
                 </StackPanel>
 
 
-                <Grid Grid.Row="10">
+                <Grid Grid.Row="10" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -125,14 +125,14 @@
 
                 </Grid>
 
-                <Grid Grid.Row="11">
+                <Grid Grid.Row="11" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <TextBox x:Name="pick" Width="500" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="HotPink" FontWeight="Medium"/>
                 </Grid>
 
-                <Grid Grid.Row="12">
+                <Grid Grid.Row="12" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -140,14 +140,14 @@
                     <TextBlock x:Name="paragrapgh" FontFamily="Cascadia Mono" FontSize="16" FontWeight="ExtraBold" Foreground="HotPink" HorizontalAlignment="Center"/>
                 </Grid>
 
-                <Grid Grid.Row="13">
+                <Grid Grid.Row="13" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <Label Content="Do you need any additional tips?" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Bold" FontSize="19" HorizontalAlignment="Center"></Label>
                 </Grid>
 
-                <Grid Grid.Row="14">
+                <Grid Grid.Row="14" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -155,7 +155,7 @@
                     <TextBox x:Name="info" Foreground="HotPink" FontFamily="Cascadia Mono"  Width="500" Padding="10" FontWeight="Medium"></TextBox>
                 </Grid>
 
-                <Grid Grid.Row="15">
+                <Grid Grid.Row="15" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -163,7 +163,7 @@
                     <TextBlock x:Name="information" FontFamily="Cascadia Mono" FontSize="16" FontWeight="ExtraBold" HorizontalAlignment="Center"></TextBlock>
                 </Grid>
 
-                <Grid Grid.Row="16">
+                <Grid Grid.Row="16" Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -243,6 +243,7 @@
                         <TextBlock x:Name="questionIndex" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="11" HorizontalAlignment="Right" VerticalAlignment="Top"></TextBlock>
                         <Button Name="next" Click="next_Click" Content="Next" Width="190" HorizontalAlignment="Left"></Button>
                         <TextBlock Name="txtScore" FontFamily="Cascadia Mono" FontSize="16" FontWeight="ExtraBold" Foreground="DeepPink"></TextBlock>
+                        <TextBlock Name="scoreFeedback" FontFamily="Cascadia Mono" Foreground="DeepPink" FontWeight="Medium" FontSize="16"></TextBlock>
                     </StackPanel>
                 </StackPanel>
 
