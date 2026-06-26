@@ -455,7 +455,7 @@ namespace Cybot
         int totalScore = 0;
         // int currentQuestion = 0;
         int currentIndex = 0;
-
+        string explanation;
         public void topicQuestions() 
         { 
             
@@ -467,6 +467,7 @@ namespace Cybot
                 rb3 = "C)It's an expression used in culinary terms.",
                 rb4 = "D)It's a form of spyware.",
                 correct = "A",
+                explanation = "Phishing is an online fraud that tricks people into providing sensitive information like passwords and credit card information. "
                 });
                 
                 questions.Add(new Questions
@@ -475,7 +476,9 @@ namespace Cybot
                 rb2 = "B)The email says your account is on hold because of a billing problem.",
                 rb3 = "C)The email invites you to click on a link to update your payment details.",
                 rb4 = "D)All of the above.",
-                correct = "D"});
+                correct = "D",
+                explanation = "All these red flags are valid"
+                });
 
                 questions.Add(new Questions
                 {txtQuestion = "3)If you received a phishing email what authorities would you report it to?" ,
@@ -483,7 +486,9 @@ namespace Cybot
                 rb2 = "B)SABC",
                 rb3 = "C)CIA",
                 rb4 = "D)FTC",
-                correct = "D"});
+                correct = "D",
+                explanation = "You should report it to the FTC."
+                });
 
                 questions.Add(new Questions
                 { txtQuestion = "4)Why should you always strive for longer passwords?",
@@ -491,7 +496,9 @@ namespace Cybot
                 rb2 = "B)It's meant to look like that.",
                 rb3 = "C)It reduces the risk of exploiting your personal information.",
                 rb4 = "D)To be able to share it with unknown people online.",
-                correct = "A"});
+                correct = "A",
+                explanation = "Longer passwords make it harder for attackers to guess or crack it through brute force methods."
+                });
 
                 questions.Add(new Questions
                 { txtQuestion = "5)What potential risks am i going to face if i don't change my passwords regularly?",
@@ -499,7 +506,9 @@ namespace Cybot
                 rb2 = "B)Risks related to data breaches and unauthorised access for critical accounts like email or banking.",
                 rb3 = "C)Some random individual might have access to your work phone number.",
                 rb4 = "D)Someone may have access to your Netflix account.",
-                correct = "B"});
+                correct = "B",
+                explanation = "Risks related to data breaches and unauthorised access for critical accounts like email or banking."
+                });
 
                 questions.Add(new Questions
                 {
@@ -508,7 +517,8 @@ namespace Cybot
                     rb2 = "B)They ensure that your password is as strong as possible.",
                     rb3 = "C)Hackers wont be able to gain access to your information.",
                     rb4 = "D)To safeguard my favorite clothing brand account information.",
-                    correct = "B"
+                    correct = "B",
+                    explanation = "They ensure that your password is as strong as possible."
                 });
 
 
@@ -517,7 +527,8 @@ namespace Cybot
                     txtQuestion = "7)Choosing to not update my device means that my software will run efficiently.",
                     rb1 = "True.",
                     rb2 = "False.",
-                    correct = "False"
+                    correct = "False",
+                    explanation = "You need to update your software regularly."
                 });
 
                 questions.Add(new Questions
@@ -525,7 +536,8 @@ namespace Cybot
                     txtQuestion = "8)Using HTTPS encrypts data exchanged between your web browser and the website your visiting making it difficult for hackers to intercept your information.",
                     rb1 = "True.",
                     rb2 = "False.",
-                    correct = "True"
+                    correct = "True",
+                    explanation = "HTTPS does encrypt your data so hackers don't intercept your information."
                 });
 
                 questions.Add(new Questions 
@@ -533,7 +545,8 @@ namespace Cybot
                     txtQuestion = "9)Being aware of the latest online threats and how to protect yourself is crucial in maintaining your online security..",
                     rb1 = "True.",
                     rb2 = "False.",
-                    correct = "True"
+                    correct = "True",
+                    explanation = "Being aware of online threats helps you to protect yourself so you can maintain online security."
                 });
 
                 questions.Add(new Questions
@@ -541,7 +554,8 @@ namespace Cybot
                     txtQuestion = "10)Social engineering is a harmless action whereby people unknowingly share sensitive information about themselves.",
                     rb1 = "True.",
                     rb2 = "False.",
-                    correct = "False"
+                    correct = "False",
+                    explanation = "Social Engineering uses psychological manipulation to trick people into divulging confidential information."
                 });
 
                 questions.Add(new Questions
@@ -549,7 +563,8 @@ namespace Cybot
                     txtQuestion = "11)As an authorised individual within an organisation it's a must that you allow an unknown individual to physically follow you to a restricted area while claiming they have mislaid their pass.",
                     rb1 = "True.",
                     rb2 = "False.",
-                    correct = "False"
+                    correct = "False",
+                    explanation = "Tailgating is a form of social engineering whereby unauthorised individuals  gain access to a restricted area of an organisation."
                 });
 
                 questions.Add(new Questions
@@ -557,7 +572,8 @@ namespace Cybot
                     txtQuestion = "12)Social engineering attacks are not always easy to detect and therefore organisations should never conduct proper training for their staff.",
                     rb1 = "True.",
                     rb2 = "False.",
-                    correct = "False"
+                    correct = "False",
+                    explanation = "Organisations need to perform mandatory training to reduce the likelihood of losing vital information."
                 });
                 
             }
@@ -578,7 +594,7 @@ namespace Cybot
             else 
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:Phishing is an online fraud that tricks people into providing sensitive information like passwords and credit card information.";
+                txtFeedback.Text = "Incorrect:" + explanation;
             }
     
             
@@ -591,7 +607,7 @@ namespace Cybot
             else 
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:All these red flags are valid";
+                txtFeedback.Text = "Incorrect:";
             }
             
 
@@ -604,7 +620,7 @@ namespace Cybot
             else 
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:You should report it to the";
+                txtFeedback.Text = "Incorrect:";
             }
             
 
@@ -617,7 +633,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:Longer passwords make it harder for attackers to guess or crack it through brute force methods.";
+                txtFeedback.Text = "Incorrect:";
             }
             
 
@@ -630,7 +646,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground= Brushes.Red;
-                txtFeedback.Text = "Incorrect:Risks related to data breaches and unauthorised access for critical accounts like email or banking.";
+                txtFeedback.Text = "Incorrect:";
             }
             
 
@@ -643,7 +659,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:They ensure that your password is as strong as possible.";
+                txtFeedback.Text = "Incorrect:";
             }
             
 
@@ -656,7 +672,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:You need to update your software regularly.";
+                txtFeedback.Text = "Incorrect:";
             }
             
             if (rb1.IsChecked == true && currentQuestion.correct == "True")
@@ -668,7 +684,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:HTTPS does encrypt your data so hackers don't intercept your information.";
+                txtFeedback.Text = "Incorrect:";
             }
             
             if (rb1.IsChecked == true && currentQuestion.correct == "True")
@@ -680,7 +696,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:Being aware of online threats helps you to protect yourself so you can maintain online security.";
+                txtFeedback.Text = "Incorrect:";
             }
             
 
@@ -693,7 +709,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:Social Engineering uses psychological manipulation to trick people into divulging confidential information.";
+                txtFeedback.Text = "Incorrect:";
             }
            
             if (rb2.IsChecked == true && currentQuestion.correct == "False")
@@ -705,7 +721,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:Tailgating is a form of social engineering whereby unauthorised individuals  gain access to a restricted area of an organisation.";
+                txtFeedback.Text = "Incorrect:";
             }
             
 
@@ -718,7 +734,7 @@ namespace Cybot
             else
             {
                 txtFeedback.Foreground = Brushes.Red;
-                txtFeedback.Text = "Incorrect:Organisations need to perform mandatory training to reduce the likelihood of losing vital information.";
+                txtFeedback.Text = "Incorrect:";
             }
             
 
