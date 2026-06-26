@@ -264,7 +264,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Button x:Name="modifyTasks" Click="modifyTasks_Click" Content="modifyTasks" Width="130" Margin="10" FontSize="19" Foreground="Pink" Background="DeepPink"></Button>
+                    <Button x:Name="modifyTasks" Click="modifyTasks_Click" Content="modifyTasks" Width="130" Margin="10" FontSize="19" FontFamily="Cascadia Mono" Foreground="Pink" Background="DeepPink" HorizontalAlignment="Right"></Button>
                      
                 </Grid>
 

@@ -844,7 +844,8 @@ namespace Cybot
                     initialActivity = 0;
                 }
 
-                logsumarry.Text = "";
+                logsumarry.Text = "Here's your activity log:";
+                logsumarry.Foreground = Brushes.HotPink;
 
                 for (int i = initialActivity; i< activityLog.Count; i++)
                 {
