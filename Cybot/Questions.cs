@@ -15,5 +15,6 @@ namespace Cybot
         public string txtFeedback {  get; set; }
         public string tstScore { get; set; } 
 
+        public string explanation{get; set;}
     }
 }
