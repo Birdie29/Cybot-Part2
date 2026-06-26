@@ -811,31 +811,32 @@ namespace Cybot
 
             if(action.Contains("show") || action.Contains("summary") || action.Contains("what") || action.Contains("list")) 
             {
-                taskFeedback.Foreground = Brushes.Red;
-                taskFeedback.Text = "Im sorry i did't catch that. Could you rephrase it.";
-            }
-            else if(action.Contains("show") || action.Contains("summary") || action.Contains("what") || action.Contains("list")) 
-            {
-                foreach (var task in addTask) 
+ 
+                foreach (var task in addTask)
                 {
                     summary.Text = task;
                 }
 
-                foreach (var topic in cybersecurityTopics) 
+                foreach (var topic in cybersecurityTopics)
                 {
                     summary.Text = topic;
                 }
 
-                foreach (var reminder in setReminder) 
-                { 
+                foreach (var reminder in setReminder)
+                {
                     summary.Text = reminder;
                 }
 
                 foreach (var test in quizTest)
-                { 
+                {
                     summary.Text = test;
                 }
-            
+            }
+            else if(action.Contains("show") || action.Contains("summary") || action.Contains("what") || action.Contains("list")) 
+            {
+                taskFeedback.Foreground = Brushes.Red;
+                taskFeedback.Text = "Im sorry i did't catch that. Could you rephrase it.";
+
             }
 
             if (!log.Contains("show activity log") && !log.Contains("activities") && !log.Contains("log")) 
