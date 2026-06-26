@@ -35,7 +35,7 @@ namespace Cybot
             
         }
 
-       
+
         /*
         private void addTaskButton_Click(object sender, RoutedEventArgs e) 
         {
@@ -156,12 +156,9 @@ namespace Cybot
             }
         }
         
-
-        private void ButtonManage_Click(object sender, RoutedEventArgs e)
-        {
-            taskModification();
-        }
-       */
+         */
+       
+      
 
         private void Username()
         {
@@ -455,7 +452,7 @@ namespace Cybot
         int totalScore = 0;
         // int currentQuestion = 0;
         int currentIndex = 0;
-        string explanation;
+        
         public void topicQuestions() 
         { 
             
@@ -580,7 +577,7 @@ namespace Cybot
         }
 
         
-
+        
         public void validateAnswers()
         {
             Questions currentQuestion = questions[currentIndex];
@@ -743,12 +740,12 @@ namespace Cybot
         public void Score()
         {
             
-            if (totalScore >= 10 && totalScore <= 12)
+            if (totalScore > 10 && totalScore <= 12)
             {
                 txtScore.Text = "You scored a " + totalScore + "/12";
                 scoreFeedback.Text = "Great job, your a cybersecurity pro!.";
             }
-            else if (totalScore >= 6 && totalScore <= 9)
+            else if (totalScore > 6 && totalScore <= 9)
             {
                 txtScore.Text = "You scored a " + totalScore + "/12";
                 scoreFeedback.Text = "Nice work you're already thinking like a pro!";
@@ -759,22 +756,24 @@ namespace Cybot
                 scoreFeedback.Text = "Keep learning to stay safe online";
             }
         }
-        
 
-        /*
+        private void managebtn_Click(object sender, RoutedEventArgs e)
+        {
+            taskModification();
+        }
+
         List<string> addTask = new List<string>();
         List<string> cybersecurityTopics = new List<string>();
         List<string> setReminder = new List<string>();
         List<string> quizTest = new List<string>();
         List<string> activityLog = new List<string>();
-        
-       
 
+       
         public void taskModification()
         {
-            string action = taskMod.Text;
+            string action = taskMod.Text.ToLower();
             string log = logAction.Text;
-            action.ToLower();
+            
             if(!action.Contains("add") && !action.Contains("create") && !action.Contains("make") && !action.Contains("new")) 
             {
                 taskFeedback.Foreground = Brushes.Red;
@@ -893,7 +892,7 @@ namespace Cybot
             
            
         }
-        */
+        
 
     }
 }

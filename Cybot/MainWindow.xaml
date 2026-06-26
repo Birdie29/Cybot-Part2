@@ -247,7 +247,7 @@
                     </StackPanel>
                 </StackPanel>
 
-                <StackPanel Grid.Row="22" Visibility="Collapsed">
+                <StackPanel Grid.Row="22">
                     <Label Content="Just a quick headsup regarding your tasks you can add, set reminders, take quizzes or even view a summry or your activity logs" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Bold" FontSize="19" HorizontalAlignment="Center"></Label>
                     <TextBox x:Name="taskMod" Width="490" Padding="10" FontSize="16" FontWeight="Medium" Foreground="HotPink"></TextBox>
                     <TextBlock x:Name="taskFeedback" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
@@ -260,28 +260,32 @@
                     <TextBlock x:Name="summary" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
                 </Grid>
 
-                <Grid Grid.Row="24" Visibility="Collapsed">
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <Button x:Name="ManageButton" Click="PressClick" Content="Ammend Task" Width="130" Margin="10" FontSize="19" Foreground="Pink" Background="DeepPink"></Button>
+                <Grid Grid.Row="24">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" x:Name="addtsk" Click="addtask_Click" Content="Ammend Task" Width="130" Margin="10" FontSize="19" Foreground="Pink" Background="DeepPink"></Button>
+                    <Button Grid.Column="1" Name="cyberTopics" Click="cybersTopics_Click" Content="CybberTopics" Width="130" Foreground="Pink" Background="DeepPink"></Button>
+                    <Button Grid.Column="2" Name="remindtsk" Click="remindtsk_Click" Content="reminder" Width="130" Foreground="Pink" Background="DeepPink"></Button>
                 </Grid>
 
-                <Grid Grid.Row="25" Visibility="Collapsed">
+                <Grid Grid.Row="25">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <Label Content="Would you like me to display your activities:" Foreground="DeepPink" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
                 </Grid>
 
-                <Grid Grid.Row="28" Visibility="Collapsed">
+                <Grid Grid.Row="28">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <TextBox x:Name="logAction"  Width="650" Padding="10" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="16" Foreground="LightPink"></TextBox>
                 </Grid>
 
-                <Grid Grid.Row="29" Visibility="Collapsed">
+                <Grid Grid.Row="29">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
