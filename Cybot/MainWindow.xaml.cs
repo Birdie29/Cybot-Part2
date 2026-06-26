@@ -851,7 +851,7 @@ namespace Cybot
                 for(int i=0; i>initialActivity; i= activityLog.Count() - 1) 
                 {
                     logsumarry.Foreground = Brushes.HotPink;
-                    logsumarry.Text = counter + "." + activityLog[i];
+                    logsumarry.Text += counter + "." + activityLog[i] + "\n";
                     counter = counter + 1;
                 }
             }
