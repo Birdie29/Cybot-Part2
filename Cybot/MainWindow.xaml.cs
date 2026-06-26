@@ -785,7 +785,7 @@ namespace Cybot
             {
                 cybersecurityTopics.Add(action);
                 taskFeedback.Foreground = Brushes.Green;
-                taskFeedback.Text = "Cybersecurity tip:" + action;
+                taskFeedback.Text = "Cybersecurity topic:" + action;
                 activityLog.Add("Cybersecurity tip:" + action);
             }
             else if (action.Contains("remind") || action.Contains("set") || action.Contains("remember") || action.Contains("don't forget"))
@@ -795,40 +795,34 @@ namespace Cybot
                 taskFeedback.Text = "Reminder:" + action;
                 activityLog.Add("Reminder set:" + action);
             }
-            if (action.Contains("test") || action.Contains("ask") || action.Contains("question"))
+            else if (action.Contains("test") || action.Contains("ask") || action.Contains("question"))
             {
                 quizTest.Add(action);
                 taskFeedback.Foreground = Brushes.Green;
                 taskFeedback.Text = "Quiz:" + action;
                 activityLog.Add("Quiz Test:" + action);
             }
-            else 
+            else if(action.Contains("show") || action.Contains("summary") || action.Contains("what") || action.Contains("list")) 
             {
-                    taskFeedback.Foreground = Brushes.Red;
-                    taskFeedback.Text = "Im sorry i did't catch that. Could you rephrase it.";
-
-            }
-
-            if(action.Contains("show") || action.Contains("summary") || action.Contains("what") || action.Contains("list")) 
-            {
+                summary.Text = "";
                 foreach (var task in addTask)
                 {
-                    summary.Text = task;
+                    summary.Text += task + "\n";
                 }
 
                 foreach (var topic in cybersecurityTopics)
                 {
-                    summary.Text = topic;
+                    summary.Text += topic + "\n";
                 }
 
                 foreach (var reminder in setReminder)
                 {
-                    summary.Text = reminder;
+                    summary.Text += reminder + "\n";
                 }
 
                 foreach (var test in quizTest)
                 {
-                    summary.Text = test;
+                    summary.Text += test + "\n";
                 }
             }
             else 
