@@ -253,14 +253,14 @@
                     <TextBlock x:Name="taskFeedback" Foreground="HotPink" FontSize="16" FontWeight="Bold" FontFamily="Cascadia Mono"></TextBlock>
                 </StackPanel>
 
-                <Grid Grid.Row="23">
+                <Grid Grid.Row="24">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBlock x:Name="summary" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
+                    <TextBlock Name="summary" Foreground="HotPink" FontSize="16" FontFamily="Cascadia Mono" FontWeight="Medium"></TextBlock>
                 </Grid>
 
-                <Grid Grid.Row="24">
+                <Grid Grid.Row="25">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -268,7 +268,7 @@
                      
                 </Grid>
 
-                <Grid Grid.Row="25">
+                <Grid Grid.Row="26">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>

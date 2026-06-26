@@ -811,7 +811,6 @@ namespace Cybot
 
             if(action.Contains("show") || action.Contains("summary") || action.Contains("what") || action.Contains("list")) 
             {
- 
                 foreach (var task in addTask)
                 {
                     summary.Text = task;
@@ -832,7 +831,7 @@ namespace Cybot
                     summary.Text = test;
                 }
             }
-            else if(action.Contains("show") || action.Contains("summary") || action.Contains("what") || action.Contains("list")) 
+            else 
             {
                 taskFeedback.Foreground = Brushes.Red;
                 taskFeedback.Text = "Im sorry i did't catch that. Could you rephrase it.";
