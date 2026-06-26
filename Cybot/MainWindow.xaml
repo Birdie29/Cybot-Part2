@@ -248,9 +248,9 @@
                 </StackPanel>
 
                 <StackPanel Grid.Row="22">
-                    <Label Content="Just a quick headsup regarding your tasks you can add, set reminders, take quizzes or even view a summry or your activity logs" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Bold" FontSize="19" HorizontalAlignment="Center"></Label>
-                    <TextBox x:Name="taskMod" Width="490" Padding="10" FontSize="16" FontWeight="Medium" Foreground="HotPink"></TextBox>
-                    <TextBlock x:Name="taskFeedback" Foreground="HotPink" FontSize="19" FontWeight="ExtraBold" FontFamily="Cascadia Mono"></TextBlock>
+                    <Label Content="Psst! you can add, set reminders, take quizzes or even view your summry and your activity logs" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Bold" FontSize="19" HorizontalAlignment="Center"></Label>
+                    <TextBox x:Name="taskMod" Width="490" Padding="10" FontSize="16" FontWeight="Medium" Foreground="HotPink" FontFamily="Cascadia Mono"></TextBox>
+                    <TextBlock x:Name="taskFeedback" Foreground="HotPink" FontSize="16" FontWeight="Bold" FontFamily="Cascadia Mono"></TextBlock>
                 </StackPanel>
 
                 <Grid Grid.Row="23">

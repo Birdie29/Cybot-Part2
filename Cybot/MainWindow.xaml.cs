@@ -771,74 +771,45 @@ namespace Cybot
        
         public void taskModification()
         {
-            string action = taskMod.Text.ToLower();
+            string action = taskMod.Text.ToLower().Trim();
             string log = logAction.Text;
             
-            if(!action.Contains("add") && !action.Contains("create") && !action.Contains("make") && !action.Contains("new")) 
+            if(action.Contains("add") || action.Contains("create") || action.Contains("make") || action.Contains("new")) 
             {
-                taskFeedback.Foreground = Brushes.Red;
-                taskFeedback.Text = "Im sorry i did't catch that. Could you rephrase it.";
-            }
-            else if(action.Contains("add") || action.Contains("create") || action.Contains("make") || action.Contains("new"))
-            {
-                
-                {
-                    addTask.Add(action);
-                    taskFeedback.Foreground = Brushes.Green;
-                    taskFeedback.Text = "Task:" + action;
-                    activityLog.Add("Task added:" + action);
-                }
-            }
-
-            if (!action.Contains("phishing") && !action.Contains("password") && !action.Contains("privacy"))
-            {
-                taskFeedback.Foreground = Brushes.Red;
-                taskFeedback.Text = "Im sorry i did't catch that. Could you rephrase it.";
+                addTask.Add(action);
+                taskFeedback.Foreground = Brushes.Green;
+                taskFeedback.Text = "Task:" + action;
+                activityLog.Add("Task added:" + action);
             }
             else if (action.Contains("phishing") || action.Contains("password") || action.Contains("privacy"))
             {
-               
-                {
-                    cybersecurityTopics.Add(action);
-                    taskFeedback.Foreground = Brushes.Green;
-                    taskFeedback.Text = "Cybersecurity tip:" + action;
-                    activityLog.Add("Cybersecurity tip:" + action);
-                }
+                cybersecurityTopics.Add(action);
+                taskFeedback.Foreground = Brushes.Green;
+                taskFeedback.Text = "Cybersecurity tip:" + action;
+                activityLog.Add("Cybersecurity tip:" + action);
+            }
+            else if (action.Contains("remind") || action.Contains("set") || action.Contains("remember") || action.Contains("don't forget"))
+            {
+                setReminder.Add(action);
+                taskFeedback.Foreground = Brushes.Green;
+                taskFeedback.Text = "Reminder:" + action;
+                activityLog.Add("Reminder set:" + action);
+            }
+            if (action.Contains("test") || action.Contains("ask") || action.Contains("question"))
+            {
+                quizTest.Add(action);
+                taskFeedback.Foreground = Brushes.Green;
+                taskFeedback.Text = "Quiz:" + action;
+                activityLog.Add("Quiz Test:" + action);
+            }
+            else 
+            {
+                    taskFeedback.Foreground = Brushes.Red;
+                    taskFeedback.Text = "Im sorry i did't catch that. Could you rephrase it.";
+
             }
 
-            if (!action.Contains("remind") && !action.Contains("set") && !action.Contains("remember") && !action.Contains("forget"))
-            {
-                taskFeedback.Foreground = Brushes.Red;
-                taskFeedback.Text = "Im sorry i did't catch that. Could you rephrase it.";
-            }
-            else if (action.Contains("remind") || action.Contains("set") || action.Contains("reminder") || action.Contains("forget")) 
-            {
-                
-                {
-                    setReminder.Add(action);
-                    taskFeedback.Foreground = Brushes.Green;
-                    taskFeedback.Text = "Reminder:" + action;
-                    activityLog.Add("Reminder set:" + action);
-                }
-            }
-
-            if (!action.Contains("test") && !action.Contains("ask") && !action.Contains("question"))
-            {
-                taskFeedback.Foreground = Brushes.Red;
-                taskFeedback.Text = "Im sorry i did't catch that. Could you rephrase it.";
-            }
-            else if (action.Contains("test") || action.Contains("ask") || action.Contains("question")) 
-            {
-                
-                {
-                    quizTest.Add(action);
-                    taskFeedback.Foreground = Brushes.Green;
-                    taskFeedback.Text = "Quiz:" + action;
-                    activityLog.Add("Quiz Test:" + action);
-                }
-            }
-
-            if(!action.Contains("show") && !action.Contains("summary") && !action.Contains("what") && !action.Contains("list")) 
+            if(action.Contains("show") || action.Contains("summary") || action.Contains("what") || action.Contains("list")) 
             {
                 taskFeedback.Foreground = Brushes.Red;
                 taskFeedback.Text = "Im sorry i did't catch that. Could you rephrase it.";
@@ -864,6 +835,7 @@ namespace Cybot
                 { 
                     summary.Text = test;
                 }
+            
             }
 
             if (!log.Contains("show activity log") && !log.Contains("activities") && !log.Contains("log")) 
