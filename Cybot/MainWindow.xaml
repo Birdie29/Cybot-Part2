@@ -186,7 +186,7 @@
                     <TextBlock x:Name="additionalTips" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="16" HorizontalAlignment="Center"></TextBlock>
                 </Grid>
 
-                <Grid Grid.Row="19" Visibility="Collapsed">
+                <Grid Grid.Row="19">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -195,7 +195,7 @@
                 </Grid>
 
 
-                <StackPanel Grid.Row="20" Visibility="Collapsed">
+                <StackPanel Grid.Row="20">
                     <Label Content="Enter your task title:" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19" FontWeight="Bold" HorizontalAlignment="Center"></Label>
                     <TextBox Name="title" Width="500" FontFamily="Cascadia Mono" FontSize="16" Padding="10" FontWeight="Medium" Foreground="HotPink"></TextBox>
                     <TextBlock Name="titlemsg" Foreground="HotPink" FontSize="16" FontWeight="Medium" FontFamily="Cascadia Mono"></TextBlock>
@@ -205,6 +205,7 @@
                     <Label Content="Enter your reminder date please:" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19" FontWeight="Bold" HorizontalAlignment="Center"></Label>
                     <DatePicker Name="reminder" Foreground="DeepPink" Width="500" Padding="10" SelectedDateFormat="Short"></DatePicker>
 
+                    <ListBox x:Name="taskLits" Width="600" Height="400" FontFamily="Cascadia Mono" Foreground="DeepPink" FontWeight="Medium"></ListBox>
                     <TextBlock Name="datemsg" Foreground="HotPink" FontSize="16" FontFamily="Cascadia Mono" FontWeight="Medium"></TextBlock>
                     <TextBlock Name="taskInfo" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="16" HorizontalAlignment="Center" Width="1500"></TextBlock>
 

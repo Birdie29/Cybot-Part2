@@ -36,7 +36,7 @@ namespace Cybot
         }
 
 
-        /*
+        
         private void addTaskButton_Click(object sender, RoutedEventArgs e) 
         {
             string addTask = title.Text;
@@ -47,6 +47,7 @@ namespace Cybot
             {
                 titlemsg.Text = "Looks like you didn't enter your title re type it please";
                 titlemsg.Foreground = Brushes.Red;
+                return;
             }
             else
             {
@@ -58,6 +59,7 @@ namespace Cybot
             {
                 description.Text = "I need you to enter your title please";
                 description.Foreground = Brushes.Red;
+                return;
             }
             else 
             {
@@ -68,11 +70,12 @@ namespace Cybot
             if (reminderDate.HasValue)
             {
                 DateTime selectedDate = reminderDate.Value;
+                datemsg.Text = "Date has been set.";
+                datemsg.Foreground = Brushes.Green;
             }
             else 
             {
-                DBNull.Value;
-                Value;
+                datemsg.Text = "Please select a reminder date.";
             }
         }
 
@@ -156,10 +159,10 @@ namespace Cybot
             }
         }
         
-         */
+         
        
       
-
+        
         private void Username()
         {
             string name = username.Text;
@@ -429,6 +432,7 @@ namespace Cybot
             nomessage.Text = "Cool, whenever your ready cybersecurity nerd!";
         }
 
+        
         public void next_Click(object sender, RoutedEventArgs e)
         {
             
