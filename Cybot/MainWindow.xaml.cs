@@ -12,7 +12,8 @@ using System.Media;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Cybot;
-
+using System.IO;
+using System.Text.Json;
 namespace Cybot
 {
     /// <summary>
@@ -27,7 +28,7 @@ namespace Cybot
             InitializeComponent();
             Tasks = new ObservableCollection<TaskItem>();
             taskList.ItemsSource = Tasks;
-
+            LoadTasks();
         }
 
 
@@ -95,7 +96,7 @@ namespace Cybot
             };
 
             Tasks.Add(newTask);
-
+            SaveTasks();
             datemsg.Text = reminderText;
             datemsg.Foreground = Brushes.Green;
 
@@ -112,6 +113,7 @@ namespace Cybot
             {
                 Tasks.Remove(selectedTask);
                 desmsg.Text = "Task deleted successfully";
+                SaveTasks();
             }
             else 
             {
@@ -123,9 +125,7 @@ namespace Cybot
 
         private void completeTaskButton_Click(object sender, RoutedEventArgs e)
         {
-            string completeTask = title.Text;
-            string describeTask = description.Text;
-            string datePicker = reminder.Text;
+            
 
             if (taskList.SelectedItem is TaskItem selectedTask)
             {
@@ -134,6 +134,7 @@ namespace Cybot
                     selectedTask.IsCompleted = true;
                     taskList.Items.Refresh();
                     taskInfo.Text = "Task marked as complete";
+                    SaveTasks();
                 }
                 else 
                 {
@@ -147,8 +148,26 @@ namespace Cybot
 
         }
         
-         
-       
+         private void SaveTasks() 
+        {
+            string json = JsonSerializer.Serialize(Tasks);
+            File.WriteAllText("tasks.json", json);
+        }
+
+        private void LoadTasks() 
+        {
+            if (File.Exists("tasks.json")) 
+            {
+                string json = File.ReadAllText("tasks.json");
+                var loadedTasks = JsonSerializer.Deserialize<ObservableCollection<TaskItem>>(json);
+                Tasks = loadedTasks ?? new ObservableCollection<TaskItem>();
+            }
+            else 
+            {
+                Tasks = new ObservableCollection<TaskItem>();
+            }
+            taskList.ItemsSource = Tasks;
+        }
       
         
         private void Username()
