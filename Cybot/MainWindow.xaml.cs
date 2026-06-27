@@ -10,6 +10,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Media;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using Cybot;
 
 namespace Cybot
 {
@@ -18,10 +20,13 @@ namespace Cybot
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ObservableCollection<TaskItem> Tasks { get; set; }
        
         public MainWindow()
         {
             InitializeComponent();
+            Tasks = new ObservableCollection<TaskItem>();
+            taskList.ItemsSource = Tasks;
 
         }
 

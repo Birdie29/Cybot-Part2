@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Cybot
 {
-    internal class Class1
+    public class TaskItem
     {
        public string Title {get; set;}
 
