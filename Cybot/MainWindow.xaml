@@ -205,10 +205,12 @@
                     <Label Content="Enter your reminder date please:" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19" FontWeight="Bold" HorizontalAlignment="Center"></Label>
                     <DatePicker Name="reminder" Foreground="DeepPink" Width="500" Padding="10" SelectedDateFormat="Short"></DatePicker>
 
-                    <ListBox x:Name="taskList" Width="400" Height="400" FontFamily="Cascadia Mono" Foreground="DeepPink" FontWeight="Medium"></ListBox>
+                    
                     <TextBlock Name="datemsg" Foreground="HotPink" FontSize="16" FontFamily="Cascadia Mono" FontWeight="Medium"></TextBlock>
                     <TextBlock Name="taskInfo" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="16" HorizontalAlignment="Center" Width="1500"></TextBlock>
-
+                    <ListBox x:Name="taskList" Width="400" Height="400" FontFamily="Cascadia Mono" Foreground="DeepPink" FontWeight="Medium"></ListBox>
+                    
+                    
                     <Grid Margin="10,10,10,10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="10*"/>

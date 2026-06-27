@@ -83,7 +83,28 @@ namespace Cybot
                 datemsg.Text = "Please select a reminder date.";
                 datemsg.Foreground = Brushes.Green;
             }
+
+            string reminderText = reminderDate.HasValue ? reminderDate.Value.ToString() : "No reminder set";
+
+            var newTask = new TaskItem
+            {
+                Title = titlemsg.Text,
+                Description = description.Text,
+                ReminderDate = reminderText,
+                IsCompleted = false,
+            };
+
+            Tasks.Add(newTask);
+
+            datemsg.Text = reminderText;
+            datemsg.Foreground = Brushes.Green;
+
+            title.Clear();
+            description.Clear();
+            reminder.SelectedDate = null;
         }
+
+        
 
         private void deleteTaskButton_Click(object sender, RoutedEventArgs e) 
         {
@@ -91,38 +112,17 @@ namespace Cybot
             string describeTask = description.Text;
             string datePicker = reminder.Text;
 
-            if (string.IsNullOrWhiteSpace(deleteTask)) 
+            if (taskList.SelectedItem is TaskItem selectedTask) 
             {
-                title.Text = "Looks like you didn't enter your title re type it please";
-                titlemsg.Foreground = Brushes.Red;
+                Tasks.Remove(selectedTask);
+                desmsg.Text = "Task deleted successfully";
             }
             else 
             {
-                titlemsg.Text = "Awesome task title received";
-                titlemsg.Foreground = Brushes.HotPink;
+                desmsg.Text = "Please select a task to delete.";
             }
 
-            if (string.IsNullOrWhiteSpace(describeTask))
-            {
-                description.Text = "I need you to enter your title please";
-                description.Foreground = Brushes.Red;
-            }
-            else 
-            {
-                description.Text = "Description received";
-                description.Foreground = Brushes.Red;
-            }
-
-            if (string.IsNullOrWhiteSpace(datePicker))
-            {
-                datemsg.Text = "I need your date please";
-                datemsg.Foreground = Brushes.Red;
-            }
-            else
-            {
-                datemsg.Text = "Date has been set";
-                datemsg.Foreground = Brushes.HotPink;
-            }
+            
         }
 
         private void completeTaskButton_Click(object sender, RoutedEventArgs e)
