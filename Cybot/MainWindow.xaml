@@ -208,7 +208,19 @@
                     
                     <TextBlock Name="datemsg" Foreground="HotPink" FontSize="16" FontFamily="Cascadia Mono" FontWeight="Medium"></TextBlock>
                     <TextBlock Name="taskInfo" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="16" HorizontalAlignment="Center" Width="1500"></TextBlock>
-                    <ListBox x:Name="taskList" Width="400" Height="400" FontFamily="Cascadia Mono" Foreground="DeepPink" FontWeight="Medium"></ListBox>
+                    <ListBox x:Name="taskList" ItemsSource="{Binding Tasks}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <TextBlock Text="{Binding Title}" Width="150"></TextBlock>
+                                    <TextBlock Text="{Binding Description}" Width="250"></TextBlock>
+                                    <TextBlock Text="{Binding ReminderDate, StringFormat='{}{0:dd/MM/yyyy}'}" Width="120"></TextBlock>
+                                    <TextBlock Text="{Binding IsCompleted}" Width="80"></TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                   
                     
                     
                     <Grid Margin="10,10,10,10">
