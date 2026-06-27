@@ -12,8 +12,7 @@ using System.Media;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Cybot;
-using System.IO;
-using System.Text.Json;
+using MySql.Data.MySqlClient;
 namespace Cybot
 {
     /// <summary>
@@ -21,29 +20,32 @@ namespace Cybot
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string connectionString = "Server=localhost;Port=3306;Database=TaskManager;User ID=root;Password=mysql@2026";
         public ObservableCollection<TaskItem> Tasks { get; set; }
-       
+
         public MainWindow()
         {
             InitializeComponent();
             Tasks = new ObservableCollection<TaskItem>();
             taskList.ItemsSource = Tasks;
             LoadTasks();
+
+
         }
 
 
-        
+
         private void PressClick(object sender, RoutedEventArgs e)
         {
             Username();
             FavTopic();
             BotTopics();
-            
+
         }
 
 
-        
-        private void addTaskButton_Click(object sender, RoutedEventArgs e) 
+
+        private void addTaskButton_Click(object sender, RoutedEventArgs e)
         {
             string addTask = title.Text;
             string describeTask = description.Text;
@@ -61,13 +63,13 @@ namespace Cybot
                 titlemsg.Foreground = Brushes.HotPink;
             }
 
-            if(string.IsNullOrWhiteSpace(describeTask))
+            if (string.IsNullOrWhiteSpace(describeTask))
             {
                 description.Text = "I need you to enter your title please";
                 description.Foreground = Brushes.Red;
                 return;
             }
-            else 
+            else
             {
                 description.Text = "Description received";
                 description.Foreground = Brushes.Red;
@@ -79,7 +81,7 @@ namespace Cybot
                 datemsg.Text = "Date has been set.";
                 datemsg.Foreground = Brushes.Green;
             }
-            else 
+            else
             {
                 datemsg.Text = "Please select a reminder date.";
                 datemsg.Foreground = Brushes.Green;
@@ -95,8 +97,18 @@ namespace Cybot
                 IsCompleted = false,
             };
 
+            using(var connection = new MySqlConnection(connectionString)) 
+            { 
+                connection.Open();
+                var command = new MySqlCommand("INSERT INTO Tasks (Title, Description, ReminderDate, IsCompleted) VALUES (@title, @desc, @reminder, @completed", connection);
+                command.Parameters.AddWithValue("@title", newTask.Title);
+                command.Parameters.AddWithValue("@desc", newTask.Description);
+                command.Parameters.AddWithValue("@reminder", (object?)newTask.ReminderDate ?? DBNull.Value);
+                command.Parameters.AddWithValue("@completed", newTask.Title);
+                command.ExecuteNonQuery();
+            }
             Tasks.Add(newTask);
-            SaveTasks();
+
             datemsg.Text = reminderText;
             datemsg.Foreground = Brushes.Green;
 
@@ -105,38 +117,54 @@ namespace Cybot
             reminder.SelectedDate = null;
         }
 
-        
 
-        private void deleteTaskButton_Click(object sender, RoutedEventArgs e) 
+
+        private void deleteTaskButton_Click(object sender, RoutedEventArgs e)
         {
-            if (taskList.SelectedItem is TaskItem selectedTask) 
+            if (taskList.SelectedItem is TaskItem selectedTask)
             {
+                
+                using(var connection = new MySqlConnection(connectionString)) 
+                {
+                    connection.Open();
+                    var command = new MySqlCommand("DELETE FROM Tasks WHERE Title=@title AND Description=@desc", connection);
+                    command.Parameters.AddWithValue("@title", selectedTask.Title);
+                    command.Parameters.AddWithValue("@desc", selectedTask.Description);
+                    command.ExecuteNonQuery();
+                }
+                Tasks.Remove(selectedTask);
                 Tasks.Remove(selectedTask);
                 desmsg.Text = "Task deleted successfully";
-                SaveTasks();
             }
-            else 
+            else
             {
                 desmsg.Text = "Please select a task to delete.";
             }
 
-            
+
         }
 
         private void completeTaskButton_Click(object sender, RoutedEventArgs e)
         {
-            
 
             if (taskList.SelectedItem is TaskItem selectedTask)
             {
-                if (!selectedTask.IsCompleted) 
+                if (!selectedTask.IsCompleted)
                 {
+                    using(var connection = new MySqlConnection(connectionString)) 
+                    {
+                        connection.Open();
+                        var command = new MySqlCommand("UPDATE Tasks SET IsCompleted=1 WHERE Title=@title AND Description=@desc", connection);
+                        command.Parameters.AddWithValue("@title", selectedTask.Title);
+                        command.Parameters.AddWithValue("@desc", selectedTask.Description); 
+                        command.ExecuteNonQuery();
+                    }
                     selectedTask.IsCompleted = true;
                     taskList.Items.Refresh();
                     taskInfo.Text = "Task marked as complete";
-                    SaveTasks();
+
                 }
-                else 
+                else
                 {
                     taskInfo.Text = "This task is already completed";
                 }
@@ -147,27 +175,30 @@ namespace Cybot
             }
 
         }
-        
-         private void SaveTasks() 
-        {
-            string json = JsonSerializer.Serialize(Tasks);
-            File.WriteAllText("tasks.json", json);
-        }
 
-        private void LoadTasks() 
+
+        private void LoadTasks()
         {
-            if (File.Exists("tasks.json")) 
+            Tasks = new ObservableCollection<TaskItem>();
+            using (var connection = new MySqlConnection(connectionString))
             {
-                string json = File.ReadAllText("tasks.json");
-                var loadedTasks = JsonSerializer.Deserialize<ObservableCollection<TaskItem>>(json);
-                Tasks = loadedTasks ?? new ObservableCollection<TaskItem>();
+                connection.Open();
+                var command = new MySqlCommand("SELECT Id, Title, Description, ReminderDate, IsCompleted FROM Tasks", connection);
+
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Tasks.Add(new TaskItem
+                        {
+                            Title = reader.GetString("title"),
+                            Description = reader.GetString("description"),
+                            ReminderDate = reader.IsDBNull(reader.GetOrdinal("ReminderDate")) ? null : reader.GetDateTime("ReaderDate"),
+                            IsCompleted = reader.GetBoolean("IsCompleted")
+                        });
+                    }
             }
-            else 
-            {
-                Tasks = new ObservableCollection<TaskItem>();
-            }
-            taskList.ItemsSource = Tasks;
-        }
+        }} 
       
         
         private void Username()
