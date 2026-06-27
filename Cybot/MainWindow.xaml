@@ -225,13 +225,13 @@
                     
                     <Grid Margin="0,10,10,1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="10*"/>
-                            <ColumnDefinition Width="10*"/>
-                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="8*"/>
+                            <ColumnDefinition Width="8*"/>
+                            <ColumnDefinition Width="8*"/>
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" x:Name="addTaskButton" Click="PressClick" Content="Add Task" Width="150" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15" Height="48" Margin="539,0,539,0" VerticalAlignment="Top"></Button>
-                        <Button Grid.Column="1" x:Name="deleteTaskButton" Click="PressClick" Content="Delete Task" Width="150" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15"></Button>
-                        <Button Grid.Column="2" x:Name="completeTaskButton" Click="PressClick" Content="Mark Complete" Width="150" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15"></Button>
+                        <Button Grid.Column="0" x:Name="addTaskButton" Click="addTaskButton_Click" Content="Add Task" Width="150" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15" Height="48" Margin="539,0,539,0" VerticalAlignment="Top"></Button>
+                        <Button Grid.Column="1" x:Name="deleteTaskButton" Click="deleteTaskButton_Click" Content="Delete Task" Width="150" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15"></Button>
+                        <Button Grid.Column="2" x:Name="completeTaskButton" Click="completeTaskButton_Click" Content="Mark Complete" Width="150" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15"></Button>
                     </Grid>
                 </StackPanel>
 
