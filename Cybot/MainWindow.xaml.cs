@@ -97,24 +97,41 @@ namespace Cybot
                 IsCompleted = false,
             };
 
-            using(var connection = new MySqlConnection(connectionString)) 
-            { 
-                connection.Open();
-                var command = new MySqlCommand("INSERT INTO Tasks (Title, Description, ReminderDate, IsCompleted) VALUES (@title, @desc, @reminder, @completed", connection);
-                command.Parameters.AddWithValue("@title", newTask.Title);
-                command.Parameters.AddWithValue("@desc", newTask.Description);
-                command.Parameters.AddWithValue("@reminder", (object?)newTask.ReminderDate ?? DBNull.Value);
-                command.Parameters.AddWithValue("@completed", newTask.Title);
-                command.ExecuteNonQuery();
+            try
+            {
+                using (var connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+                    var command = new MySqlCommand(
+                        "INSERT INTO Tasks (Title, Description, ReminderDate, IsCompleted) VALUES (@title, @desc, @reminder, @completed", connection);
+                    command.Parameters.AddWithValue("@title", newTask.Title);
+                    command.Parameters.AddWithValue("@desc", newTask.Description);
+                    command.Parameters.AddWithValue("@reminder", (object?)newTask.ReminderDate ?? DBNull.Value);
+                    command.Parameters.AddWithValue("@completed", newTask.Title);
+
+                    command.ExecuteNonQuery();
+
+                    
+                }
+                Tasks.Add(newTask);
+
+                datemsg.Text = reminderText;
+                datemsg.Foreground = Brushes.Green;
+
+                title.Clear();
+                description.Clear();
+                reminder.SelectedDate = null;
             }
-            Tasks.Add(newTask);
-
-            datemsg.Text = reminderText;
-            datemsg.Foreground = Brushes.Green;
-
-            title.Clear();
-            description.Clear();
-            reminder.SelectedDate = null;
+            catch (MySqlException ex)
+            {
+                titlemsg.Text = $"Database error: {ex.Message}";
+            }
+            catch (Exception ex) 
+            {
+                datemsg.Text = $"Unexpected error: {ex.Message}";
+            }
+           
+           
         }
 
 
