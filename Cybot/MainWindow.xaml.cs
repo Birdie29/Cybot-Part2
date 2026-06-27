@@ -76,6 +76,7 @@ namespace Cybot
             else 
             {
                 datemsg.Text = "Please select a reminder date.";
+                datemsg.Foreground = Brushes.Green;
             }
         }
 
@@ -597,8 +598,7 @@ namespace Cybot
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
-    
-            
+
             if (rb4.IsChecked == true && currentQuestion.correct == "D") 
             {
                 txtFeedback.Foreground= Brushes.Green;
@@ -611,7 +611,7 @@ namespace Cybot
                 txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
             
-
+            /*
             if(rb4.IsChecked == true && currentQuestion.correct == "D") 
             {
                 txtFeedback.Foreground = Brushes.Green;
@@ -737,7 +737,7 @@ namespace Cybot
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
-            
+            */
 
         }
 

@@ -205,7 +205,7 @@
                     <Label Content="Enter your reminder date please:" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19" FontWeight="Bold" HorizontalAlignment="Center"></Label>
                     <DatePicker Name="reminder" Foreground="DeepPink" Width="500" Padding="10" SelectedDateFormat="Short"></DatePicker>
 
-                    <ListBox x:Name="taskLits" Width="600" Height="400" FontFamily="Cascadia Mono" Foreground="DeepPink" FontWeight="Medium"></ListBox>
+                    <ListBox x:Name="taskLits" Width="400" Height="400" FontFamily="Cascadia Mono" Foreground="DeepPink" FontWeight="Medium"></ListBox>
                     <TextBlock Name="datemsg" Foreground="HotPink" FontSize="16" FontFamily="Cascadia Mono" FontWeight="Medium"></TextBlock>
                     <TextBlock Name="taskInfo" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="16" HorizontalAlignment="Center" Width="1500"></TextBlock>
 
@@ -215,9 +215,9 @@
                             <ColumnDefinition Width="10*"/>
                             <ColumnDefinition Width="10*"/>
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" x:Name="addTaskButton" Click="PressClick" Content="Add Task" Width="250" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15" Height="48" Margin="539,0,539,0" VerticalAlignment="Top"></Button>
-                        <Button Grid.Column="1" x:Name="deleteTaskButton" Click="PressClick" Content="Delete Task" Width="250" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15"></Button>
-                        <Button Grid.Column="2" x:Name="completeTaskButton" Click="PressClick" Content="Mark Complete" Width="250" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15"></Button>
+                        <Button Grid.Column="0" x:Name="addTaskButton" Click="PressClick" Content="Add Task" Width="150" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15" Height="48" Margin="539,0,539,0" VerticalAlignment="Top"></Button>
+                        <Button Grid.Column="1" x:Name="deleteTaskButton" Click="PressClick" Content="Delete Task" Width="150" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15"></Button>
+                        <Button Grid.Column="2" x:Name="completeTaskButton" Click="PressClick" Content="Mark Complete" Width="150" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15"></Button>
                     </Grid>
                 </StackPanel>
 
