@@ -489,10 +489,9 @@ namespace Cybot
         }
         
         List<Questions> questions = new List<Questions>();
-       // string userOption = "";
-       // string correct = "";
+      
         int totalScore = 0;
-        // int currentQuestion = 0;
+        
         int currentIndex = 0;
         
         public void topicQuestions() 
@@ -648,7 +647,7 @@ namespace Cybot
                 txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
             
-            /*
+            
             if(rb4.IsChecked == true && currentQuestion.correct == "D") 
             {
                 txtFeedback.Foreground = Brushes.Green;
@@ -774,19 +773,19 @@ namespace Cybot
                 txtFeedback.Foreground = Brushes.Red;
                 txtFeedback.Text = "Incorrect:" + currentQuestion.explanation;
             }
-            */
+            
 
         }
 
         public void Score()
         {
             
-            if (totalScore > 10 && totalScore <= 12)
+            if (totalScore > 10 && totalScore < 12)
             {
                 txtScore.Text = "You scored a " + totalScore + "/12";
                 scoreFeedback.Text = "Great job, your a cybersecurity pro!.";
             }
-            else if (totalScore > 6 && totalScore <= 9)
+            else if (totalScore > 6 && totalScore < 9)
             {
                 txtScore.Text = "You scored a " + totalScore + "/12";
                 scoreFeedback.Text = "Nice work you're already thinking like a pro!";
