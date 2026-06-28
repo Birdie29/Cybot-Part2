@@ -71,8 +71,8 @@ namespace Cybot
             }
             else
             {
-                description.Text = "Description received";
-                description.Foreground = Brushes.Red;
+                desmsg.Text = "Description received";
+                desmsg.Foreground = Brushes.Red;
             }
 
             if (reminderDate.HasValue)
@@ -200,6 +200,7 @@ namespace Cybot
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
+
                 var command = new MySqlCommand("SELECT Id, Title, Description, ReminderDate, IsCompleted FROM Tasks", connection);
 
                 using (var reader = command.ExecuteReader())
@@ -522,7 +523,8 @@ namespace Cybot
                 rb3 = "C)It's an expression used in culinary terms.",
                 rb4 = "D)It's a form of spyware.",
                 correct = "A",
-                explanation = "Phishing is an online fraud that tricks people into providing sensitive information like passwords and credit card information. "
+                explanation = "Phishing is an online fraud " +
+                "that tricks people into providing sensitive information like passwords and credit card information. "
                 });
                 
                 questions.Add(new Questions
@@ -588,7 +590,8 @@ namespace Cybot
 
                 questions.Add(new Questions
                 {
-                    txtQuestion = "8)Using HTTPS encrypts data exchanged between your web browser and the website your visiting making it difficult for hackers to intercept your information.",
+                    txtQuestion = "8)Using HTTPS encrypts data exchanged between your web browser and the " +
+                    "website your visiting making it difficult for hackers to intercept your information.",
                     rb1 = "True.",
                     rb2 = "False.",
                     correct = "True",
@@ -597,7 +600,8 @@ namespace Cybot
 
                 questions.Add(new Questions 
                 {
-                    txtQuestion = "9)Being aware of the latest online threats and how to protect yourself is crucial in maintaining your online security..",
+                    txtQuestion = "9)Being aware of the latest online threats and how to protect yourself " +
+                    "is crucial in maintaining your online security..",
                     rb1 = "True.",
                     rb2 = "False.",
                     correct = "True",

@@ -49,7 +49,7 @@
                 <Image Grid.Row="0"  Source="/cybotart.png" Margin="0,0,0,87" Grid.RowSpan="2"/>
 
 
-                <Grid Grid.Row="2" Visibility="Collapsed">
+                <Grid Grid.Row="2">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
 
@@ -60,7 +60,7 @@
 
                 </Grid>
 
-                <Grid Grid.Row="3" Visibility="Collapsed">
+                <Grid Grid.Row="3">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -68,7 +68,7 @@
                          Padding="10" Background="White"  Foreground="HotPink" FontFamily="Cascadia Mono" FontWeight="Medium"/>
                 </Grid>
 
-                <Grid Grid.Row="4" Visibility="Collapsed">
+                <Grid Grid.Row="4">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -78,7 +78,7 @@
                 </Grid>
 
 
-                <Grid Grid.Row="5" Visibility="Collapsed">
+                <Grid Grid.Row="5">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -87,7 +87,7 @@
 
                 </Grid>
 
-                <Grid Grid.Row="6" Visibility="Collapsed">
+                <Grid Grid.Row="6">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -95,7 +95,7 @@
 
                 </Grid>
 
-                <Grid Grid.Row="7" Visibility="Collapsed">
+                <Grid Grid.Row="7">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -103,20 +103,20 @@
 
                 </Grid>
 
-                <Grid Grid.Row="8" Visibility="Collapsed">
+                <Grid Grid.Row="8">
 
                     <Label Content="Here's a list of some topics we can dive right into:" FontSize="19" FontWeight="Bold" Foreground="DeepPink" FontFamily="Cascadia Mono" HorizontalAlignment="Center"/>
 
                 </Grid>
 
-                <StackPanel Grid.Row="9" Margin="10" Visibility="Collapsed">
+                <StackPanel Grid.Row="9" Margin="10">
                     <TextBlock Name="password" Text="~Password Safety" Width="300"  HorizontalAlignment="Center" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
                     <TextBlock Name="scam" Text="~Phishing" Width="300"  HorizontalAlignment="Center" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
                     <TextBlock Name="privacy" Text="~Safe browsing" Width="300" HorizontalAlignment="Center" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" Foreground="DeepPink"/>
                 </StackPanel>
 
 
-                <Grid Grid.Row="10" Visibility="Collapsed">
+                <Grid Grid.Row="10">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -125,14 +125,14 @@
 
                 </Grid>
 
-                <Grid Grid.Row="11" Visibility="Collapsed">
+                <Grid Grid.Row="11" >
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <TextBox x:Name="pick" Width="500" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="HotPink" FontWeight="Medium"/>
                 </Grid>
 
-                <Grid Grid.Row="12" Visibility="Collapsed">
+                <Grid Grid.Row="12" >
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -140,14 +140,14 @@
                     <TextBlock x:Name="paragrapgh" FontFamily="Cascadia Mono" FontSize="16" FontWeight="ExtraBold" Foreground="HotPink" HorizontalAlignment="Center"/>
                 </Grid>
 
-                <Grid Grid.Row="13" Visibility="Collapsed">
+                <Grid Grid.Row="13" >
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <Label Content="Do you need any additional tips?" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Bold" FontSize="19" HorizontalAlignment="Center"></Label>
                 </Grid>
 
-                <Grid Grid.Row="14" Visibility="Collapsed">
+                <Grid Grid.Row="14" >
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -155,7 +155,7 @@
                     <TextBox x:Name="info" Foreground="HotPink" FontFamily="Cascadia Mono"  Width="500" Padding="10" FontWeight="Medium"></TextBox>
                 </Grid>
 
-                <Grid Grid.Row="15" Visibility="Collapsed">
+                <Grid Grid.Row="15">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -163,7 +163,7 @@
                     <TextBlock x:Name="information" FontFamily="Cascadia Mono" FontSize="16" FontWeight="ExtraBold" HorizontalAlignment="Center"></TextBlock>
                 </Grid>
 
-                <Grid Grid.Row="16" Visibility="Collapsed">
+                <Grid Grid.Row="16">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -190,24 +190,32 @@
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Label Content="How about we step it up a notch!. You can use the assistant below to keep track of your tasks by adding, setting reminders and marking them off as you go.
-                           " FontFamily="Cascadia Mono" FontWeight="Bold" FontSize="19" Foreground="DeepPink" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                    <Label Content="How about we step it up a notch!. 
+                           You can use the assistant below to keep track of your tasks by adding, setting reminders and marking them off as you go.
+                           " FontFamily="Cascadia Mono" FontWeight="Bold" FontSize="19" Foreground="DeepPink" 
+                           HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
                 </Grid>
 
 
                 <StackPanel Grid.Row="20">
-                    <Label Content="Enter your task title:" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19" FontWeight="Bold" HorizontalAlignment="Center"></Label>
-                    <TextBox Name="title" Width="500" FontFamily="Cascadia Mono" FontSize="16" Padding="10" FontWeight="Medium" Foreground="HotPink"></TextBox>
+                    <Label Content="Enter your task title:" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19" FontWeight="Bold"
+                           HorizontalAlignment="Center"></Label>
+                    <TextBox Name="title" Width="500" FontFamily="Cascadia Mono" FontSize="16" Padding="10" FontWeight="Medium"
+                             Foreground="HotPink"></TextBox>
                     <TextBlock Name="titlemsg" Foreground="HotPink" FontSize="16" FontWeight="Medium" FontFamily="Cascadia Mono"></TextBlock>
-                    <Label Content="Enter your task description:" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19" FontWeight="Bold" HorizontalAlignment="Center"></Label>
-                    <TextBox Name="description" Width="500" FontFamily="Cascadia Mono" FontSize="16" Padding="10" FontWeight="Medium" Foreground="HotPink"></TextBox>
+                    <Label Content="Enter your task description:" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19"
+                           FontWeight="Bold" HorizontalAlignment="Center"></Label>
+                    <TextBox Name="description" Width="500" FontFamily="Cascadia Mono" FontSize="16" Padding="10" FontWeight="Medium" 
+                             Foreground="HotPink"></TextBox>
                     <TextBlock Name="desmsg" Foreground="HotPink" FontSize="16" FontFamily="Cascadia Mono" FontWeight="Medium"></TextBlock>
-                    <Label Content="Enter your reminder date please:" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19" FontWeight="Bold" HorizontalAlignment="Center"></Label>
+                    <Label Content="Enter your reminder date please:" FontFamily="Cascadia Mono" Foreground="DeepPink" 
+                           FontSize="19" FontWeight="Bold" HorizontalAlignment="Center"></Label>
                     <DatePicker Name="reminder" Foreground="DeepPink" Width="500" Padding="10" SelectedDateFormat="Short"></DatePicker>
 
                     
                     <TextBlock Name="datemsg" Foreground="HotPink" FontSize="16" FontFamily="Cascadia Mono" FontWeight="Medium"></TextBlock>
-                    <TextBlock Name="taskInfo" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="16" HorizontalAlignment="Center" Width="1500"></TextBlock>
+                    <TextBlock Name="taskInfo" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="16" 
+                               HorizontalAlignment="Center" Width="1500"></TextBlock>
                     <ListBox x:Name="taskList" ItemsSource="{Binding Tasks}" Width="400" Height="400">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
@@ -229,33 +237,46 @@
                             <ColumnDefinition Width="8*"/>
                             <ColumnDefinition Width="8*"/>
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" x:Name="addTaskButton" Click="addTaskButton_Click" Content="Add Task" Width="150" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15" Height="48"></Button>
-                        <Button Grid.Column="1" x:Name="deleteTaskButton" Click="deleteTaskButton_Click" Content="Delete Task" Width="150" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15"></Button>
-                        <Button Grid.Column="2" x:Name="completeTaskButton" Click="completeTaskButton_Click" Content="Mark Complete" Width="150" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" Background="DeepPink" Padding="15"></Button>
+                        <Button Grid.Column="0" x:Name="addTaskButton" Click="addTaskButton_Click" Content="Add Task" Width="150"
+                                Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" 
+                                Background="DeepPink" Padding="15" Height="48"></Button>
+                        <Button Grid.Column="1" x:Name="deleteTaskButton" Click="deleteTaskButton_Click" Content="Delete Task" Width="150" 
+                                Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" 
+                                Background="DeepPink" Padding="15"></Button>
+                        <Button Grid.Column="2" x:Name="completeTaskButton" Click="completeTaskButton_Click" Content="Mark Complete" 
+                                Width="150" Foreground="Pink" FontFamily="Cascadia Mono" FontWeight="ExtraBold" FontSize="14" 
+                                Background="DeepPink" Padding="15"></Button>
                     </Grid>
                 </StackPanel>
 
-                <StackPanel Grid.Row="21" Name="StartPanel">
-                    <Label Content="Would you like to play a game?" FontWeight="Bold" HorizontalAlignment="Center" Foreground="DeepPink" FontFamily="Cascadia Mono" FontSize="19"></Label>
+                <StackPanel Grid.Row="21" Name="StartPanel" Visibility="Collapsed">
+                    <Label Content="Would you like to play a game?" FontWeight="Bold" HorizontalAlignment="Center" 
+                           Foreground="DeepPink" FontFamily="Cascadia Mono" FontSize="19"></Label>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="80*"/>
                             <ColumnDefinition Width="80*"/>
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" Name="btnyes" Click="btnyes_Click" Content="YES" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="190" Background="DeepPink" Padding="10"></Button>
-                        <Button Grid.Column="1" Name="btnno" Click="btnno_Click" Content="NO" FontFamily="Cascadia Mono" Foreground="Pink" FontSize="20" Width="190" Background="DeepPink" Padding="10"></Button>
+                        <Button Grid.Column="0" Name="btnyes" Click="btnyes_Click" Content="YES" FontFamily="Cascadia Mono" 
+                                Foreground="Pink" FontSize="20" Width="190" Background="DeepPink" Padding="10"></Button>
+                        <Button Grid.Column="1" Name="btnno" Click="btnno_Click" Content="NO" FontFamily="Cascadia Mono" 
+                                Foreground="Pink" FontSize="20" Width="190" Background="DeepPink" Padding="10"></Button>
      
                     </Grid>
                     <TextBlock x:Name="nomessage" Foreground="HotPink" FontSize="16" FontWeight="Medium" Grid.ColumnSpan="2" ></TextBlock>
                     
                     <StackPanel Grid.Row="21" x:Name="QuizPanel" Visibility="Collapsed">
-                        <Label Name="txtQuestion" Content="What do you understand by the term phishing?" FontFamily="Cascadia Mono" Foreground="DeepPink" FontSize="19" FontWeight="Bold"></Label>
-                        <RadioButton Name="rb1" Content="A)Online fraud that tricks people into providing sensitive information like passwords or credit card information." Foreground="DeepPink" FontSize="19" FontWeight="Bold"></RadioButton>
+                        <Label Name="txtQuestion" Content="What do you understand by the term phishing?" FontFamily="Cascadia Mono"
+                               Foreground="DeepPink" FontSize="19" FontWeight="Bold"></Label>
+                        <RadioButton Name="rb1" Content="A)Online fraud that tricks people into providing sensitive information 
+                                     like passwords or credit card information."
+                                     Foreground="DeepPink" FontSize="19" FontWeight="Bold"></RadioButton>
                         <RadioButton Name="rb2" Content="B)Advising teenagers on how to properly catch a fish." Foreground="DeepPink"></RadioButton>
                         <RadioButton Name="rb3" Content="C)It's an expression used in cullinary terms." Foreground="DeepPink"></RadioButton>
                         <RadioButton Name="rb4" Content="D)It's a form of spyware." Foreground="DeepPink"></RadioButton>
                         <TextBlock Name="txtFeedback" FontFamily="Cascadia Mono" FontSize="16" FontWeight="ExtraBold"></TextBlock>
-                        <TextBlock x:Name="questionIndex" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="11" HorizontalAlignment="Right" VerticalAlignment="Top"></TextBlock>
+                        <TextBlock x:Name="questionIndex" Foreground="DeepPink" FontFamily="Cascadia Mono" 
+                                   FontWeight="Medium" FontSize="11" HorizontalAlignment="Right" VerticalAlignment="Top"></TextBlock>
                         <Button Name="next" Click="next_Click" Content="Next" Width="190" HorizontalAlignment="Left"></Button>
                         <TextBlock Name="txtScore" FontFamily="Cascadia Mono" FontSize="16" FontWeight="ExtraBold" Foreground="DeepPink"></TextBlock>
                         <TextBlock Name="scoreFeedback" FontFamily="Cascadia Mono" Foreground="DeepPink" FontWeight="Medium" FontSize="16"></TextBlock>
@@ -263,9 +284,12 @@
                 </StackPanel>
 
                 <StackPanel Grid.Row="22">
-                    <Label Content="Psst! you can add, set reminders, take quizzes or even view your summry and your activity logs" Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Bold" FontSize="19" HorizontalAlignment="Center"></Label>
-                    <TextBox x:Name="taskMod" Width="490" Padding="10" FontSize="16" FontWeight="Medium" Foreground="HotPink" FontFamily="Cascadia Mono"></TextBox>
-                    <TextBlock x:Name="taskFeedback" Foreground="HotPink" FontSize="16" FontWeight="Bold" FontFamily="Cascadia Mono" HorizontalAlignment="Center"></TextBlock>
+                    <Label Content="Psst! you can add, set reminders, take quizzes or even view your summry and your activity logs" 
+                           Foreground="DeepPink" FontFamily="Cascadia Mono" FontWeight="Bold" FontSize="19" HorizontalAlignment="Center"></Label>
+                    <TextBox x:Name="taskMod" Width="490" Padding="10" FontSize="16" FontWeight="Medium" Foreground="HotPink" 
+                             FontFamily="Cascadia Mono"></TextBox>
+                    <TextBlock x:Name="taskFeedback" Foreground="HotPink" FontSize="16" FontWeight="Bold" 
+                               FontFamily="Cascadia Mono" HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
 
                 <Grid Grid.Row="24">
@@ -279,7 +303,9 @@
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Button x:Name="modifyTasks" Click="modifyTasks_Click" Content="modifyTasks" Width="130" Margin="10" FontSize="19" FontFamily="Cascadia Mono" Foreground="Pink" Background="DeepPink" HorizontalAlignment="Center"></Button>
+                    <Button x:Name="modifyTasks" Click="modifyTasks_Click" Content="modifyTasks" Width="130" 
+                            Margin="10" FontSize="19" FontFamily="Cascadia Mono" Foreground="Pink" 
+                            Background="DeepPink" HorizontalAlignment="Center"></Button>
                      
                 </Grid>
 
@@ -287,14 +313,17 @@
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Label Content="Would you like me to display your activities:" Foreground="DeepPink" FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                    <Label Content="Would you like me to display your activities:" Foreground="DeepPink" 
+                           FontFamily="Cascadia Mono" FontSize="19" FontWeight="Bold" VerticalContentAlignment="Center" 
+                           HorizontalContentAlignment="Center"></Label>
                 </Grid>
 
                 <Grid Grid.Row="28">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBox x:Name="logAction"  Width="650" Padding="10" FontFamily="Cascadia Mono" FontWeight="Medium" FontSize="16" Foreground="HotPink"></TextBox>
+                    <TextBox x:Name="logAction"  Width="650" Padding="10" FontFamily="Cascadia Mono" FontWeight="Medium" 
+                             FontSize="16" Foreground="HotPink"></TextBox>
                 </Grid>
 
                 <Grid Grid.Row="29">
