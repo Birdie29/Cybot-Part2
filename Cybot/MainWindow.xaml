@@ -249,7 +249,7 @@
                     </Grid>
                 </StackPanel>
 
-                <StackPanel Grid.Row="21" Name="StartPanel" Visibility="Collapsed">
+                <StackPanel Grid.Row="21" Name="StartPanel">
                     <Label Content="Would you like to play a game?" FontWeight="Bold" HorizontalAlignment="Center" 
                            Foreground="DeepPink" FontFamily="Cascadia Mono" FontSize="19"></Label>
                     <Grid>
